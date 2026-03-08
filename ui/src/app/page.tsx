@@ -7,6 +7,7 @@ import { Header } from "./../components/Header"
 import { Sidebar } from "./../components/Sidebar"
 import { Breadcrumbs } from "./../components/Breadcrumbs"
 import { FileGrid } from "./../components/FileGrid"
+import { Gallery } from "./../components/Gallery"
 import { PreviewModal } from "./../components/PreviewModal"
 import { fetchDirectory, logout, isAuthenticated, fetchDrives, fetchPinnedFolders, addPinnedFolder, removePinnedFolderByPath, removePinnedFolder } from "./../services/api"
 import type { BrowseResponse, ViewMode, PinnedFolder, FileItem } from "./../types"
@@ -29,7 +30,7 @@ function AppContent() {
   const [previewFile, setPreviewFile] = useState<FileItem | null>(null)
   const [isAuth, setIsAuth] = useState(false)
   const [username, setUsername] = useState<string | null>(null)
-  const [view, setView] = useState<"drive" | "settings">("drive")
+  const [view, setView] = useState<"drive" | "gallery" | "settings">("drive")
   const [drives, setDrives] = useState<{ name: string; path: string }[]>([])
   const [selectedDrive, setSelectedDrive] = useState<string>("")
 
@@ -189,33 +190,40 @@ function AppContent() {
             handleBreadcrumbNavigate("/"); // Reset path when switching drives
           }}
           onUnpin={handleUnpinById}
+          currentView={view}
+          onNavigateView={setView}
         />
 
         <main className="flex-1 flex flex-col bg-white dark:bg-gray-900 border-t border-l border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden z-10 -ml-[1px]">
           {/* Main Content Toolbar */}
-          <div className="px-6 py-4 flex items-center justify-between bg-white dark:bg-gray-900 z-10 sticky top-0 border-b border-gray-100 dark:border-gray-800">
+          <div className="px-6 py-4 flex items-center justify-between bg-white dark:bg-gray-900 z-10 sticky top-0 border-b border-gray-100 dark:border-gray-800 min-h-[73px]">
             <div className="flex flex-col gap-1">
               <h1 className="text-2xl font-normal text-gray-800 dark:text-gray-100 tracking-tight">
-                {currentPath === "/" ? "My Drive" : currentPath.split("/").pop()}
+                {view === "gallery" ? "Gallery" : (currentPath === "/" ? "My Drive" : currentPath.split("/").pop())}
               </h1>
-              <Breadcrumbs path={currentPath} onNavigate={handleBreadcrumbNavigate} />
+              {view === "drive" && (
+                <Breadcrumbs path={currentPath} onNavigate={handleBreadcrumbNavigate} />
+              )}
             </div>
-            <div className="flex items-center gap-2 border border-gray-200 dark:border-gray-700 rounded-lg p-0.5 bg-gray-50 dark:bg-gray-800/50">
-              <button
-                onClick={() => handleSetViewMode("list")}
-                className={`p-1.5 rounded-md transition-all cursor-pointer ${viewMode === "list" ? "bg-white dark:bg-gray-700 shadow-sm text-gray-900 dark:text-gray-100" : "text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"}`}
-                title="List view"
-              >
-                <List className="h-4 w-4" />
-              </button>
-              <button
-                onClick={() => handleSetViewMode("grid")}
-                className={`p-1.5 rounded-md transition-all cursor-pointer ${viewMode === "grid" ? "bg-white dark:bg-gray-700 shadow-sm text-gray-900 dark:text-gray-100" : "text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"}`}
-                title="Grid view"
-              >
-                <LayoutGrid className="h-4 w-4" />
-              </button>
-            </div>
+
+            {view === "drive" && (
+              <div className="flex items-center gap-2 border border-gray-200 dark:border-gray-700 rounded-lg p-0.5 bg-gray-50 dark:bg-gray-800/50">
+                <button
+                  onClick={() => handleSetViewMode("list")}
+                  className={`p-1.5 rounded-md transition-all cursor-pointer ${viewMode === "list" ? "bg-white dark:bg-gray-700 shadow-sm text-gray-900 dark:text-gray-100" : "text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"}`}
+                  title="List view"
+                >
+                  <List className="h-4 w-4" />
+                </button>
+                <button
+                  onClick={() => handleSetViewMode("grid")}
+                  className={`p-1.5 rounded-md transition-all cursor-pointer ${viewMode === "grid" ? "bg-white dark:bg-gray-700 shadow-sm text-gray-900 dark:text-gray-100" : "text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"}`}
+                  title="Grid view"
+                >
+                  <LayoutGrid className="h-4 w-4" />
+                </button>
+              </div>
+            )}
           </div>
 
           <div className="flex-1 overflow-y-auto p-5 custom-scrollbar">
@@ -235,28 +243,28 @@ function AppContent() {
                   Return to Home
                 </button>
               </div>
-            ) : data ? (
-              view === "drive" ? (
-                <FileGrid
-                  data={data}
-                  viewMode={viewMode}
-                  currentPath={currentPath}
-                  onNavigate={handleNavigate}
-                  onFileClick={handleFileClick}
-                  pinnedFolders={pinnedFolders}
-                  onPin={handleTogglePin}
-                  selectedDrive={selectedDrive}
-                />
-              ) : (
-                <Settings onBack={() => setView("drive")} />
-              )
+            ) : view === "drive" && data ? (
+              <FileGrid
+                data={data}
+                viewMode={viewMode}
+                currentPath={currentPath}
+                onNavigate={handleNavigate}
+                onFileClick={handleFileClick}
+                pinnedFolders={pinnedFolders}
+                onPin={handleTogglePin}
+                selectedDrive={selectedDrive}
+              />
+            ) : view === "gallery" ? (
+              <Gallery />
+            ) : view === "settings" ? (
+              <Settings onBack={() => setView("drive")} />
             ) : null}
           </div>
         </main>
       </div >
 
       <PreviewModal
-        item={previewFile}
+        item={view === "drive" ? previewFile : null}
         currentPath={currentPath}
         onClose={() => setPreviewFile(null)}
         selectedDrive={selectedDrive}

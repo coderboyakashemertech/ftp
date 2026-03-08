@@ -1,5 +1,9 @@
 export interface FileItem {
     name: string
+    path?: string
+    folderPath?: string
+    folderName?: string
+    drive?: string
     extension: string | null
     size: number
     modifiedAt: string

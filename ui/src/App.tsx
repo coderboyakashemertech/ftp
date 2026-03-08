@@ -73,6 +73,7 @@ function App() {
         <Sidebar
           pinnedFolders={pinnedFolders}
           onNavigate={handleBreadcrumbNavigate}
+          onDriveSelect={() => { }}
         />
 
         <main className="flex-1 flex flex-col bg-white dark:bg-gray-900 h-[calc(100vh-65px)] rounded-tl-xl border-t border-l border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden z-10 -ml-[1px]">

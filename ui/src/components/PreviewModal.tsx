@@ -24,7 +24,7 @@ export function PreviewModal({
     const [error, setError] = useState<string | null>(null);
 
     const isOpen = !!item;
-    const extension = item?.extension?.toLowerCase() || "";
+    const extension = (item?.extension || "").toLowerCase().replace(/^\./, "");
     const isImage = ["jpg", "jpeg", "png", "gif", "svg", "webp", "avif"].includes(
         extension,
     );
@@ -44,9 +44,11 @@ export function PreviewModal({
     ].includes(extension);
 
     const cleanPath = currentPath === "/" ? "" : currentPath.replace(/^\//, "");
-    const fullPath = cleanPath ? `${cleanPath}/${item?.name}` : item?.name || "";
-    const staticUrl = item ? getStaticUrl(fullPath, selectedDrive) : "";
-    const downloadUrl = item ? getDownloadUrl(fullPath, selectedDrive) : "";
+    const fullPath = item?.path || (cleanPath ? `${cleanPath}/${item?.name}` : item?.name || "");
+    const driveToUse = item?.drive || selectedDrive;
+
+    const staticUrl = item ? getStaticUrl(fullPath, driveToUse) : "";
+    const downloadUrl = item ? getDownloadUrl(fullPath, driveToUse) : "";
 
     useEffect(() => {
         if (isOpen && isText && staticUrl) {

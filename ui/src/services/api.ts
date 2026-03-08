@@ -1,5 +1,5 @@
 import axios from "axios"
-import type { BrowseResponse, PinnedFolder } from "../types"
+import type { BrowseResponse, PinnedFolder, FileItem } from "../types"
 
 // The base URL of the local Express backend, defaulting to the env variable
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3002/api"
@@ -18,6 +18,18 @@ export async function fetchDirectory(path: string = "", drive?: string): Promise
         return response.data
     } catch (error) {
         console.error("Failed to fetch directory:", error)
+        throw error
+    }
+}
+
+export async function fetchGallery(): Promise<{ files: FileItem[] }> {
+    try {
+        const response = await axios.get(`${API_URL}/gallery`, {
+            headers: getAuthHeaders()
+        })
+        return response.data
+    } catch (error) {
+        console.error("Failed to fetch gallery:", error)
         throw error
     }
 }

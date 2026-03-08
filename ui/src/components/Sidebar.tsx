@@ -1,4 +1,4 @@
-import { Plus, Folder, Clock, Star, Trash2, Home, Share2, Settings, HardDrive, X } from "lucide-react";
+import { Plus, Folder, Clock, Star, Trash2, Home, Share2, Settings, HardDrive, X, Image as ImageIcon } from "lucide-react";
 import { cn } from "../lib/utils"
 import type { PinnedFolder } from "../types"
 
@@ -54,9 +54,11 @@ interface SidebarProps {
     selectedDrive?: string | null;
     onDriveSelect: (driveName: string) => void;
     onUnpin?: (id: number) => void;
+    currentView?: "drive" | "gallery" | "settings";
+    onNavigateView?: (view: "drive" | "gallery" | "settings") => void;
 }
 
-export function Sidebar({ pinnedFolders = [], onNavigate, drives = [], selectedDrive, onDriveSelect, onUnpin }: SidebarProps) {
+export function Sidebar({ pinnedFolders = [], onNavigate, drives = [], selectedDrive, onDriveSelect, onUnpin, currentView = "drive", onNavigateView }: SidebarProps) {
     return (
         <aside className="w-64 flex-shrink-0 flex flex-col py-4 pr-3 border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-y-auto">
             <div className="px-4 mb-4">
@@ -67,6 +69,21 @@ export function Sidebar({ pinnedFolders = [], onNavigate, drives = [], selectedD
             </div>
 
             <nav className="flex-1 space-y-1 px-2 overflow-y-auto custom-scrollbar">
+                <div className="mb-6 space-y-1">
+                    <SidebarItem
+                        icon={HardDrive}
+                        label="My Drive"
+                        active={currentView === "drive" || !currentView}
+                        onClick={() => onNavigateView?.("drive")}
+                    />
+                    <SidebarItem
+                        icon={ImageIcon}
+                        label="Gallery"
+                        active={currentView === "gallery"}
+                        onClick={() => onNavigateView?.("gallery")}
+                    />
+                </div>
+
                 {/* Drives Section */}
                 <div className="mb-4">
                     <h3 className="px-4 text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-2">Available Drives</h3>

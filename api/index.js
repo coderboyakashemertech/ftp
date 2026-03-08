@@ -5,6 +5,7 @@ const authRouter = require("./src/routes/auth");
 const foldersRouter = require("./src/routes/folders");
 const filesRouter = require("./src/routes/files");
 const browseRouter = require("./src/routes/browse");
+const galleryRouter = require("./src/routes/gallery");
 const userRouter = require("./src/routes/user");
 const pinnedRouter = require("./src/routes/pinned");
 const authenticateToken = require("./src/middleware/authMiddleware");
@@ -22,6 +23,7 @@ app.use("/api/auth", authRouter);
 app.use("/api/folders", authenticateToken, foldersRouter);
 app.use("/api/files", authenticateToken, filesRouter);
 app.use("/api/browse", authenticateToken, browseRouter);
+app.use("/api/gallery", authenticateToken, galleryRouter);
 app.use("/api/user", userRouter);
 app.use("/api/pinned", authenticateToken, pinnedRouter);
 

@@ -16,3 +16,5 @@
 [2026-03-08T16:14:51.899Z] Drive: C Drive, Root: /mnt/c/Users/akash, Relative: NTUSER.DAT, Target: /mnt/c/Users/akash/NTUSER.DAT
 [2026-03-08T16:14:51.902Z] Stream error: EACCES: permission denied, open '/mnt/c/Users/akash/NTUSER.DAT' (EACCES)
 [2026-03-08T16:14:57.145Z] Drive: C Drive, Root: /mnt/c/Users/akash, Relative: .wslconfig, Target: /mnt/c/Users/akash/.wslconfig
+[2026-03-08T16:50:15.245Z] Drive: Windows, Root: /mnt/c/Windows, Relative: ahmet-yuksek.jpg, Target: /mnt/c/Windows/ahmet-yuksek.jpg
+[2026-03-08T17:29:20.163Z] Drive: C Drive, Root: /mnt/c/Users/akash, Relative: Pictures/Step-2-Account-Type-Selection.png, Target: /mnt/c/Users/akash/Pictures/Step-2-Account-Type-Selection.png
