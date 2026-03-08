@@ -10,9 +10,10 @@ interface FileGridProps {
     onFileClick: (file: FileItem) => void
     pinnedFolders: PinnedFolder[]
     onPin: (name: string, path: string) => void
+    selectedDrive?: string
 }
 
-export function FileGrid({ data, viewMode, currentPath, onNavigate, onFileClick, pinnedFolders, onPin }: FileGridProps) {
+export function FileGrid({ data, viewMode, currentPath, onNavigate, onFileClick, pinnedFolders, onPin, selectedDrive }: FileGridProps) {
     const hasContent = data.folders.length > 0 || data.files.length > 0
 
     if (!hasContent) {
@@ -49,7 +50,8 @@ export function FileGrid({ data, viewMode, currentPath, onNavigate, onFileClick,
                             currentPath={currentPath}
                             onDoubleClick={() => onNavigate(folder)}
                             onPin={onPin}
-                            isPinned={pinnedFolders.some(pf => pf.path === (currentPath === "/" ? "" : currentPath.replace(/^\//, "")) + (currentPath === "/" ? "" : "/") + folder)}
+                            isPinned={pinnedFolders.some(pf => pf.path === (currentPath === "/" ? "" : currentPath.replace(/^\//, "")) + (currentPath === "/" ? "" : "/") + folder && pf.drive === selectedDrive)}
+                            selectedDrive={selectedDrive}
                         />
                     ))}
                     {data.files.map(file => (
@@ -60,6 +62,7 @@ export function FileGrid({ data, viewMode, currentPath, onNavigate, onFileClick,
                             viewMode="list"
                             currentPath={currentPath}
                             onDoubleClick={() => onFileClick(file)}
+                            selectedDrive={selectedDrive}
                         />
                     ))}
                 </div>
@@ -83,7 +86,8 @@ export function FileGrid({ data, viewMode, currentPath, onNavigate, onFileClick,
                                 currentPath={currentPath}
                                 onDoubleClick={() => onNavigate(folder)}
                                 onPin={onPin}
-                                isPinned={pinnedFolders.some(pf => pf.path === (currentPath === "/" ? "" : currentPath.replace(/^\//, "")) + (currentPath === "/" ? "" : "/") + folder)}
+                                isPinned={pinnedFolders.some(pf => pf.path === (currentPath === "/" ? "" : currentPath.replace(/^\//, "")) + (currentPath === "/" ? "" : "/") + folder && pf.drive === selectedDrive)}
+                                selectedDrive={selectedDrive}
                             />
                         ))}
                     </div>
@@ -102,6 +106,7 @@ export function FileGrid({ data, viewMode, currentPath, onNavigate, onFileClick,
                                 viewMode="grid"
                                 currentPath={currentPath}
                                 onDoubleClick={() => onFileClick(file)}
+                                selectedDrive={selectedDrive}
                             />
                         ))}
                     </div>

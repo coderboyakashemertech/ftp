@@ -1,0 +1,14 @@
+[
+    {
+        "name": "C Drive",
+        "path": "/mnt/c/Users/akash/"
+    },
+    {
+        "name": "System32",
+        "path": "/mnt/c/Windows/System32"
+    },
+    {
+        "name": "Windows",
+        "path": "/mnt/c/Windows"
+    }
+]

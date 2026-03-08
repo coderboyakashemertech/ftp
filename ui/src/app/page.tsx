@@ -8,8 +8,10 @@ import { Sidebar } from "./../components/Sidebar"
 import { Breadcrumbs } from "./../components/Breadcrumbs"
 import { FileGrid } from "./../components/FileGrid"
 import { PreviewModal } from "./../components/PreviewModal"
-import { fetchDirectory } from "./../services/api"
+import { fetchDirectory, logout, isAuthenticated, fetchDrives, fetchPinnedFolders, addPinnedFolder, removePinnedFolderByPath, removePinnedFolder } from "./../services/api"
 import type { BrowseResponse, ViewMode, PinnedFolder, FileItem } from "./../types"
+import { Login } from "./../components/Login"
+import { Settings } from "./../components/Settings"
 
 function AppContent() {
   const router = useRouter()
@@ -25,6 +27,11 @@ function AppContent() {
   const [viewMode, setViewMode] = useState<ViewMode>("grid")
   const [pinnedFolders, setPinnedFolders] = useState<PinnedFolder[]>([])
   const [previewFile, setPreviewFile] = useState<FileItem | null>(null)
+  const [isAuth, setIsAuth] = useState(false)
+  const [username, setUsername] = useState<string | null>(null)
+  const [view, setView] = useState<"drive" | "settings">("drive")
+  const [drives, setDrives] = useState<{ name: string; path: string }[]>([])
+  const [selectedDrive, setSelectedDrive] = useState<string>("")
 
   // Sync viewMode with localStorage
   useEffect(() => {
@@ -33,15 +40,10 @@ function AppContent() {
       setViewMode(savedViewMode)
     }
 
-    const savedPins = localStorage.getItem("pinnedFolders")
-    if (savedPins) {
-      try {
-        setPinnedFolders(JSON.parse(savedPins))
-      } catch (e) {
-        console.error("Failed to parse pinned folders", e)
-      }
-    }
+    setIsAuth(isAuthenticated())
+    setUsername(localStorage.getItem("name") || localStorage.getItem("username"))
   }, [])
+
 
   const handleSetViewMode = (mode: ViewMode) => {
     setViewMode(mode)
@@ -62,28 +64,58 @@ function AppContent() {
     router.push(url, { scroll: false })
   }, [pathname, router, searchParams])
 
+  // Initial data fetch and authentication check
   useEffect(() => {
-    async function loadData() {
-      setLoading(true)
-      setError(null)
-      try {
-        // Remove leading slash if any because API expects relative paths
-        const apiPath = currentPath === "/" ? "" : currentPath.replace(/^\//, "")
-        const res = await fetchDirectory(apiPath)
-        setData(res)
-      } catch (err) {
-        if (err instanceof Error) {
-          setError(err.message)
-        } else {
-          setError("Failed to load directory contents")
-        }
-      } finally {
-        setLoading(false)
-      }
+    if (isAuthenticated()) {
+      setIsAuth(true)
+      setUsername(localStorage.getItem("username"))
+      loadDrives()
+      loadPinnedFolders()
     }
+  }, [router])
 
-    loadData()
-  }, [currentPath])
+  const loadPinnedFolders = async () => {
+    try {
+      const pins = await fetchPinnedFolders()
+      setPinnedFolders(pins)
+    } catch (err) {
+      console.error("Failed to load pinned folders:", err)
+    }
+  }
+
+  const loadDrives = async () => {
+    try {
+      const driveList = await fetchDrives()
+      setDrives(driveList)
+      if (driveList.length > 0) {
+        setSelectedDrive(driveList[0].name) // Select the first drive by default
+      }
+    } catch (err) {
+      console.error("Failed to load drives:", err)
+    }
+  }
+
+  // Load files when path or selected drive changes
+  useEffect(() => {
+    if (isAuth && view === "drive") {
+      loadFiles(currentPath)
+    }
+  }, [isAuth, currentPath, view, selectedDrive])
+
+  const loadFiles = async (path: string) => {
+    setLoading(true)
+    setError(null)
+    try {
+      // Remove leading slash if any because API expects relative paths
+      const apiPath = path === "/" ? "" : path.replace(/^\//, "")
+      const result = await fetchDirectory(apiPath, selectedDrive)
+      setData(result)
+    } catch (err) {
+      setError("Failed to load files and folders. Please try again.")
+    } finally {
+      setLoading(false)
+    }
+  }
 
   const handleNavigate = (folderName: string) => {
     const newPath = currentPath === "/" ? `/${folderName}` : `${currentPath}/${folderName}`
@@ -98,28 +130,68 @@ function AppContent() {
     updateUrl(path)
   }
 
-  const handleTogglePin = (name: string, path: string) => {
-    setPinnedFolders(prev => {
-      const isPinned = prev.some(p => p.path === path)
-      let next: PinnedFolder[]
+  const handleTogglePin = async (name: string, path: string) => {
+    const isPinned = pinnedFolders.some(p => p.path === path && p.drive === selectedDrive)
+
+    try {
       if (isPinned) {
-        next = prev.filter(p => p.path !== path)
+        await removePinnedFolderByPath(path, selectedDrive)
       } else {
-        next = [...prev, { name, path }]
+        await addPinnedFolder(name, path, selectedDrive)
       }
-      localStorage.setItem("pinnedFolders", JSON.stringify(next))
-      return next
-    })
+      // Re-fetch pins to ensure UI is in sync
+      const pins = await fetchPinnedFolders()
+      setPinnedFolders(pins)
+    } catch (err) {
+      console.error("Failed to toggle pin:", err)
+    }
+  }
+
+  const handleUnpinById = async (id: number) => {
+    try {
+      await removePinnedFolder(id)
+      // Re-fetch pins to ensure UI is in sync
+      const pins = await fetchPinnedFolders()
+      setPinnedFolders(pins)
+    } catch (err) {
+      console.error("Failed to unpin:", err)
+    }
+  }
+
+  const handleLogout = () => {
+    logout()
+    setIsAuth(false)
+    setUsername(null)
+  }
+
+  const handleLoginSuccess = () => {
+    setIsAuth(true)
+    setUsername(localStorage.getItem("name") || localStorage.getItem("username"))
+  }
+
+
+  if (!isAuth) {
+    return <Login onLoginSuccess={handleLoginSuccess} />
   }
 
   return (
-    <div className="font-sans min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 flex flex-col selection:bg-indigo-100 selection:text-indigo-900 overflow-hidden">
-      <Header />
+    <div className="font-sans h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 flex flex-col selection:bg-indigo-100 selection:text-indigo-900 overflow-hidden">
+      <Header onLogout={handleLogout} username={username} onNavigateToSettings={() => setView("settings")} />
 
       <div className="flex flex-1 overflow-hidden">
-        <Sidebar pinnedFolders={pinnedFolders} onNavigate={handleBreadcrumbNavigate} />
+        <Sidebar
+          pinnedFolders={pinnedFolders}
+          onNavigate={handleBreadcrumbNavigate}
+          drives={drives}
+          selectedDrive={selectedDrive}
+          onDriveSelect={(driveName) => {
+            setSelectedDrive(driveName);
+            handleBreadcrumbNavigate("/"); // Reset path when switching drives
+          }}
+          onUnpin={handleUnpinById}
+        />
 
-        <main className="flex-1 flex flex-col bg-white dark:bg-gray-900 h-[calc(100vh-65px)] rounded-tl-xl border-t border-l border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden z-10 -ml-[1px]">
+        <main className="flex-1 flex flex-col bg-white dark:bg-gray-900 border-t border-l border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden z-10 -ml-[1px]">
           {/* Main Content Toolbar */}
           <div className="px-6 py-4 flex items-center justify-between bg-white dark:bg-gray-900 z-10 sticky top-0 border-b border-gray-100 dark:border-gray-800">
             <div className="flex flex-col gap-1">
@@ -146,7 +218,7 @@ function AppContent() {
             </div>
           </div>
 
-          <div className="flex-1 overflow-y-auto px-6 pb-8 custom-scrollbar">
+          <div className="flex-1 overflow-y-auto p-5 custom-scrollbar">
 
             {loading ? (
               <div className="flex justify-center items-center h-64">
@@ -164,15 +236,20 @@ function AppContent() {
                 </button>
               </div>
             ) : data ? (
-              <FileGrid
-                data={data}
-                viewMode={viewMode}
-                currentPath={currentPath}
-                onNavigate={handleNavigate}
-                onFileClick={handleFileClick}
-                pinnedFolders={pinnedFolders}
-                onPin={handleTogglePin}
-              />
+              view === "drive" ? (
+                <FileGrid
+                  data={data}
+                  viewMode={viewMode}
+                  currentPath={currentPath}
+                  onNavigate={handleNavigate}
+                  onFileClick={handleFileClick}
+                  pinnedFolders={pinnedFolders}
+                  onPin={handleTogglePin}
+                  selectedDrive={selectedDrive}
+                />
+              ) : (
+                <Settings onBack={() => setView("drive")} />
+              )
             ) : null}
           </div>
         </main>
@@ -182,6 +259,7 @@ function AppContent() {
         item={previewFile}
         currentPath={currentPath}
         onClose={() => setPreviewFile(null)}
+        selectedDrive={selectedDrive}
       />
     </div >
   )

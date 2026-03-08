@@ -1,0 +1,18 @@
+[2026-03-08T16:13:14.731Z] Drive: C Drive, Root: /mnt/c/Users/akash, Relative: .node_repl_history, Target: /mnt/c/Users/akash/.node_repl_history
+[2026-03-08T16:13:14.734Z] res.download error: Not Found (undefined)
+[2026-03-08T16:13:15.773Z] Drive: C Drive, Root: /mnt/c/Users/akash, Relative: .node_repl_history, Target: /mnt/c/Users/akash/.node_repl_history
+[2026-03-08T16:13:15.776Z] res.download error: Not Found (undefined)
+[2026-03-08T16:13:25.420Z] Drive: C Drive, Root: /mnt/c/Users/akash, Relative: .node_repl_history, Target: /mnt/c/Users/akash/.node_repl_history
+[2026-03-08T16:13:25.421Z] res.download error: Not Found (undefined)
+[2026-03-08T16:13:27.033Z] Drive: C Drive, Root: /mnt/c/Users/akash, Relative: .node_repl_history, Target: /mnt/c/Users/akash/.node_repl_history
+[2026-03-08T16:13:27.034Z] res.download error: Not Found (undefined)
+[2026-03-08T16:13:27.745Z] Drive: C Drive, Root: /mnt/c/Users/akash, Relative: .node_repl_history, Target: /mnt/c/Users/akash/.node_repl_history
+[2026-03-08T16:13:27.747Z] res.download error: Not Found (undefined)
+[2026-03-08T16:13:51.852Z] Drive: C Drive, Root: /mnt/c/Users/akash, Relative: .node_repl_history, Target: /mnt/c/Users/akash/.node_repl_history
+[2026-03-08T16:13:51.854Z] res.download error: Not Found (undefined)
+[2026-03-08T16:14:42.531Z] Drive: C Drive, Root: /mnt/c/Users/akash, Relative: .node_repl_history, Target: /mnt/c/Users/akash/.node_repl_history
+[2026-03-08T16:14:50.851Z] Drive: C Drive, Root: /mnt/c/Users/akash, Relative: NTUSER.DAT, Target: /mnt/c/Users/akash/NTUSER.DAT
+[2026-03-08T16:14:50.854Z] Stream error: EACCES: permission denied, open '/mnt/c/Users/akash/NTUSER.DAT' (EACCES)
+[2026-03-08T16:14:51.899Z] Drive: C Drive, Root: /mnt/c/Users/akash, Relative: NTUSER.DAT, Target: /mnt/c/Users/akash/NTUSER.DAT
+[2026-03-08T16:14:51.902Z] Stream error: EACCES: permission denied, open '/mnt/c/Users/akash/NTUSER.DAT' (EACCES)
+[2026-03-08T16:14:57.145Z] Drive: C Drive, Root: /mnt/c/Users/akash, Relative: .wslconfig, Target: /mnt/c/Users/akash/.wslconfig

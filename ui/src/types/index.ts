@@ -14,6 +14,8 @@ export interface BrowseResponse {
 export type ViewMode = "grid" | "list"
 
 export interface PinnedFolder {
+    id?: number
     name: string
     path: string
+    drive?: string
 }

@@ -4,7 +4,7 @@ const path = require("path");
 
 const router = express.Router();
 
-const ROOT_DIR = path.resolve(process.env.ROOT_DIR || "./files");
+const { resolveRootDir } = require("../utils/drives");
 
 /**
  * GET /api/files
@@ -17,10 +17,12 @@ const ROOT_DIR = path.resolve(process.env.ROOT_DIR || "./files");
 router.get("/", (req, res) => {
     try {
         const relativePath = req.query.path || "";
-        const targetDir = path.resolve(ROOT_DIR, relativePath);
+        const driveName = req.query.drive;
+        const rootDir = resolveRootDir(driveName);
+        const targetDir = path.resolve(rootDir, relativePath);
 
         // Path traversal protection
-        if (!targetDir.startsWith(ROOT_DIR)) {
+        if (!targetDir.startsWith(rootDir)) {
             return res.status(403).json({
                 error: "Forbidden: Access outside the root directory is not allowed.",
             });
@@ -73,14 +75,16 @@ router.get("/", (req, res) => {
 router.get("/serve", (req, res) => {
     try {
         const relativePath = req.query.path || "";
+        const driveName = req.query.drive;
         if (!relativePath) {
             return res.status(400).json({ error: "Missing 'path' query parameter" });
         }
 
-        const targetFile = path.resolve(ROOT_DIR, relativePath);
+        const rootDir = resolveRootDir(driveName);
+        const targetFile = path.resolve(rootDir, relativePath);
 
         // Path traversal protection
-        if (!targetFile.startsWith(ROOT_DIR)) {
+        if (!targetFile.startsWith(rootDir)) {
             return res.status(403).json({ error: "Forbidden" });
         }
 
@@ -148,14 +152,18 @@ router.get("/serve", (req, res) => {
 router.get("/download", (req, res) => {
     try {
         const relativePath = req.query.path || "";
+        const driveName = req.query.drive;
         if (!relativePath) {
             return res.status(400).json({ error: "Missing 'path' query parameter" });
         }
 
-        const targetFile = path.resolve(ROOT_DIR, relativePath);
+        const rootDir = resolveRootDir(driveName);
+        const targetFile = path.resolve(rootDir, relativePath);
+        const logEntry = `[${new Date().toISOString()}] Drive: ${driveName || "DEFAULT"}, Root: ${rootDir}, Relative: ${relativePath}, Target: ${targetFile}\n`;
+        fs.appendFileSync(path.join(__dirname, "../../download_debug.log"), logEntry);
 
         // Path traversal protection
-        if (!targetFile.startsWith(ROOT_DIR)) {
+        if (!targetFile.startsWith(rootDir)) {
             return res.status(403).json({ error: "Forbidden" });
         }
 
@@ -168,18 +176,24 @@ router.get("/download", (req, res) => {
             return res.status(400).json({ error: "Not a file" });
         }
 
-        // res.download() sets Content-Disposition to "attachment"
-        res.download(targetFile, path.basename(targetFile), (err) => {
-            if (err) {
-                console.error("Download failed:", err);
-                if (!res.headersSent) {
-                    res.status(500).json({ error: "Download failed" });
-                }
+        // Set headers for download
+        res.setHeader('Content-Disposition', `attachment; filename="${path.basename(targetFile)}"`);
+        res.setHeader('Content-Type', 'application/octet-stream');
+
+        const fileStream = fs.createReadStream(targetFile);
+        fileStream.on('error', (err) => {
+            const errLog = `[${new Date().toISOString()}] Stream error: ${err.message} (${err.code})\n`;
+            fs.appendFileSync(path.join(__dirname, "../../download_debug.log"), errLog);
+            if (!res.headersSent) {
+                res.status(500).json({ error: "Download failed", message: err.message });
             }
         });
+
+        fileStream.pipe(res);
     } catch (err) {
-        console.error("Error downloading file:", err);
-        return res.status(500).json({ error: "Internal server error" });
+        const catchLog = `[${new Date().toISOString()}] Unexpected error: ${err.message}\n`;
+        fs.appendFileSync(path.join(__dirname, "../../download_debug.log"), catchLog);
+        return res.status(500).json({ error: "Internal server error", message: err.message });
     }
 });
 

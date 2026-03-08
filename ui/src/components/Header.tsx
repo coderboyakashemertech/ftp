@@ -1,9 +1,15 @@
-import { Search, Settings, HelpCircle, User } from "lucide-react"
+import { Search, Settings, HelpCircle, User, LogOut } from "lucide-react"
 
-export function Header() {
+interface HeaderProps {
+    onLogout?: () => void;
+    username?: string | null;
+    onNavigateToSettings?: () => void;
+}
+
+export function Header({ onLogout, username, onNavigateToSettings }: HeaderProps) {
     return (
-        <header className="flex items-center justify-between px-6 py-2 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 sticky top-0 z-10 transition-colors">
-            <div className="flex items-center gap-4">
+        <header className="flex items-center justify-between px-6 py-2 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 sticky top-0 z-[50] transition-colors">
+            <div className="flex items-center gap-4 flex-shrink-0">
                 <div className="flex items-center gap-2">
                     {/* A simple placeholder logo consisting of colored shapes */}
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,7 +24,7 @@ export function Header() {
                 </div>
             </div>
 
-            <div className="flex-1 max-w-2xl px-6">
+            <div className="flex-1 max-w-2xl px-6 min-w-0">
                 <div className="relative group">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <Search className="h-5 w-5 text-gray-500 group-focus-within:text-gray-900 dark:group-focus-within:text-gray-100 transition-colors" />
@@ -31,19 +37,28 @@ export function Header() {
                 </div>
             </div>
 
-            <div className="flex items-center gap-4">
-                <button className="p-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors cursor-pointer">
+            <div className="flex items-center gap-4 flex-shrink-0">
+                <button className="p-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors cursor-pointer" title="Help">
                     <HelpCircle className="h-5 w-5" />
                 </button>
-                <button className="p-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors cursor-pointer">
+                <button
+                    onClick={onNavigateToSettings}
+                    className="p-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors cursor-pointer"
+                    title="Settings"
+                >
                     <Settings className="h-5 w-5" />
                 </button>
-                <button className="p-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors cursor-pointer">
-                    <div className="h-8 w-8 rounded-full bg-indigo-600 flex items-center justify-center text-white">
-                        <User className="h-5 w-5" />
+                <div className="flex items-center gap-3 pl-2 border-l border-gray-100 dark:border-gray-800">
+                    <div className="flex flex-col items-end hidden sm:flex">
+                        <span className="text-xs font-semibold text-gray-900 dark:text-gray-100 uppercase tracking-wider whitespace-nowrap">{username || "User"}</span>
+                        <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-tighter">Verified</span>
                     </div>
-                </button>
+                    <button onClick={onLogout} className="p-2 text-gray-600 dark:text-gray-400 hover:bg-rose-50 dark:hover:bg-rose-900/20 hover:text-rose-600 dark:hover:text-rose-400 rounded-full transition-all cursor-pointer group" title="Logout">
+                        <LogOut className="h-5 w-5 group-hover:translate-x-0.5 transition-transform" />
+                    </button>
+                </div>
             </div>
         </header>
     )
 }
+

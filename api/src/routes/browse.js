@@ -4,12 +4,23 @@ const path = require("path");
 
 const router = express.Router();
 
-const ROOT_DIR = path.resolve(process.env.ROOT_DIR || "./files");
+const ROOT_DIR_DEFAULT = path.resolve(process.env.ROOT_DIR || "./files");
+const { getDrives, resolveRootDir } = require("../utils/drives");
+
+/**
+ * GET /api/browse/drives
+ * Returns the list of available drives.
+ */
+router.get("/drives", (req, res) => {
+    const drives = getDrives();
+    res.json(drives);
+});
 
 /**
  * GET /api/browse
  * Query Params:
- *   - path (optional): relative sub-path inside ROOT_DIR
+ *   - path (optional): relative sub-path inside the drive root
+ *   - drive (optional): the name of the drive (from drives.json)
  *
  * Response:
  *   { path, folders: string[], files: [{ name, extension, size, modifiedAt }] }
@@ -17,10 +28,13 @@ const ROOT_DIR = path.resolve(process.env.ROOT_DIR || "./files");
 router.get("/", (req, res) => {
     try {
         const relativePath = req.query.path || "";
-        const targetDir = path.resolve(ROOT_DIR, relativePath);
+        const driveName = req.query.drive;
+
+        const rootDir = resolveRootDir(driveName);
+        const targetDir = path.resolve(rootDir, relativePath);
 
         // Path traversal protection
-        if (!targetDir.startsWith(ROOT_DIR)) {
+        if (!targetDir.startsWith(rootDir)) {
             return res.status(403).json({
                 error: "Forbidden: Access outside the root directory is not allowed.",
             });

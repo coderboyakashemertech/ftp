@@ -10,7 +10,7 @@ interface ContextMenuProps {
     onDownload?: () => void;
     downloadUrl?: string;
     fileName?: string;
-    onCopyPath?: () => void;
+    onCopyLink?: () => void;
     onPin?: () => void;
     isPinned?: boolean;
     onOpen?: () => void;
@@ -24,7 +24,7 @@ export function ContextMenu({
     onDownload,
     downloadUrl,
     fileName,
-    onCopyPath,
+    onCopyLink,
     onPin,
     isPinned,
     onOpen,
@@ -89,11 +89,11 @@ export function ContextMenu({
             )}
 
             <button
-                onClick={() => { onCopyPath?.(); onClose(); }}
+                onClick={() => { onCopyLink?.(); onClose(); }}
                 className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2 cursor-pointer"
             >
                 <Copy className="h-4 w-4" />
-                Copy Path
+                Copy Link
             </button>
 
             {isFolder && (

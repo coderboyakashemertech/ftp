@@ -1,9 +1,13 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const authRouter = require("./src/routes/auth");
 const foldersRouter = require("./src/routes/folders");
 const filesRouter = require("./src/routes/files");
 const browseRouter = require("./src/routes/browse");
+const userRouter = require("./src/routes/user");
+const pinnedRouter = require("./src/routes/pinned");
+const authenticateToken = require("./src/middleware/authMiddleware");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,12 +16,19 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use("/api/folders", foldersRouter);
-app.use("/api/files", filesRouter);
-app.use("/api/browse", browseRouter);
+app.use("/api/auth", authRouter);
 
-// Serve static files from the root directory so the UI can fetch images
+// Protected Routes (require auth)
+app.use("/api/folders", authenticateToken, foldersRouter);
+app.use("/api/files", authenticateToken, filesRouter);
+app.use("/api/browse", authenticateToken, browseRouter);
+app.use("/api/user", userRouter);
+app.use("/api/pinned", authenticateToken, pinnedRouter);
+
+// Serve static files from the root directory
+// NOTE: Ideally, static files should also be protected or served via a route that checks auth
 app.use("/api/static", express.static(process.env.ROOT_DIR || "./files"));
+
 
 // Health check
 app.get("/", (req, res) => {

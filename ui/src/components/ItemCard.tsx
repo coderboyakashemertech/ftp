@@ -2,7 +2,6 @@ import { useState } from "react"
 import { Folder, File as FileIcon, MoreVertical, FileText, ImageIcon, Code, FileArchive, Film, Music } from "lucide-react"
 import type { FileItem } from "../types"
 import { format } from "date-fns"
-import Image from "next/image"
 import { ContextMenu } from "./ContextMenu"
 import { getDownloadUrl, getStaticUrl } from "../services/api"
 
@@ -14,6 +13,7 @@ interface ItemCardProps {
     onDoubleClick: () => void
     isPinned?: boolean
     onPin?: (name: string, path: string) => void
+    selectedDrive?: string
 }
 
 function getFileIcon(extension: string | null) {
@@ -47,7 +47,7 @@ function formatBytes(bytes: number, decimals = 2) {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i]
 }
 
-export function ItemCard({ item, isFolder, viewMode, currentPath, onDoubleClick, isPinned, onPin }: ItemCardProps) {
+export function ItemCard({ item, isFolder, viewMode, currentPath, onDoubleClick, isPinned, onPin, selectedDrive }: ItemCardProps) {
     const name = isFolder ? (item as string) : (item as FileItem).name
     const isImage = !isFolder && ['jpg', 'jpeg', 'png', 'gif', 'svg', 'webp', 'avif', 'bmp', 'ico', 'tiff'].includes((item as FileItem).extension?.toLowerCase() || '')
     const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:3001/api"
@@ -59,7 +59,7 @@ export function ItemCard({ item, isFolder, viewMode, currentPath, onDoubleClick,
     // Construct the full path securely.
     const cleanPath = currentPath === "/" ? "" : currentPath.replace(/^\//, '')
     const fullPath = cleanPath ? `${cleanPath}/${name}` : name
-    const imagePath = `${staticUrl}/${fullPath}`
+    const imagePath = getStaticUrl(fullPath, selectedDrive)
 
     const handleContextMenu = (e: React.MouseEvent) => {
         e.preventDefault();
@@ -72,13 +72,16 @@ export function ItemCard({ item, isFolder, viewMode, currentPath, onDoubleClick,
         setContextMenu({ x: rect.right - 180, y: rect.bottom + 5 });
     };
 
-    const handleCopyPath = () => {
-        navigator.clipboard.writeText(fullPath);
-        // Could add a toast here
+    const handleCopyLink = () => {
+        if (!isFolder) {
+            navigator.clipboard.writeText(getStaticUrl(fullPath, selectedDrive));
+        } else {
+            navigator.clipboard.writeText(fullPath);
+        }
     };
 
-    const downloadUrl = !isFolder ? getDownloadUrl(fullPath) : undefined;
-    const staticUrl_direct = !isFolder ? getStaticUrl(fullPath) : undefined;
+    const downloadUrl = !isFolder ? getDownloadUrl(fullPath, selectedDrive) : undefined;
+    const staticUrl_direct = !isFolder ? getStaticUrl(fullPath, selectedDrive) : undefined;
 
     if (viewMode === "list") {
         return (
@@ -92,12 +95,10 @@ export function ItemCard({ item, isFolder, viewMode, currentPath, onDoubleClick,
                         {isFolder ? (
                             <Folder className="h-5 w-5 text-gray-700 dark:text-gray-300 fill-gray-700 dark:fill-gray-300" />
                         ) : isImage ? (
-                            <Image
+                            <img
                                 src={imagePath}
                                 alt={name}
-                                fill
-                                className="object-cover"
-                                unoptimized={false}
+                                className="w-full h-full object-cover"
                             />
                         ) : (
                             getFileIcon((item as FileItem).extension)
@@ -128,7 +129,7 @@ export function ItemCard({ item, isFolder, viewMode, currentPath, onDoubleClick,
                             onClose={() => setContextMenu(null)}
                             downloadUrl={downloadUrl}
                             fileName={name}
-                            onCopyPath={handleCopyPath}
+                            onCopyLink={handleCopyLink}
                             onPin={onPin ? () => onPin(name, fullPath) : undefined}
                             isPinned={isPinned}
                             onOpen={onDoubleClick}
@@ -169,7 +170,7 @@ export function ItemCard({ item, isFolder, viewMode, currentPath, onDoubleClick,
                     onClose={() => setContextMenu(null)}
                     downloadUrl={downloadUrl}
                     fileName={name}
-                    onCopyPath={handleCopyPath}
+                    onCopyLink={handleCopyLink}
                     onPin={onPin ? () => onPin(name, fullPath) : undefined}
                     isPinned={isPinned}
                     onOpen={onDoubleClick}
@@ -185,7 +186,7 @@ export function ItemCard({ item, isFolder, viewMode, currentPath, onDoubleClick,
                 <>
                     <div className="flex-1 bg-gray-50 dark:bg-gray-800/50 flex items-center justify-center border-b border-gray-100 dark:border-gray-800 overflow-hidden relative">
                         {isImage ? (
-                            <Image src={imagePath} alt={name || "File image"} fill className="object-cover" unoptimized={false} />
+                            <img src={imagePath} alt={name || "File image"} className="w-full h-full object-cover" />
                         ) : (
                             getFileIcon((item as FileItem).extension)
                         )}
