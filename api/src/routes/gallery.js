@@ -88,7 +88,7 @@ router.get("/", async (req, res) => {
             const data = JSON.parse(await fsPromises.readFile(galleryJsonPath, "utf8"));
 
             for (const folderObj of data.folders || []) {
-                for (const img of folderObj.images || []) {
+                for (const img of folderObj.files || folderObj.images || []) {
                     const absPath = img.path;
 
                     let matchedDrive = null;

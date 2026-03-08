@@ -3,8 +3,12 @@
         {
             "folder_name": "Pictures",
             "folder_path": "/mnt/c/Users/akash/Pictures",
-            "image_count": 24,
-            "images": [
+            "file_count": 25,
+            "files": [
+                {
+                    "name": "20251125_022802.mp4",
+                    "path": "/mnt/c/Users/akash/Pictures/20251125_022802.mp4"
+                },
                 {
                     "name": "Gemini_Generated_Image_1bpcfk1bpcfk1bpc.png",
                     "path": "/mnt/c/Users/akash/Pictures/Gemini_Generated_Image_1bpcfk1bpcfk1bpc.png"
@@ -106,8 +110,8 @@
         {
             "folder_name": "Screenshots",
             "folder_path": "/mnt/c/Users/akash/Pictures/Screenshots",
-            "image_count": 117,
-            "images": [
+            "file_count": 118,
+            "files": [
                 {
                     "name": "Screenshot 2026-01-31 115329.png",
                     "path": "/mnt/c/Users/akash/Pictures/Screenshots/Screenshot 2026-01-31 115329.png"
@@ -575,14 +579,18 @@
                 {
                     "name": "Screenshot 2026-03-08 205117.png",
                     "path": "/mnt/c/Users/akash/Pictures/Screenshots/Screenshot 2026-03-08 205117.png"
+                },
+                {
+                    "name": "Screenshot 2026-03-08 230822.png",
+                    "path": "/mnt/c/Users/akash/Pictures/Screenshots/Screenshot 2026-03-08 230822.png"
                 }
             ]
         },
         {
             "folder_name": "old",
             "folder_path": "/mnt/c/Users/akash/Pictures/Screenshots/old",
-            "image_count": 92,
-            "images": [
+            "file_count": 92,
+            "files": [
                 {
                     "name": "Screenshot 2025-12-22 192223.png",
                     "path": "/mnt/c/Users/akash/Pictures/Screenshots/old/Screenshot 2025-12-22 192223.png"
