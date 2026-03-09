@@ -1,7 +1,8 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
-const { resolveRootDir } = require("../utils/drives");
+const { getDrives, ROOT_DIR_DEFAULT } = require("../utils/drives");
+const fsPromises = require("fs").promises;
 
 const router = express.Router();
 
@@ -77,9 +78,11 @@ async function findMediaFiles(dir, rootDir, driveName, resultList, visited = new
  */
 router.get("/", async (req, res) => {
     try {
-        const { getDrives, ROOT_DIR_DEFAULT } = require("../utils/drives");
         const drives = getDrives();
-        const resolvedDrives = drives.map(d => ({ name: d.name, absPath: path.resolve(d.path) }));
+        const resolvedDrives = (drives || []).map(d => ({
+            name: d.name,
+            absPath: d.path ? path.resolve(d.path) : null
+        })).filter(d => d.absPath);
 
         const mediaFiles = [];
         const galleryJsonPath = path.join(__dirname, "../../gallery.json");
@@ -90,9 +93,15 @@ router.get("/", async (req, res) => {
             const folders = Array.isArray(data) ? data : (data.folders || []);
 
             for (const folderObj of folders) {
-                for (const img of folderObj.files || folderObj.images || []) {
-                    const absPath = img.path;
+                if (!folderObj || typeof folderObj !== 'object') continue;
 
+                const files = folderObj.files || folderObj.images || [];
+                if (!Array.isArray(files)) continue;
+
+                for (const img of files) {
+                    if (!img || !img.path || !img.name) continue;
+
+                    const absPath = img.path;
                     let matchedDrive = null;
                     let rootDirForMatched = null;
 
@@ -105,26 +114,29 @@ router.get("/", async (req, res) => {
                         }
                     }
 
-                    if (!matchedDrive) {
-                        continue;
+                    if (!matchedDrive) continue;
+
+                    try {
+                        const relativePath = path.relative(rootDirForMatched, absPath).replace(/\\/g, '/');
+                        let folderPath = path.dirname(relativePath).replace(/\\/g, '/');
+                        if (folderPath === '.') folderPath = '';
+
+                        const ext = path.extname(img.name).toLowerCase();
+
+                        mediaFiles.push({
+                            name: img.name,
+                            path: relativePath,
+                            folderPath: folderPath,
+                            folderName: folderObj.folder_name || path.basename(folderPath) || "Root",
+                            drive: matchedDrive,
+                            extension: ext,
+                            size: 0,
+                            absPath: absPath,
+                            modifiedAt: new Date().toISOString()
+                        });
+                    } catch (err) {
+                        // Skip individual malformed paths
                     }
-
-                    const relativePath = path.relative(rootDirForMatched, absPath).replace(/\\/g, '/');
-                    let folderPath = path.dirname(relativePath).replace(/\\/g, '/');
-                    if (folderPath === '.') folderPath = '';
-
-                    const ext = path.extname(img.name).toLowerCase();
-
-                    mediaFiles.push({
-                        name: img.name,
-                        path: relativePath,
-                        folderPath: folderPath,
-                        folderName: folderObj.folder_name || path.basename(folderPath) || "Root",
-                        drive: matchedDrive,
-                        extension: ext,
-                        size: 0,
-                        modifiedAt: new Date().toISOString()
-                    });
                 }
             }
         }
@@ -163,6 +175,21 @@ router.get("/", async (req, res) => {
         const total = filteredFiles.length;
         const paginatedFiles = filteredFiles.slice(startIndex, endIndex);
 
+        // Fetch real sizes for paginated results
+        for (const file of paginatedFiles) {
+            try {
+                if (file.absPath && fs.existsSync(file.absPath)) {
+                    const stats = fs.statSync(file.absPath);
+                    file.size = stats.size;
+                    file.modifiedAt = stats.mtime.toISOString();
+                }
+            } catch (err) {
+                // Keep default
+            }
+            // Remove absPath from response to keep it clean
+            delete file.absPath;
+        }
+
         res.json({
             files: paginatedFiles,
             folders: Array.from(foldersMap.values()),
@@ -173,7 +200,7 @@ router.get("/", async (req, res) => {
         });
     } catch (err) {
         console.error("[GALLERY] Error generating gallery:", err);
-        res.status(500).json({ error: "Internal server error" });
+        res.status(500).json({ error: "Internal server error", details: err.message });
     }
 });
 
