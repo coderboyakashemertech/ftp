@@ -33,38 +33,40 @@ export function FileGrid({ data, viewMode, currentPath, onNavigate, onFileClick,
 
     if (viewMode === "list") {
         return (
-            <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm">
-                <div className="grid grid-cols-12 gap-4 px-4 py-3 border-b border-gray-200 dark:border-gray-800 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider bg-gray-50/50 dark:bg-gray-800/20">
-                    <div className="col-span-6">Name</div>
-                    <div className="col-span-3">Last modified</div>
-                    <div className="col-span-2">File size</div>
-                    <div className="col-span-1"></div>
-                </div>
-                <div className="divide-y divide-gray-100 dark:divide-gray-800">
-                    {data.folders.map(folder => (
-                        <ItemCard
-                            key={folder}
-                            item={folder}
-                            isFolder={true}
-                            viewMode="list"
-                            currentPath={currentPath}
-                            onDoubleClick={() => onNavigate(folder)}
-                            onPin={onPin}
-                            isPinned={pinnedFolders.some(pf => pf.path === (currentPath === "/" ? "" : currentPath.replace(/^\//, "")) + (currentPath === "/" ? "" : "/") + folder && pf.drive === selectedDrive)}
-                            selectedDrive={selectedDrive}
-                        />
-                    ))}
-                    {data.files.map(file => (
-                        <ItemCard
-                            key={file.name}
-                            item={file}
-                            isFolder={false}
-                            viewMode="list"
-                            currentPath={currentPath}
-                            onDoubleClick={() => onFileClick(file)}
-                            selectedDrive={selectedDrive}
-                        />
-                    ))}
+            <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm overflow-x-auto custom-scrollbar">
+                <div className="min-w-[500px] md:min-w-full">
+                    <div className="grid grid-cols-12 gap-4 px-4 py-3 border-b border-gray-200 dark:border-gray-800 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider bg-gray-50/50 dark:bg-gray-800/20">
+                        <div className="col-span-6">Name</div>
+                        <div className="col-span-3">Last modified</div>
+                        <div className="col-span-2">File size</div>
+                        <div className="col-span-1"></div>
+                    </div>
+                    <div className="divide-y divide-gray-100 dark:divide-gray-800">
+                        {data.folders.map(folder => (
+                            <ItemCard
+                                key={folder}
+                                item={folder}
+                                isFolder={true}
+                                viewMode="list"
+                                currentPath={currentPath}
+                                onDoubleClick={() => onNavigate(folder)}
+                                onPin={onPin}
+                                isPinned={pinnedFolders.some(pf => pf.path === (currentPath === "/" ? "" : currentPath.replace(/^\//, "")) + (currentPath === "/" ? "" : "/") + folder && pf.drive === selectedDrive)}
+                                selectedDrive={selectedDrive}
+                            />
+                        ))}
+                        {data.files.map(file => (
+                            <ItemCard
+                                key={file.name}
+                                item={file}
+                                isFolder={false}
+                                viewMode="list"
+                                currentPath={currentPath}
+                                onDoubleClick={() => onFileClick(file)}
+                                selectedDrive={selectedDrive}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         )

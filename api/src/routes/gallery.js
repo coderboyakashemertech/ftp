@@ -132,7 +132,48 @@ router.get("/", async (req, res) => {
             }
         }
 
-        res.json({ files: mediaFiles });
+        const { folderPath, page, limit } = req.query;
+        const pageInt = parseInt(page) || 1;
+        const limitInt = parseInt(limit) || 10;
+        const startIndex = (pageInt - 1) * limitInt;
+        const endIndex = pageInt * limitInt;
+
+        // 1. Gather all folders for the frontend to show the folder list
+        const foldersMap = new Map();
+        mediaFiles.forEach(file => {
+            const fPath = file.folderPath ? `/${file.folderPath}` : "/";
+            if (!foldersMap.has(fPath)) {
+                foldersMap.set(fPath, {
+                    name: file.folderName || fPath,
+                    path: fPath,
+                    count: 1,
+                    preview: file
+                });
+            } else {
+                foldersMap.get(fPath).count++;
+            }
+        });
+
+        // 2. Filter files by folder if requested
+        let filteredFiles = mediaFiles;
+        if (folderPath) {
+            filteredFiles = mediaFiles.filter(file => {
+                const fPath = file.folderPath ? `/${file.folderPath}` : "/";
+                return fPath === folderPath;
+            });
+        }
+
+        const total = filteredFiles.length;
+        const paginatedFiles = filteredFiles.slice(startIndex, endIndex);
+
+        res.json({
+            files: paginatedFiles,
+            folders: Array.from(foldersMap.values()),
+            total,
+            page: pageInt,
+            limit: limitInt,
+            totalPages: Math.ceil(total / limitInt)
+        });
     } catch (err) {
         console.error("[GALLERY] Error generating gallery:", err);
         res.status(500).json({ error: "Internal server error" });

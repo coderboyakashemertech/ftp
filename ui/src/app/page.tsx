@@ -33,6 +33,7 @@ function AppContent() {
   const [view, setView] = useState<"drive" | "gallery" | "settings">("drive")
   const [drives, setDrives] = useState<{ name: string; path: string }[]>([])
   const [selectedDrive, setSelectedDrive] = useState<string>("")
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   // Sync viewMode with localStorage
   useEffect(() => {
@@ -129,6 +130,12 @@ function AppContent() {
 
   const handleBreadcrumbNavigate = (path: string) => {
     updateUrl(path)
+    setIsSidebarOpen(false)
+  }
+
+  const handleNavigateView = (newView: "drive" | "gallery" | "settings") => {
+    setView(newView)
+    setIsSidebarOpen(false)
   }
 
   const handleTogglePin = async (name: string, path: string) => {
@@ -177,9 +184,22 @@ function AppContent() {
 
   return (
     <div className="font-sans h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 flex flex-col selection:bg-indigo-100 selection:text-indigo-900 overflow-hidden">
-      <Header onLogout={handleLogout} username={username} onNavigateToSettings={() => setView("settings")} />
+      <Header
+        onLogout={handleLogout}
+        username={username}
+        onNavigateToSettings={() => { setView("settings"); setIsSidebarOpen(false); }}
+        onToggleSidebar={() => setIsSidebarOpen(prev => !prev)}
+      />
 
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 overflow-hidden relative">
+        {/* Mobile Sidebar Overlay */}
+        {isSidebarOpen && (
+          <div
+            className="fixed inset-0 bg-gray-900/40 dark:bg-black/60 z-[55] md:hidden backdrop-blur-sm transition-opacity"
+            onClick={() => setIsSidebarOpen(false)}
+          />
+        )}
+
         <Sidebar
           pinnedFolders={pinnedFolders}
           onNavigate={handleBreadcrumbNavigate}
@@ -188,10 +208,13 @@ function AppContent() {
           onDriveSelect={(driveName) => {
             setSelectedDrive(driveName);
             handleBreadcrumbNavigate("/"); // Reset path when switching drives
+            setIsSidebarOpen(false);
           }}
           onUnpin={handleUnpinById}
           currentView={view}
-          onNavigateView={setView}
+          onNavigateView={handleNavigateView}
+          isOpen={isSidebarOpen}
+          onClose={() => setIsSidebarOpen(false)}
         />
 
         <main className="flex-1 flex flex-col bg-white dark:bg-gray-900 border-t border-l border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden z-10 -ml-[1px]">

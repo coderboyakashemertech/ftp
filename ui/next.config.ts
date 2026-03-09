@@ -4,15 +4,15 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        port: "3002",
-        protocol: "http",
-        hostname: "localhost",
-        pathname: "/api/static/**",
+        protocol: "https",
+        hostname: "api.pakyaaa.online",
+        pathname: "/api/files/**",
       },
       {
-        protocol: "https",
-        hostname: "demo.pakyaaa.online",
-        pathname: "/api/static/**",
+        protocol: "http",
+        hostname: "localhost",
+        port: "3002",
+        pathname: "/api/files/**",
       },
     ],
   },

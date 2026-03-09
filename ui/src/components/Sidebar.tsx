@@ -56,15 +56,27 @@ interface SidebarProps {
     onUnpin?: (id: number) => void;
     currentView?: "drive" | "gallery" | "settings";
     onNavigateView?: (view: "drive" | "gallery" | "settings") => void;
+    isOpen?: boolean;
+    onClose?: () => void;
 }
 
-export function Sidebar({ pinnedFolders = [], onNavigate, drives = [], selectedDrive, onDriveSelect, onUnpin, currentView = "drive", onNavigateView }: SidebarProps) {
+export function Sidebar({ pinnedFolders = [], onNavigate, drives = [], selectedDrive, onDriveSelect, onUnpin, currentView = "drive", onNavigateView, isOpen, onClose }: SidebarProps) {
     return (
-        <aside className="w-64 flex-shrink-0 flex flex-col py-4 pr-3 border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-y-auto">
-            <div className="px-4 mb-4">
+        <aside className={cn(
+            "flex-shrink-0 flex flex-col py-4 pr-3 border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-y-auto",
+            "fixed inset-y-0 left-0 z-[60] transform transition-transform duration-300 w-64 md:relative md:translate-x-0",
+            isOpen ? "translate-x-0 shadow-2xl" : "-translate-x-full"
+        )}>
+            <div className="px-4 mb-4 flex justify-between items-center">
                 <button className="flex items-center gap-2 px-5 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-sm hover:shadow-md hover:bg-gray-50 dark:hover:bg-gray-700 transition-all font-medium text-gray-700 dark:text-gray-200 text-sm w-fit cursor-pointer">
                     <Plus className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
                     New
+                </button>
+                <button
+                    onClick={onClose}
+                    className="md:hidden p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                >
+                    <X className="h-6 w-6" />
                 </button>
             </div>
 

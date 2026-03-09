@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { X, PlayCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import type { FileItem } from "../types";
 import { getStaticUrl } from "../services/api";
@@ -78,11 +79,11 @@ export function GalleryPreviewModal({
     const driveToUse = item?.drive;
     const staticUrl = item ? getStaticUrl(fullPath, driveToUse) : "";
 
-    return (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center animate-in fade-in zoom-in-[0.98] duration-300 ease-out bg-black">
+    const modalContent = (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center animate-in fade-in zoom-in-[0.98] duration-300 ease-out p-0 sm:p-8">
             {/* Dark Backdrop */}
             <div
-                className="absolute inset-0 transition-opacity cursor-pointer"
+                className="absolute inset-0 bg-black/90 backdrop-blur-md transition-opacity cursor-pointer"
                 onClick={onClose}
             />
 
@@ -115,7 +116,7 @@ export function GalleryPreviewModal({
             </button>
 
             {/* Counter */}
-            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 text-white/60 font-medium text-sm z-[120] pointer-events-none tracking-widest">
+            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 text-white/60 font-medium text-sm z-[120] pointer-events-none tracking-widest bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-md">
                 {currentIndex + 1} / {files.length}
             </div>
 
@@ -130,7 +131,7 @@ export function GalleryPreviewModal({
                     <video
                         key={staticUrl}
                         src={staticUrl}
-                        className="max-w-full max-h-[100dvh] object-contain pointer-events-auto"
+                        className="max-w-full max-h-full object-contain pointer-events-auto shadow-2xl"
                         autoPlay
                         controls
                         playsInline
@@ -140,7 +141,7 @@ export function GalleryPreviewModal({
                         key={staticUrl}
                         src={staticUrl}
                         alt={item.name}
-                        className="max-w-full max-h-[100dvh] w-auto h-auto object-contain pointer-events-auto"
+                        className="max-w-full max-h-full w-auto h-auto object-contain pointer-events-auto shadow-2xl"
                         loading="eager"
                         draggable={false}
                     />
@@ -148,4 +149,7 @@ export function GalleryPreviewModal({
             </div>
         </div>
     );
+
+    if (typeof document === "undefined") return null;
+    return createPortal(modalContent, document.body);
 }
