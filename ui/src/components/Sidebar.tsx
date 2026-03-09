@@ -83,12 +83,6 @@ export function Sidebar({ pinnedFolders = [], onNavigate, drives = [], selectedD
             <nav className="flex-1 space-y-1 px-2 overflow-y-auto custom-scrollbar">
                 <div className="mb-6 space-y-1">
                     <SidebarItem
-                        icon={HardDrive}
-                        label="My Drive"
-                        active={currentView === "drive" || !currentView}
-                        onClick={() => onNavigateView?.("drive")}
-                    />
-                    <SidebarItem
                         icon={ImageIcon}
                         label="Gallery"
                         active={currentView === "gallery"}

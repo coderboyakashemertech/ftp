@@ -106,12 +106,7 @@ router.get("/", async (req, res) => {
                     }
 
                     if (!matchedDrive) {
-                        if (absPath.startsWith(ROOT_DIR_DEFAULT)) {
-                            matchedDrive = "My Drive";
-                            rootDirForMatched = ROOT_DIR_DEFAULT;
-                        } else {
-                            continue;
-                        }
+                        continue;
                     }
 
                     const relativePath = path.relative(rootDirForMatched, absPath).replace(/\\/g, '/');
@@ -136,7 +131,7 @@ router.get("/", async (req, res) => {
 
         const { folderPath, page, limit } = req.query;
         const pageInt = parseInt(page) || 1;
-        const limitInt = parseInt(limit) || 10;
+        const limitInt = parseInt(limit) || 50;
         const startIndex = (pageInt - 1) * limitInt;
         const endIndex = pageInt * limitInt;
 

@@ -16,7 +16,7 @@ export function Breadcrumbs({ path, onNavigate }: BreadcrumbsProps) {
                 className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded flex items-center gap-1 transition-colors cursor-pointer"
             >
                 <Home className="h-4 w-4" />
-                <span className="sr-only sm:not-sr-only">My Drive</span>
+                <span className="sr-only">Back to Home</span>
             </button>
 
             {parts.map((part, index) => {

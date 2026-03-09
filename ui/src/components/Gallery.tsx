@@ -61,7 +61,7 @@ export function Gallery() {
     else setLoadingMore(true);
 
     try {
-      const result = await fetchGallery(pageNum, 10, folderPath);
+      const result = await fetchGallery(pageNum, 50, folderPath);
       console.log("🚀 ~ loadGallery ~ result:", result);
 
       if (append) {

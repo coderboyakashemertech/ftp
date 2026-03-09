@@ -23,14 +23,14 @@ function AppContent() {
   const currentPath = searchParams.get("path") || "/"
 
   const [data, setData] = useState<BrowseResponse | null>(null)
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [viewMode, setViewMode] = useState<ViewMode>("grid")
   const [pinnedFolders, setPinnedFolders] = useState<PinnedFolder[]>([])
   const [previewFile, setPreviewFile] = useState<FileItem | null>(null)
   const [isAuth, setIsAuth] = useState(false)
   const [username, setUsername] = useState<string | null>(null)
-  const [view, setView] = useState<"drive" | "gallery" | "settings">("drive")
+  const [view, setView] = useState<"drive" | "gallery" | "settings">("gallery")
   const [drives, setDrives] = useState<{ name: string; path: string }[]>([])
   const [selectedDrive, setSelectedDrive] = useState<string>("")
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -134,6 +134,9 @@ function AppContent() {
   }
 
   const handleNavigateView = (newView: "drive" | "gallery" | "settings") => {
+    if (newView === "drive" && view !== "drive") {
+      setLoading(true);
+    }
     setView(newView)
     setIsSidebarOpen(false)
   }
@@ -222,7 +225,7 @@ function AppContent() {
           <div className="px-6 py-4 flex items-center justify-between bg-white dark:bg-gray-900 z-10 sticky top-0 border-b border-gray-100 dark:border-gray-800 min-h-[73px]">
             <div className="flex flex-col gap-1">
               <h1 className="text-2xl font-normal text-gray-800 dark:text-gray-100 tracking-tight">
-                {view === "gallery" ? "Gallery" : (currentPath === "/" ? "My Drive" : currentPath.split("/").pop())}
+                {view === "gallery" ? "Gallery" : (currentPath === "/" ? selectedDrive : currentPath.split("/").pop())}
               </h1>
               {view === "drive" && (
                 <Breadcrumbs path={currentPath} onNavigate={handleBreadcrumbNavigate} />

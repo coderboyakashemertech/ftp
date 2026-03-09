@@ -22,7 +22,7 @@ export async function fetchDirectory(path: string = "", drive?: string): Promise
     }
 }
 
-export async function fetchGallery(page: number = 1, limit: number = 10, folderPath?: string): Promise<GalleryResponse> {
+export async function fetchGallery(page: number = 1, limit: number = 50, folderPath?: string): Promise<GalleryResponse> {
     try {
         const response = await axios.get(`${API_URL}/gallery`, {
             params: { page, limit, folderPath },
