@@ -1,14 +1,6 @@
 [
     {
-        "name": "C Drive",
-        "path": "/mnt/c/Users/akash/"
-    },
-    {
-        "name": "System32",
-        "path": "/mnt/c/Windows/System32"
-    },
-    {
-        "name": "Windows",
-        "path": "/mnt/c/Windows"
+        "name": "Seagate 2TB",
+        "path": "/mnt/seagate-2tb"
     }
 ]
