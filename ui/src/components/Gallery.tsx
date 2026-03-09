@@ -1,7 +1,7 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { fetchGallery, getStaticUrl } from "../services/api";
-import type { FileItem } from "../types";
-import { Image as ImageIcon, Film, PlayCircle, Folder } from "lucide-react";
+import type { FileItem, GalleryResponse } from "../types";
+import { Image as ImageIcon, Film, PlayCircle, Folder, LayoutGrid, List } from "lucide-react";
 import { GalleryPreviewModal } from "./GalleryPreviewModal";
 import Image from "next/image";
 
@@ -12,10 +12,20 @@ const isVideo = (filename: string) => {
 
 export function Gallery() {
   const [mediaFiles, setMediaFiles] = useState<FileItem[]>([]);
+  const [folders, setFolders] = useState<GalleryResponse["folders"]>([]);
+
+  // View Mode state
+  const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 
   // Loading & Error States
   const [loading, setLoading] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Pagination State
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [totalItems, setTotalItems] = useState(0);
 
   // Navigation State
   const [viewLevel, setViewLevel] = useState<"folders" | "media">("folders");
@@ -25,81 +35,84 @@ export function Gallery() {
   } | null>(null);
   const [previewIndex, setPreviewIndex] = useState<number | null>(null);
 
-  // Pagination State
-  const [visibleCount, setVisibleCount] = useState(60);
+  const lastFetchRef = useRef<{ page: number; folderPath?: string } | null>(null);
 
-  // 1. Fetch Everything on mount
+  // Sync viewMode with localStorage
   useEffect(() => {
-    const loadGallery = async () => {
-      console.time("api-timer");
-      setLoading(true);
-      try {
-        const result = await fetchGallery();
-        console.log("🚀 ~ loadGallery ~ result:", result);
-        setMediaFiles(result.files);
-      } catch (err) {
-        console.error("Failed to load gallery:", err);
-        setError("Failed to load gallery content.");
-      } finally {
-        setLoading(false);
-      }
-      console.timeEnd("api-timer");
-    };
-    loadGallery();
+    const savedMode = localStorage.getItem("galleryViewMode") as "grid" | "list";
+    if (savedMode === "grid" || savedMode === "list") {
+      setViewMode(savedMode);
+    }
   }, []);
 
-  // Folders View Data (from fetched mediaFiles)
-  const foldersData = useMemo(() => {
-    const folderMap = new Map<
-      string,
-      { name: string; path: string; count: number; preview: FileItem | null }
-    >();
+  const handleSetViewMode = (mode: "grid" | "list") => {
+    setViewMode(mode);
+    localStorage.setItem("galleryViewMode", mode);
+  };
 
-    mediaFiles.forEach((file) => {
-      const fPath = file.folderPath ? `/${file.folderPath}` : "/";
-      const fName = file.folderName || fPath;
+  const loadGallery = async (pageNum: number, folderPath?: string, append: boolean = false) => {
+    // If we are already fetching this exact page and folder, skip.
+    if (!append && lastFetchRef.current?.page === pageNum && lastFetchRef.current?.folderPath === folderPath) {
+      return;
+    }
+    lastFetchRef.current = { page: pageNum, folderPath };
 
-      if (!folderMap.has(fPath)) {
-        folderMap.set(fPath, {
-          name: fName,
-          path: fPath,
-          count: 1,
-          preview: file,
-        });
+    if (pageNum === 1) setLoading(true);
+    else setLoadingMore(true);
+
+    try {
+      const result = await fetchGallery(pageNum, 10, folderPath);
+      console.log("🚀 ~ loadGallery ~ result:", result);
+
+      if (append) {
+        setMediaFiles((prev) => [...prev, ...result.files]);
       } else {
-        const existing = folderMap.get(fPath)!;
-        existing.count += 1;
-        // Prioritize images for previews if current preview is a video
-        if (
-          existing.preview &&
-          isVideo(existing.preview.name) &&
-          !isVideo(file.name)
-        ) {
-          existing.preview = file;
-        }
+        setMediaFiles(result.files);
       }
-    });
 
-    return Array.from(folderMap.values()).sort((a, b) =>
-      a.name.localeCompare(b.name),
-    );
-  }, [mediaFiles]);
+      setFolders(result.folders);
+      setTotalPages(result.totalPages);
+      setTotalItems(result.total);
+      setPage(result.page);
+    } catch (err) {
+      console.error("Failed to load gallery:", err);
+      setError("Failed to load gallery content.");
+      lastFetchRef.current = null; // Reset to allow retry
+    } finally {
+      setLoading(false);
+      setLoadingMore(false);
+    }
+  };
 
-  // Media View Data (filtered by selectedFolder)
-  const mediaData = useMemo(() => {
-    if (!selectedFolder) return [];
+  // 1. Initial Load
+  useEffect(() => {
+    loadGallery(1);
+  }, []);
 
-    return mediaFiles.filter((file) => {
-      const folderPath = file.folderPath ? `/${file.folderPath}` : "/";
-      return folderPath === selectedFolder.path;
-    });
-  }, [mediaFiles, selectedFolder]);
+  // 2. Handle Folder Selection
+  const handleSelectFolder = (folder: { path: string; name: string }) => {
+    setSelectedFolder(folder);
+    setViewLevel("media");
+    setPage(1);
+    loadGallery(1, folder.path);
+  };
 
-  const visibleMedia = useMemo(() => {
-    return mediaData.slice(0, visibleCount);
-  }, [mediaData, visibleCount]);
+  const handleBackToFolders = () => {
+    setViewLevel("folders");
+    setSelectedFolder(null);
+    setPage(1);
+    // Optionally reload all? Or just keep current. 
+    // Usually folders are consistent, but let's refresh just in case.
+    loadGallery(1);
+  };
 
-  if (loading) {
+  const handleLoadMore = () => {
+    if (page < totalPages) {
+      loadGallery(page + 1, selectedFolder?.path, true);
+    }
+  };
+
+  if (loading && page === 1) {
     return (
       <div className="flex justify-center items-center h-full min-h-[50vh]">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
@@ -115,7 +128,7 @@ export function Gallery() {
     );
   }
 
-  if (viewLevel === "folders" && mediaFiles.length === 0) {
+  if (viewLevel === "folders" && folders.length === 0) {
     return (
       <div className="space-y-4 animate-in fade-in duration-300">
         <div className="flex flex-col items-center justify-center h-full min-h-[40vh] text-gray-500 dark:text-gray-400">
@@ -129,184 +142,254 @@ export function Gallery() {
 
   // --- RENDER HELPERS ---
 
+  const renderViewToggle = () => (
+    <div className="flex items-center gap-2 border border-gray-200 dark:border-gray-700 rounded-lg p-0.5 bg-gray-50/50 dark:bg-gray-800/50 backdrop-blur-sm">
+      <button
+        onClick={() => handleSetViewMode("list")}
+        className={`p-1.5 rounded-md transition-all cursor-pointer ${viewMode === "list" ? "bg-white dark:bg-gray-700 shadow-sm text-indigo-600 dark:text-indigo-400" : "text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"}`}
+        title="List view"
+      >
+        <List className="h-4 w-4" />
+      </button>
+      <button
+        onClick={() => handleSetViewMode("grid")}
+        className={`p-1.5 rounded-md transition-all cursor-pointer ${viewMode === "grid" ? "bg-white dark:bg-gray-700 shadow-sm text-indigo-600 dark:text-indigo-400" : "text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"}`}
+        title="Grid view"
+      >
+        <LayoutGrid className="h-4 w-4" />
+      </button>
+    </div>
+  );
+
   const renderFoldersView = () => (
     <div className="space-y-4 animate-in fade-in duration-300">
-      <h2 className="text-lg font-medium text-gray-900 dark:text-white px-1 mb-4">
-        Folders
-      </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-4">
-        {foldersData.map((folderObj) => {
-          // Get the first item as a preview image
-          const previewFile = folderObj.preview;
-          const previewUrl = previewFile
-            ? getStaticUrl(previewFile.path || "", previewFile.drive)
-            : "";
-          const isVid = previewFile ? isVideo(previewFile.name) : false;
+      <div className="flex items-center justify-between mb-4 px-1 sticky top-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md py-3 z-10 border-b border-gray-100 dark:border-gray-800">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white">
+          Folders
+        </h2>
+        {renderViewToggle()}
+      </div>
 
-          return (
+      {viewMode === "grid" ? (
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-4">
+          {folders.map((folderObj) => (
             <div
               key={folderObj.path}
-              onClick={() => {
-                setSelectedFolder(folderObj);
-                setViewLevel("media");
-                setVisibleCount(60); // Reset pagination
-              }}
-              className="group relative aspect-square bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-gray-700 hover:border-indigo-400 dark:hover:border-indigo-500"
+              onClick={() => handleSelectFolder(folderObj)}
+              className="group relative aspect-square bg-gray-50/50 dark:bg-gray-800/30 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-indigo-400 dark:hover:border-indigo-500"
             >
-              {previewFile ? (
-                isVid ? (
+              {/* Folder Icon Container */}
+              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-indigo-50/50 to-white dark:from-indigo-900/10 dark:to-gray-900/50 group-hover:from-indigo-100/50 dark:group-hover:from-indigo-900/20 transition-colors duration-500">
+                <div className="relative transform group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 ease-out">
+                  <div className="absolute inset-0 bg-indigo-500/20 dark:bg-indigo-400/20 blur-2xl rounded-full scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <Folder className="h-16 w-16 text-indigo-500 dark:text-indigo-400 drop-shadow-sm" strokeWidth={1.5} />
+                </div>
+              </div>
+
+              {/* Overlay Gradient for Text */}
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 pt-16 flex flex-col justify-end">
+                <div className="flex items-center gap-2">
+                  <div className="p-1.5 bg-indigo-500/20 backdrop-blur-md rounded-lg group-hover:bg-indigo-500/30 transition-colors">
+                    <Folder className="h-3.5 w-3.5 text-indigo-300 shrink-0" strokeWidth={2.5} />
+                  </div>
+                  <p className="font-bold text-sm text-white truncate drop-shadow-md">
+                    {folderObj.name}
+                  </p>
+                </div>
+                <div className="flex items-center gap-2 mt-1 ml-9">
+                  <span className="text-[11px] font-medium text-white/80 drop-shadow-md">
+                    {folderObj.count} items
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="space-y-1">
+          {folders.map((folderObj) => (
+            <div
+              key={folderObj.path}
+              onClick={() => handleSelectFolder(folderObj)}
+              className="group flex items-center justify-between p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition-all border border-transparent hover:border-gray-100 dark:hover:border-gray-700"
+            >
+              <div className="flex items-center gap-3">
+                <div className="p-2.5 bg-indigo-50 dark:bg-indigo-500/10 rounded-lg group-hover:bg-indigo-100 dark:group-hover:bg-indigo-500/20 transition-colors">
+                  <Folder className="h-5 w-5 text-indigo-500 dark:text-indigo-400" strokeWidth={2} />
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    {folderObj.name}
+                  </h3>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    {folderObj.count} items
+                  </p>
+                </div>
+              </div>
+              <div className="text-gray-400 group-hover:text-indigo-500 transition-colors mr-2">
+                &rarr;
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+
+  const renderMediaView = () => (
+    <div className="space-y-4 animate-in fade-in duration-300 pb-20">
+      <div className="flex items-center justify-between mb-4 px-1 sticky top-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md py-3 z-10 border-b border-gray-100 dark:border-gray-800">
+        <div className="flex items-center gap-2 min-w-0">
+          <button
+            onClick={handleBackToFolders}
+            className="text-sm font-medium text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-500/10 dark:hover:bg-indigo-500/20 px-3 py-1.5 rounded-lg transition-colors cursor-pointer shrink-0"
+          >
+            &larr; <span className="hidden sm:inline">Back</span>
+          </button>
+          <div className="ml-1 pl-3 border-l border-gray-300 dark:border-gray-700 flex flex-col min-w-0">
+            <h2 className="text-base font-bold text-gray-900 dark:text-white truncate">
+              {selectedFolder?.name}
+            </h2>
+          </div>
+        </div>
+        {renderViewToggle()}
+      </div>
+
+      {viewMode === "grid" ? (
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-4">
+          {mediaFiles.map((file, idx) => {
+            const isVid = isVideo(file.name);
+            const srcUrl = getStaticUrl(file.path || "", file.drive);
+
+            return (
+              <div
+                key={file.path || file.name}
+                className="group relative aspect-square bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-gray-700 hover:border-indigo-400 dark:hover:border-indigo-500"
+                onClick={() => setPreviewIndex(idx)}
+              >
+                {isVid ? (
                   <div className="w-full h-full relative">
                     <video
-                      src={`${previewUrl}#t=0.1`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      src={`${srcUrl}#t=0.1`}
+                      className="w-full h-full object-cover"
                       preload="metadata"
                       muted
                       playsInline
                     />
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                      <PlayCircle className="h-10 w-10 text-white opacity-80 group-hover:scale-110 transition-transform" />
+                    </div>
+                    <div className="absolute bottom-2 right-2 flex items-center gap-1 bg-black/60 text-white text-[10px] px-1.5 py-0.5 rounded backdrop-blur-sm">
+                      <Film className="h-3 w-3" />
+                    </div>
                   </div>
                 ) : (
-                  <Image
-                    src={previewUrl}
-                    alt={folderObj.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src =
-                        'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none" stroke="%239CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>';
-                      target.className =
-                        "w-full h-full object-contain p-8 text-gray-400";
-                    }}
-                    height={100}
-                    width={100}
-                  />
-                )
-              ) : (
-                <div className="w-full h-full flex items-center justify-center bg-gray-50 dark:bg-gray-800/50">
-                  <Folder className="h-10 w-10 text-gray-300 dark:text-gray-600" />
-                </div>
-              )}
-
-              {/* Overlay Gradient for Text */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-3 pt-12 flex flex-col justify-end">
-                <div className="flex items-center gap-2">
-                  <Folder className="h-4 w-4 text-indigo-400 shrink-0" />
-                  <p className="font-semibold text-sm text-white truncate drop-shadow-md">
-                    {folderObj.name}
+                  <div className="w-full h-full relative">
+                    <Image
+                      src={srcUrl}
+                      alt={file.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src =
+                          'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none" stroke="%239CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>';
+                        target.className =
+                          "w-full h-full object-contain p-8 text-gray-400";
+                      }}
+                      height={100}
+                      width={100}
+                    />
+                  </div>
+                )}
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-3 pt-8 flex items-end">
+                  <p className="text-white text-xs font-medium truncate w-full drop-shadow-md">
+                    {file.name}
                   </p>
                 </div>
-                <span className="text-xs text-gray-300 drop-shadow-md ml-6">
-                  {folderObj.count} items
-                </span>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      ) : (
+        <div className="space-y-1">
+          {mediaFiles.map((file, idx) => {
+            const isVid = isVideo(file.name);
+            const srcUrl = getStaticUrl(file.path || "", file.drive);
+
+            return (
+              <div
+                key={file.path || file.name}
+                onClick={() => setPreviewIndex(idx)}
+                className="group flex items-center gap-4 p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition-all border border-transparent hover:border-gray-100 dark:hover:border-gray-700"
+              >
+                <div className="relative w-16 h-12 flex-shrink-0 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+                  {isVid ? (
+                    <div className="w-full h-full relative">
+                      <video src={`${srcUrl}#t=0.1`} className="w-full h-full object-cover" preload="metadata" muted playsInline />
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/10">
+                        <PlayCircle className="h-4 w-4 text-white" />
+                      </div>
+                    </div>
+                  ) : (
+                    <Image
+                      src={srcUrl}
+                      alt={file.name}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      height={50}
+                      width={70}
+                    />
+                  )}
+                </div>
+                <div className="flex-1 min-w-0 pr-4">
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    {file.name}
+                  </h3>
+                  <div className="flex items-center gap-3 text-xs text-gray-400 dark:text-gray-500">
+                    <span className="uppercase">{file.extension?.replace('.', '') || 'FILE'}</span>
+                    <span>•</span>
+                    <span>{(file.size / (1024 * 1024)).toFixed(2)} MB</span>
+                  </div>
+                </div>
+                <div className="text-gray-400 group-hover:text-indigo-500 transition-colors mr-2">
+                  <ImageIcon className="h-4 w-4 opacity-40 group-hover:opacity-100" />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {page < totalPages && (
+        <div className="flex justify-center pt-8">
+          <button
+            onClick={handleLoadMore}
+            disabled={loadingMore}
+            className="px-6 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full text-sm font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors shadow-sm disabled:opacity-50 flex items-center gap-2"
+          >
+            {loadingMore ? (
+              <>
+                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-indigo-600"></div>
+                Loading...
+              </>
+            ) : (
+              `Load More Content (${totalItems - mediaFiles.length} remaining)`
+            )}
+          </button>
+        </div>
+      )}
     </div>
   );
 
-  //   const renderMediaView = () => (
-  //     <div className="space-y-4 animate-in fade-in duration-300 pb-20">
-  //       <div className="flex items-center gap-2 mb-4 px-1 sticky top-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md py-3 z-10 border-b border-gray-100 dark:border-gray-800">
-  //         <button
-  //           onClick={() => {
-  //             setViewLevel("folders");
-  //             setSelectedFolder(null);
-  //           }}
-  //           className="text-sm font-medium text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-500/10 dark:hover:bg-indigo-500/20 px-3 py-1.5 rounded-lg transition-colors cursor-pointer"
-  //         >
-  //           &larr; Back to Folders
-  //         </button>
-  //         <div className="ml-2 pl-4 border-l border-gray-300 dark:border-gray-700 flex flex-col min-w-0">
-  //           <h2 className="text-base font-bold text-gray-900 dark:text-white truncate">
-  //             {selectedFolder?.name}
-  //           </h2>
-  //         </div>
-  //       </div>
-
-  //       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-4">
-  //         {visibleMedia.map((file) => {
-  //           const isVid = isVideo(file.name);
-  //           const srcUrl = getStaticUrl(file.path || "", file.drive);
-
-  //           return (
-  //             <div
-  //               key={file.path || file.name}
-  //               className="group relative aspect-square bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-gray-700 hover:border-indigo-400 dark:hover:border-indigo-500"
-  //               onClick={() => {
-  //                 const index = mediaData.findIndex(
-  //                   (f) => f.path === file.path && f.name === file.name,
-  //                 );
-  //                 if (index !== -1) setPreviewIndex(index);
-  //               }}
-  //             >
-  //               {isVid ? (
-  //                 <div className="w-full h-full relative">
-  //                   <video
-  //                     src={`${srcUrl}#t=0.1`}
-  //                     className="w-full h-full object-cover"
-  //                     preload="metadata"
-  //                     muted
-  //                     playsInline
-  //                   />
-  //                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
-  //                     <PlayCircle className="h-10 w-10 text-white opacity-80 group-hover:scale-110 transition-transform" />
-  //                   </div>
-  //                   <div className="absolute bottom-2 right-2 flex items-center gap-1 bg-black/60 text-white text-[10px] px-1.5 py-0.5 rounded backdrop-blur-sm">
-  //                     <Film className="h-3 w-3" />
-  //                   </div>
-  //                 </div>
-  //               ) : (
-  //                 <div className="w-full h-full relative">
-  //                   <Image
-  //                     src={srcUrl}
-  //                     alt={file.name}
-  //                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-  //                     loading="lazy"
-  //                     onError={(e) => {
-  //                       const target = e.target as HTMLImageElement;
-  //                       target.src =
-  //                         'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none" stroke="%239CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>';
-  //                       target.className =
-  //                         "w-full h-full object-contain p-8 text-gray-400";
-  //                     }}
-  //                     height={100}
-  //                     width={100}
-  //                   />
-  //                 </div>
-  //               )}
-  //               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-3 pt-8 flex items-end">
-  //                 <p className="text-white text-xs font-medium truncate w-full drop-shadow-md">
-  //                   {file.name}
-  //                 </p>
-  //               </div>
-  //             </div>
-  //           );
-  //         })}
-  //       </div>
-
-  //       {visibleCount < mediaData.length && (
-  //         <div className="flex justify-center pt-8">
-  //           <button
-  //             onClick={() => setVisibleCount((prev) => prev + 60)}
-  //             className="px-6 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full text-sm font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors shadow-sm"
-  //           >
-  //             Load More Content ({mediaData.length - visibleCount} remaining)
-  //           </button>
-  //         </div>
-  //       )}
-  //     </div>
-  //   );
-
   return (
-    <div className="h-full relative">
-      {/* {viewLevel === "folders" && renderFoldersView()} */}
-      {/* {viewLevel === "media" && renderMediaView()} */}
+    <div className="h-full relative px-4 sm:px-6">
+      {viewLevel === "folders" && renderFoldersView()}
+      {viewLevel === "media" && renderMediaView()}
 
       {previewIndex !== null && (
         <GalleryPreviewModal
-          files={mediaData}
+          files={mediaFiles}
           initialIndex={previewIndex}
           onClose={() => setPreviewIndex(null)}
         />

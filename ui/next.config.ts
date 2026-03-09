@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
         pathname: "/api/files/**",
       },
       {
+        protocol: "https",
+        hostname: "developers.elementor.com",
+        // pathname: "/docs/assets/img/**",
+      },
+      {
         protocol: "http",
         hostname: "localhost",
         port: "3002",

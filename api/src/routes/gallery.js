@@ -87,7 +87,9 @@ router.get("/", async (req, res) => {
         if (fs.existsSync(galleryJsonPath)) {
             const data = JSON.parse(await fsPromises.readFile(galleryJsonPath, "utf8"));
 
-            for (const folderObj of data.folders || []) {
+            const folders = Array.isArray(data) ? data : (data.folders || []);
+
+            for (const folderObj of folders) {
                 for (const img of folderObj.files || folderObj.images || []) {
                     const absPath = img.path;
 
