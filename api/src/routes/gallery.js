@@ -129,9 +129,9 @@ router.get("/", async (req, res) => {
                             folderName: folderObj.folder_name || path.basename(folderPath) || "Root",
                             drive: matchedDrive,
                             extension: ext,
-                            size: 0,
+                            size: img.size || 0,
                             absPath: absPath,
-                            modifiedAt: new Date().toISOString()
+                            modifiedAt: img.date ? new Date(img.date * 1000).toISOString() : new Date().toISOString()
                         });
                     } catch (err) {
                         // Skip individual malformed paths
@@ -174,17 +174,7 @@ router.get("/", async (req, res) => {
         const total = filteredFiles.length;
         const paginatedFiles = filteredFiles.slice(startIndex, endIndex);
 
-        // Fetch real sizes for paginated results
         for (const file of paginatedFiles) {
-            try {
-                if (file.absPath && fs.existsSync(file.absPath)) {
-                    const stats = fs.statSync(file.absPath);
-                    file.size = stats.size;
-                    file.modifiedAt = stats.mtime.toISOString();
-                }
-            } catch (err) {
-                // Keep default
-            }
             // Remove absPath from response to keep it clean
             delete file.absPath;
         }
