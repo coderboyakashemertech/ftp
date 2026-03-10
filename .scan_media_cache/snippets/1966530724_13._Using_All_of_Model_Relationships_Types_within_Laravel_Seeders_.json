@@ -1,0 +1,11 @@
+    {
+      "folder_name": "13. Using All of Model Relationships Types within Laravel Seeders",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/13. Using All of Model Relationships Types within Laravel Seeders",
+      "file_count": 2,
+      "folder_size_bytes": 150061972,
+      "latest_mtime": 1613989124,
+      "files": [
+        {"name": "1. Using and Inserting Simple Model Relationships within the Laravel Seeder.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/13. Using All of Model Relationships Types within Laravel Seeders/1. Using and Inserting Simple Model Relationships within the Laravel Seeder.mp4", "size": 64940917, "thumbnail": "", "date": 1613989066, "mimetype": "video/mp4"},
+        {"name": "2. Using and Inserting Polymorphic Relationships Using the Laravel Seeder.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/13. Using All of Model Relationships Types within Laravel Seeders/2. Using and Inserting Polymorphic Relationships Using the Laravel Seeder.mp4", "size": 85121055, "thumbnail": "", "date": 1613989124, "mimetype": "video/mp4"}
+      ]
+    }

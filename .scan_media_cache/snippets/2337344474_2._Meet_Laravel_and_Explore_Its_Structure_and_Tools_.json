@@ -1,0 +1,15 @@
+    {
+      "folder_name": "2. Meet Laravel and Explore Its Structure and Tools",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/2. Meet Laravel and Explore Its Structure and Tools",
+      "file_count": 6,
+      "folder_size_bytes": 310103000,
+      "latest_mtime": 1613989096,
+      "files": [
+        {"name": "1. Using Composer to Install Laravel.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/2. Meet Laravel and Explore Its Structure and Tools/1. Using Composer to Install Laravel.mp4", "size": 48964644, "thumbnail": "", "date": 1613988986, "mimetype": "video/mp4"},
+        {"name": "3. Adapting the Project to the New Laravel Versions.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/2. Meet Laravel and Explore Its Structure and Tools/3. Adapting the Project to the New Laravel Versions.mp4", "size": 30539117, "thumbnail": "", "date": 1613988624, "mimetype": "video/mp4"},
+        {"name": "4. Exploring the Laravel Structure by Following Its Execution Process.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/2. Meet Laravel and Explore Its Structure and Tools/4. Exploring the Laravel Structure by Following Its Execution Process.mp4", "size": 73575202, "thumbnail": "", "date": 1613989090, "mimetype": "video/mp4"},
+        {"name": "5. Meet Artisan of Laravel.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/2. Meet Laravel and Explore Its Structure and Tools/5. Meet Artisan of Laravel.mp4", "size": 42893212, "thumbnail": "", "date": 1613989058, "mimetype": "video/mp4"},
+        {"name": "6. Using Php Artisan Tinker.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/2. Meet Laravel and Explore Its Structure and Tools/6. Using Php Artisan Tinker.mp4", "size": 24082888, "thumbnail": "", "date": 1613989096, "mimetype": "video/mp4"},
+        {"name": "7. Identifying and Assigning the Laravel Environment Settings.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/2. Meet Laravel and Explore Its Structure and Tools/7. Identifying and Assigning the Laravel Environment Settings.mp4", "size": 90047937, "thumbnail": "", "date": 1613989048, "mimetype": "video/mp4"}
+      ]
+    }

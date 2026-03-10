@@ -1,0 +1,13 @@
+    {
+      "folder_name": "12. Like  Unlike Post",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/12. Like  Unlike Post",
+      "file_count": 4,
+      "folder_size_bytes": 296967520,
+      "latest_mtime": 1606412956,
+      "files": [
+        {"name": "1. Create typeDefs  resolvers  queries for Like  Unlike.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/12. Like  Unlike Post/1. Create typeDefs  resolvers  queries for Like  Unlike.mp4", "size": 74891371, "thumbnail": "", "date": 1606412895, "mimetype": "video/mp4"},
+        {"name": "2. Firing Like  Unlike Post Mutations from Client.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/12. Like  Unlike Post/2. Firing Like  Unlike Post Mutations from Client.mp4", "size": 110467894, "thumbnail": "", "date": 1606412921, "mimetype": "video/mp4"},
+        {"name": "3. Add Logic for Toggling Like  Unlike Post.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/12. Like  Unlike Post/3. Add Logic for Toggling Like  Unlike Post.mp4", "size": 60796683, "thumbnail": "", "date": 1606412940, "mimetype": "video/mp4"},
+        {"name": "4. Add Like Notification in Profile Tab.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/12. Like  Unlike Post/4. Add Like Notification in Profile Tab.mp4", "size": 50811572, "thumbnail": "", "date": 1606412956, "mimetype": "video/mp4"}
+      ]
+    }

@@ -1,0 +1,15 @@
+    {
+      "folder_name": "5. Usage of Databases and Information Management in Laravel",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/5. Usage of Databases and Information Management in Laravel",
+      "file_count": 6,
+      "folder_size_bytes": 498516573,
+      "latest_mtime": 1613989124,
+      "files": [
+        {"name": "1. Explore Database Connections in Laravel and Configure One.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/5. Usage of Databases and Information Management in Laravel/1. Explore Database Connections in Laravel and Configure One.mp4", "size": 70362185, "thumbnail": "", "date": 1613989112, "mimetype": "video/mp4"},
+        {"name": "2. Creating Database Tables with Laravel Migrations.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/5. Usage of Databases and Information Management in Laravel/2. Creating Database Tables with Laravel Migrations.mp4", "size": 113737927, "thumbnail": "", "date": 1613989080, "mimetype": "video/mp4"},
+        {"name": "3. Introducing Eloquent and Models in Laravel.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/5. Usage of Databases and Information Management in Laravel/3. Introducing Eloquent and Models in Laravel.mp4", "size": 91392854, "thumbnail": "", "date": 1613989122, "mimetype": "video/mp4"},
+        {"name": "4. Inserting Information with Laravel Seeders and Factories.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/5. Usage of Databases and Information Management in Laravel/4. Inserting Information with Laravel Seeders and Factories.mp4", "size": 110375182, "thumbnail": "", "date": 1613989124, "mimetype": "video/mp4"},
+        {"name": "5. Interacting with the Database with the Laravel Query Builder.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/5. Usage of Databases and Information Management in Laravel/5. Interacting with the Database with the Laravel Query Builder.mp4", "size": 50426264, "thumbnail": "", "date": 1613989038, "mimetype": "video/mp4"},
+        {"name": "6. Reading and Selecting Data with Models in Laravel.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/5. Usage of Databases and Information Management in Laravel/6. Reading and Selecting Data with Models in Laravel.mp4", "size": 62222161, "thumbnail": "", "date": 1613989122, "mimetype": "video/mp4"}
+      ]
+    }

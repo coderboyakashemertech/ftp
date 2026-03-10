@@ -1,0 +1,12 @@
+    {
+      "folder_name": "img",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Laravel 8 PHP Framework A - Z Build Professional Ecommerce/2. Laravel 8 A-Z Basic Fandamentals with Complete Dynamic Web Project/Excise_File/sleek-dashboard-master/src/assets/img",
+      "file_count": 3,
+      "folder_size_bytes": 101392,
+      "latest_mtime": 1610032207,
+      "files": [
+        {"name": "favicon.png", "path": "/mnt/seagate-2tb/Lectures/Laravel 8 PHP Framework A - Z Build Professional Ecommerce/2. Laravel 8 A-Z Basic Fandamentals with Complete Dynamic Web Project/Excise_File/sleek-dashboard-master/src/assets/img/favicon.png", "size": 1787, "thumbnail": "", "date": 1610032207, "mimetype": "image/png"},
+        {"name": "lightenning.png", "path": "/mnt/seagate-2tb/Lectures/Laravel 8 PHP Framework A - Z Build Professional Ecommerce/2. Laravel 8 A-Z Basic Fandamentals with Complete Dynamic Web Project/Excise_File/sleek-dashboard-master/src/assets/img/lightenning.png", "size": 98391, "thumbnail": "", "date": 1610032207, "mimetype": "image/png"},
+        {"name": "sleek-icon.png", "path": "/mnt/seagate-2tb/Lectures/Laravel 8 PHP Framework A - Z Build Professional Ecommerce/2. Laravel 8 A-Z Basic Fandamentals with Complete Dynamic Web Project/Excise_File/sleek-dashboard-master/src/assets/img/sleek-icon.png", "size": 1214, "thumbnail": "", "date": 1610032207, "mimetype": "image/png"}
+      ]
+    }

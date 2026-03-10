@@ -1,0 +1,16 @@
+    {
+      "folder_name": "18. Handling User's Actions and Their Profiles",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/18. Handling User's Actions and Their Profiles",
+      "file_count": 7,
+      "folder_size_bytes": 632285653,
+      "latest_mtime": 1613989124,
+      "files": [
+        {"name": "1. Verifying a User Email After Registering.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/18. Handling User's Actions and Their Profiles/1. Verifying a User Email After Registering.mp4", "size": 132577313, "thumbnail": "", "date": 1613989094, "mimetype": "video/mp4"},
+        {"name": "2. Using Route Middleware in Laravel to Allow Actions Only to Verified Users.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/18. Handling User's Actions and Their Profiles/2. Using Route Middleware in Laravel to Allow Actions Only to Verified Users.mp4", "size": 56898359, "thumbnail": "", "date": 1613988958, "mimetype": "video/mp4"},
+        {"name": "3. How Works the Password Reset Feature of Laravel.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/18. Handling User's Actions and Their Profiles/3. How Works the Password Reset Feature of Laravel.mp4", "size": 33709142, "thumbnail": "", "date": 1613989124, "mimetype": "video/mp4"},
+        {"name": "4. Allowing to Edit the User's Profile with Laravel.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/18. Handling User's Actions and Their Profiles/4. Allowing to Edit the User's Profile with Laravel.mp4", "size": 118437249, "thumbnail": "", "date": 1613989108, "mimetype": "video/mp4"},
+        {"name": "5. Editing a User's Profile with Laravel.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/18. Handling User's Actions and Their Profiles/5. Editing a User's Profile with Laravel.mp4", "size": 94370880, "thumbnail": "", "date": 1613989100, "mimetype": "video/mp4"},
+        {"name": "6. Receiving and Handling Files in Laravel User's Profile Image.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/18. Handling User's Actions and Their Profiles/6. Receiving and Handling Files in Laravel User's Profile Image.mp4", "size": 126602841, "thumbnail": "", "date": 1613989106, "mimetype": "video/mp4"},
+        {"name": "7. Using and Showing the Profile Image Stored for the User's profile.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/18. Handling User's Actions and Their Profiles/7. Using and Showing the Profile Image Stored for the User's profile.mp4", "size": 69689869, "thumbnail": "", "date": 1613989118, "mimetype": "video/mp4"}
+      ]
+    }

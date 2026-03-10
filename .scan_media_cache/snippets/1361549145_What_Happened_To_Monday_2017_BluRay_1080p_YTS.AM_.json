@@ -1,0 +1,11 @@
+    {
+      "folder_name": "What Happened To Monday (2017) [BluRay] [1080p] [YTS.AM]",
+      "folder_path": "/mnt/seagate-2tb/Movies/What Happened To Monday (2017) [BluRay] [1080p] [YTS.AM]",
+      "file_count": 2,
+      "folder_size_bytes": 2134270486,
+      "latest_mtime": 1699883729,
+      "files": [
+        {"name": "What.Happened.To.Monday.2017.1080p.BluRay.x264-[YTS.AM].mp4", "path": "/mnt/seagate-2tb/Movies/What Happened To Monday (2017) [BluRay] [1080p] [YTS.AM]/What.Happened.To.Monday.2017.1080p.BluRay.x264-[YTS.AM].mp4", "size": 2134212354, "thumbnail": "", "date": 1699883729, "mimetype": "video/mp4"},
+        {"name": "www.YTS.AM.jpg", "path": "/mnt/seagate-2tb/Movies/What Happened To Monday (2017) [BluRay] [1080p] [YTS.AM]/www.YTS.AM.jpg", "size": 58132, "thumbnail": "", "date": 1699883556, "mimetype": "image/jpeg"}
+      ]
+    }

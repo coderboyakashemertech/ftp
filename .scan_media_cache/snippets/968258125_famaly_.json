@@ -1,0 +1,13 @@
+    {
+      "folder_name": "famaly",
+      "folder_path": "/mnt/seagate-2tb/Preeti Laptop/G Drive/videos/famaly",
+      "file_count": 4,
+      "folder_size_bytes": 798603655,
+      "latest_mtime": 1458977754,
+      "files": [
+        {"name": "20160325_235039.mp4", "path": "/mnt/seagate-2tb/Preeti Laptop/G Drive/videos/famaly/20160325_235039.mp4", "size": 37278776, "thumbnail": "", "date": 1458977655, "mimetype": "video/mp4"},
+        {"name": "20160325_235304.mp4", "path": "/mnt/seagate-2tb/Preeti Laptop/G Drive/videos/famaly/20160325_235304.mp4", "size": 259317702, "thumbnail": "", "date": 1458977709, "mimetype": "video/mp4"},
+        {"name": "20160326_000441.mp4", "path": "/mnt/seagate-2tb/Preeti Laptop/G Drive/videos/famaly/20160326_000441.mp4", "size": 249495521, "thumbnail": "", "date": 1458977754, "mimetype": "video/mp4"},
+        {"name": "20160326_000708.mp4", "path": "/mnt/seagate-2tb/Preeti Laptop/G Drive/videos/famaly/20160326_000708.mp4", "size": 252511656, "thumbnail": "", "date": 1458977649, "mimetype": "video/mp4"}
+      ]
+    }

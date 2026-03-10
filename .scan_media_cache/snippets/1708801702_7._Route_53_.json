@@ -1,0 +1,22 @@
+    {
+      "folder_name": "7. Route 53",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/7. Route 53",
+      "file_count": 13,
+      "folder_size_bytes": 343834297,
+      "latest_mtime": 1617196578,
+      "files": [
+        {"name": "10. Routing Policy - Failover.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/7. Route 53/10. Routing Policy - Failover.mp4", "size": 27237409, "thumbnail": "", "date": 1617196562, "mimetype": "video/mp4"},
+        {"name": "11. Routing Policy - Geolocation.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/7. Route 53/11. Routing Policy - Geolocation.mp4", "size": 32151223, "thumbnail": "", "date": 1617196568, "mimetype": "video/mp4"},
+        {"name": "12. Routing Policy - Multi Value.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/7. Route 53/12. Routing Policy - Multi Value.mp4", "size": 27135124, "thumbnail": "", "date": 1617196574, "mimetype": "video/mp4"},
+        {"name": "13. Section Cleanup.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/7. Route 53/13. Section Cleanup.mp4", "size": 10188260, "thumbnail": "", "date": 1617196578, "mimetype": "video/mp4"},
+        {"name": "1. Route 53 Overview.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/7. Route 53/1. Route 53 Overview.mp4", "size": 14452944, "thumbnail": "", "date": 1617196486, "mimetype": "video/mp4"},
+        {"name": "2. Route 53 Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/7. Route 53/2. Route 53 Hands On.mp4", "size": 19509700, "thumbnail": "", "date": 1617196490, "mimetype": "video/mp4"},
+        {"name": "3. Route 53 - EC2 Setup.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/7. Route 53/3. Route 53 - EC2 Setup.mp4", "size": 44195422, "thumbnail": "", "date": 1617196506, "mimetype": "video/mp4"},
+        {"name": "4. Route 53 - TTL.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/7. Route 53/4. Route 53 - TTL.mp4", "size": 27956962, "thumbnail": "", "date": 1617196512, "mimetype": "video/mp4"},
+        {"name": "5. Route 53 CNAME vs Alias.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/7. Route 53/5. Route 53 CNAME vs Alias.mp4", "size": 38000693, "thumbnail": "", "date": 1617196530, "mimetype": "video/mp4"},
+        {"name": "6. Routing Policy - Simple.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/7. Route 53/6. Routing Policy - Simple.mp4", "size": 19982821, "thumbnail": "", "date": 1617196534, "mimetype": "video/mp4"},
+        {"name": "7. Routing Policy - Weighted.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/7. Route 53/7. Routing Policy - Weighted.mp4", "size": 25496764, "thumbnail": "", "date": 1617196538, "mimetype": "video/mp4"},
+        {"name": "8. Routing Policy - Latency.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/7. Route 53/8. Routing Policy - Latency.mp4", "size": 22420967, "thumbnail": "", "date": 1617196546, "mimetype": "video/mp4"},
+        {"name": "9. Route 53 Health Checks.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/7. Route 53/9. Route 53 Health Checks.mp4", "size": 35106008, "thumbnail": "", "date": 1617196554, "mimetype": "video/mp4"}
+      ]
+    }

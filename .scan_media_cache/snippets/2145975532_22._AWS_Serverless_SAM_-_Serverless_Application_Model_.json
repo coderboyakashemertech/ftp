@@ -1,0 +1,20 @@
+    {
+      "folder_name": "22. AWS Serverless SAM - Serverless Application Model",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/22. AWS Serverless SAM - Serverless Application Model",
+      "file_count": 11,
+      "folder_size_bytes": 392138325,
+      "latest_mtime": 1617199132,
+      "files": [
+        {"name": "10. SAM with CodeDeploy.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/22. AWS Serverless SAM - Serverless Application Model/10. SAM with CodeDeploy.mp4", "size": 70611442, "thumbnail": "", "date": 1617199130, "mimetype": "video/mp4"},
+        {"name": "11. SAM Section Summary.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/22. AWS Serverless SAM - Serverless Application Model/11. SAM Section Summary.mp4", "size": 3497947, "thumbnail": "", "date": 1617199132, "mimetype": "video/mp4"},
+        {"name": "1. AWS SAM - Section Introduction.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/22. AWS Serverless SAM - Serverless Application Model/1. AWS SAM - Section Introduction.mp4", "size": 19459700, "thumbnail": "", "date": 1617198938, "mimetype": "video/mp4"},
+        {"name": "2. SAM Overview.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/22. AWS Serverless SAM - Serverless Application Model/2. SAM Overview.mp4", "size": 23136882, "thumbnail": "", "date": 1617198942, "mimetype": "video/mp4"},
+        {"name": "3. Installing the SAM CLI.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/22. AWS Serverless SAM - Serverless Application Model/3. Installing the SAM CLI.mp4", "size": 18447995, "thumbnail": "", "date": 1617198944, "mimetype": "video/mp4"},
+        {"name": "4. Creating first SAM Project.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/22. AWS Serverless SAM - Serverless Application Model/4. Creating first SAM Project.mp4", "size": 29611800, "thumbnail": "", "date": 1617198962, "mimetype": "video/mp4"},
+        {"name": "5. Deploying SAM Project.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/22. AWS Serverless SAM - Serverless Application Model/5. Deploying SAM Project.mp4", "size": 50325060, "thumbnail": "", "date": 1617198988, "mimetype": "video/mp4"},
+        {"name": "6. SAM API Gateway.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/22. AWS Serverless SAM - Serverless Application Model/6. SAM API Gateway.mp4", "size": 60358333, "thumbnail": "", "date": 1617199020, "mimetype": "video/mp4"},
+        {"name": "7. SAM DynamoDB.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/22. AWS Serverless SAM - Serverless Application Model/7. SAM DynamoDB.mp4", "size": 73472187, "thumbnail": "", "date": 1617199058, "mimetype": "video/mp4"},
+        {"name": "8. SAM - CloudFormation Designer and Application Repository.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/22. AWS Serverless SAM - Serverless Application Model/8. SAM - CloudFormation Designer and Application Repository.mp4", "size": 29245453, "thumbnail": "", "date": 1617199076, "mimetype": "video/mp4"},
+        {"name": "9. SAM Policy Templates.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/22. AWS Serverless SAM - Serverless Application Model/9. SAM Policy Templates.mp4", "size": 13971526, "thumbnail": "", "date": 1617199082, "mimetype": "video/mp4"}
+      ]
+    }

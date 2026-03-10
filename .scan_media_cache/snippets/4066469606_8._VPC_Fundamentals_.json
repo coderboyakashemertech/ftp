@@ -1,0 +1,15 @@
+    {
+      "folder_name": "8. VPC Fundamentals",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/8. VPC Fundamentals",
+      "file_count": 6,
+      "folder_size_bytes": 104045014,
+      "latest_mtime": 1617196610,
+      "files": [
+        {"name": "1. VPC Fundamentals - Section Introduction.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/8. VPC Fundamentals/1. VPC Fundamentals - Section Introduction.mp4", "size": 6017628, "thumbnail": "", "date": 1617196582, "mimetype": "video/mp4"},
+        {"name": "2. VPC, Subnets, IGW and NAT.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/8. VPC Fundamentals/2. VPC, Subnets, IGW and NAT.mp4", "size": 23066565, "thumbnail": "", "date": 1617196588, "mimetype": "video/mp4"},
+        {"name": "3. NACL, SG, VPC Flow Logs.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/8. VPC Fundamentals/3. NACL, SG, VPC Flow Logs.mp4", "size": 19763902, "thumbnail": "", "date": 1617196592, "mimetype": "video/mp4"},
+        {"name": "4. VPC Peering, Endpoints, VPN, DX.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/8. VPC Fundamentals/4. VPC Peering, Endpoints, VPN, DX.mp4", "size": 24119367, "thumbnail": "", "date": 1617196596, "mimetype": "video/mp4"},
+        {"name": "5. VPC Cheat Sheet & Closing Comments.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/8. VPC Fundamentals/5. VPC Cheat Sheet & Closing Comments.mp4", "size": 9976479, "thumbnail": "", "date": 1617196600, "mimetype": "video/mp4"},
+        {"name": "6. Three Tier Architecture.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/8. VPC Fundamentals/6. Three Tier Architecture.mp4", "size": 21101073, "thumbnail": "", "date": 1617196610, "mimetype": "video/mp4"}
+      ]
+    }

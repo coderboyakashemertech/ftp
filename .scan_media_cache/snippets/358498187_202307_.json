@@ -1,0 +1,11 @@
+    {
+      "folder_name": "202307__",
+      "folder_path": "/mnt/seagate-2tb/Iphone Backup/202307__",
+      "file_count": 2,
+      "folder_size_bytes": 6778628,
+      "latest_mtime": 1692538803,
+      "files": [
+        {"name": "IMG_0330.JPG", "path": "/mnt/seagate-2tb/Iphone Backup/202307__/IMG_0330.JPG", "size": 4236567, "thumbnail": "", "date": 1692538803, "mimetype": "image/jpeg"},
+        {"name": "IMG_0332.JPG", "path": "/mnt/seagate-2tb/Iphone Backup/202307__/IMG_0332.JPG", "size": 2542061, "thumbnail": "", "date": 1690987432, "mimetype": "image/jpeg"}
+      ]
+    }

@@ -1,0 +1,17 @@
+    {
+      "folder_name": "13. Laravello - VueX Global State & Authentication Sessions",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/13. Laravello - VueX Global State & Authentication Sessions",
+      "file_count": 8,
+      "folder_size_bytes": 354718048,
+      "latest_mtime": 1606035734,
+      "files": [
+        {"name": "1. VueX Global State Management Explained.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/13. Laravello - VueX Global State & Authentication Sessions/1. VueX Global State Management Explained.mp4", "size": 19506369, "thumbnail": "", "date": 1606035668, "mimetype": "video/mp4"},
+        {"name": "2. VueX Installation & Configuration.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/13. Laravello - VueX Global State & Authentication Sessions/2. VueX Installation & Configuration.mp4", "size": 25825672, "thumbnail": "", "date": 1606035676, "mimetype": "video/mp4"},
+        {"name": "3. VueX State & Mutations.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/13. Laravello - VueX Global State & Authentication Sessions/3. VueX State & Mutations.mp4", "size": 58536504, "thumbnail": "", "date": 1606035687, "mimetype": "video/mp4"},
+        {"name": "4. Tailwind CSS @apply.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/13. Laravello - VueX Global State & Authentication Sessions/4. Tailwind CSS @apply.mp4", "size": 41581445, "thumbnail": "", "date": 1606035698, "mimetype": "video/mp4"},
+        {"name": "5. VueX Actions, Side Effects and Local Storage.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/13. Laravello - VueX Global State & Authentication Sessions/5. VueX Actions, Side Effects and Local Storage.mp4", "size": 52092280, "thumbnail": "", "date": 1606035707, "mimetype": "video/mp4"},
+        {"name": "6. Detecting Expired Sessions on Page Reload.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/13. Laravello - VueX Global State & Authentication Sessions/6. Detecting Expired Sessions on Page Reload.mp4", "size": 75380817, "thumbnail": "", "date": 1606035720, "mimetype": "video/mp4"},
+        {"name": "7. Displaying Authenticated User Name (VueX mapState).mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/13. Laravello - VueX Global State & Authentication Sessions/7. Displaying Authenticated User Name (VueX mapState).mp4", "size": 50689981, "thumbnail": "", "date": 1606035729, "mimetype": "video/mp4"},
+        {"name": "8. Logging Out - Resetting VueX State.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/13. Laravello - VueX Global State & Authentication Sessions/8. Logging Out - Resetting VueX State.mp4", "size": 31104980, "thumbnail": "", "date": 1606035734, "mimetype": "video/mp4"}
+      ]
+    }

@@ -1,0 +1,15 @@
+    {
+      "folder_name": "2. Amazon Web Services Overview",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/2. Amazon Web Services Overview",
+      "file_count": 6,
+      "folder_size_bytes": 42198871,
+      "latest_mtime": 1615106052,
+      "files": [
+        {"name": "1. 0201 AWS Value Propositions.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/2. Amazon Web Services Overview/1. 0201 AWS Value Propositions.mp4", "size": 3721720, "thumbnail": "", "date": 1615106038, "mimetype": "video/mp4"},
+        {"name": "2. 0202 Regions And Availability Zones.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/2. Amazon Web Services Overview/2. 0202 Regions And Availability Zones.mp4", "size": 7542027, "thumbnail": "", "date": 1615106042, "mimetype": "video/mp4"},
+        {"name": "3. 0203 AWS - Introduction To Service Families.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/2. Amazon Web Services Overview/3. 0203 AWS - Introduction To Service Families.mp4", "size": 6338102, "thumbnail": "", "date": 1615106042, "mimetype": "video/mp4"},
+        {"name": "4. 0204 Roll Your Own Vs. AWS-Supplied Services.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/2. Amazon Web Services Overview/4. 0204 Roll Your Own Vs. AWS-Supplied Services.mp4", "size": 4218763, "thumbnail": "", "date": 1615106046, "mimetype": "video/mp4"},
+        {"name": "5. 0205 Interfaces Web GUI, APIs, And SDK.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/2. Amazon Web Services Overview/5. 0205 Interfaces Web GUI, APIs, And SDK.mp4", "size": 11356012, "thumbnail": "", "date": 1615106050, "mimetype": "video/mp4"},
+        {"name": "6. 0206 Introduction To Authentication And Authorization.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/2. Amazon Web Services Overview/6. 0206 Introduction To Authentication And Authorization.mp4", "size": 9022247, "thumbnail": "", "date": 1615106052, "mimetype": "video/mp4"}
+      ]
+    }

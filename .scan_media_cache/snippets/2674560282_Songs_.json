@@ -1,0 +1,11 @@
+    {
+      "folder_name": "Songs",
+      "folder_path": "/mnt/seagate-2tb/Preeti Laptop/G Drive/videos/songs/Songs",
+      "file_count": 2,
+      "folder_size_bytes": 55217,
+      "latest_mtime": 1495889101,
+      "files": [
+        {"name": "AlbumArtSmall.jpg", "path": "/mnt/seagate-2tb/Preeti Laptop/G Drive/videos/songs/Songs/AlbumArtSmall.jpg", "size": 8955, "thumbnail": "", "date": 1495889101, "mimetype": "image/jpeg"},
+        {"name": "Folder.jpg", "path": "/mnt/seagate-2tb/Preeti Laptop/G Drive/videos/songs/Songs/Folder.jpg", "size": 46262, "thumbnail": "", "date": 1495889101, "mimetype": "image/jpeg"}
+      ]
+    }

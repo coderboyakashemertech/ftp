@@ -1,0 +1,13 @@
+    {
+      "folder_name": "3. GraphQL Crash Course",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/3. GraphQL Crash Course",
+      "file_count": 4,
+      "folder_size_bytes": 147461890,
+      "latest_mtime": 1606034795,
+      "files": [
+        {"name": "1. GraphQL Introduction.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/3. GraphQL Crash Course/1. GraphQL Introduction.mp4", "size": 62875599, "thumbnail": "", "date": 1606034774, "mimetype": "video/mp4"},
+        {"name": "2. GraphQL Playground.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/3. GraphQL Crash Course/2. GraphQL Playground.mp4", "size": 23042592, "thumbnail": "", "date": 1606034780, "mimetype": "video/mp4"},
+        {"name": "3. More Complicated Query Example.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/3. GraphQL Crash Course/3. More Complicated Query Example.mp4", "size": 32556506, "thumbnail": "", "date": 1606034788, "mimetype": "video/mp4"},
+        {"name": "4. Mutations.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/3. GraphQL Crash Course/4. Mutations.mp4", "size": 28987193, "thumbnail": "", "date": 1606034795, "mimetype": "video/mp4"}
+      ]
+    }

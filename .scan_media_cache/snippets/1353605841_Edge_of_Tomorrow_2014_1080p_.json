@@ -1,0 +1,11 @@
+    {
+      "folder_name": "Edge of Tomorrow (2014) [1080p]",
+      "folder_path": "/mnt/seagate-2tb/Movies/Edge of Tomorrow (2014) [1080p]",
+      "file_count": 2,
+      "folder_size_bytes": 1768304341,
+      "latest_mtime": 1695578025,
+      "files": [
+        {"name": "Edge.of.Tomorrow.2014.1080p.BluRay.x264.YIFY.mp4", "path": "/mnt/seagate-2tb/Movies/Edge of Tomorrow (2014) [1080p]/Edge.of.Tomorrow.2014.1080p.BluRay.x264.YIFY.mp4", "size": 1768193827, "thumbnail": "", "date": 1695578025, "mimetype": "video/mp4"},
+        {"name": "WWW.YTS.RE.jpg", "path": "/mnt/seagate-2tb/Movies/Edge of Tomorrow (2014) [1080p]/WWW.YTS.RE.jpg", "size": 110514, "thumbnail": "", "date": 1695578025, "mimetype": "image/jpeg"}
+      ]
+    }

@@ -1,0 +1,14 @@
+    {
+      "folder_name": "7. Handling Forms and Actions with Laravel Blade and Laravel Eloquent",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/7. Handling Forms and Actions with Laravel Blade and Laravel Eloquent",
+      "file_count": 5,
+      "folder_size_bytes": 376803753,
+      "latest_mtime": 1613989138,
+      "files": [
+        {"name": "1. Showing and Using Forms in Laravel.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/7. Handling Forms and Actions with Laravel Blade and Laravel Eloquent/1. Showing and Using Forms in Laravel.mp4", "size": 100910470, "thumbnail": "", "date": 1613989102, "mimetype": "video/mp4"},
+        {"name": "2. Inserting Data from a Form with Laravel Eloquent.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/7. Handling Forms and Actions with Laravel Blade and Laravel Eloquent/2. Inserting Data from a Form with Laravel Eloquent.mp4", "size": 59196252, "thumbnail": "", "date": 1613989100, "mimetype": "video/mp4"},
+        {"name": "3. Editing Existing Data with a Form and Eloquent.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/7. Handling Forms and Actions with Laravel Blade and Laravel Eloquent/3. Editing Existing Data with a Form and Eloquent.mp4", "size": 101696999, "thumbnail": "", "date": 1613989106, "mimetype": "video/mp4"},
+        {"name": "4. Reviewing Some Features to Improve the Usability of the Laravel Project.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/7. Handling Forms and Actions with Laravel Blade and Laravel Eloquent/4. Reviewing Some Features to Improve the Usability of the Laravel Project.mp4", "size": 53127706, "thumbnail": "", "date": 1613989138, "mimetype": "video/mp4"},
+        {"name": "5. Removing Information from the Database Using Forms and Eloquent.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/7. Handling Forms and Actions with Laravel Blade and Laravel Eloquent/5. Removing Information from the Database Using Forms and Eloquent.mp4", "size": 61872326, "thumbnail": "", "date": 1613989124, "mimetype": "video/mp4"}
+      ]
+    }

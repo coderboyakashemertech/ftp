@@ -1,0 +1,15 @@
+    {
+      "folder_name": "10. Add Post  Infinite Scroll Components",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/10. Add Post  Infinite Scroll Components",
+      "file_count": 6,
+      "folder_size_bytes": 556977112,
+      "latest_mtime": 1606412787,
+      "files": [
+        {"name": "1. Make Add Post Form.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/10. Add Post  Infinite Scroll Components/1. Make Add Post Form.mp4", "size": 76858993, "thumbnail": "", "date": 1606412568, "mimetype": "video/mp4"},
+        {"name": "2. Create and Execute addPost Action  Mutation.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/10. Add Post  Infinite Scroll Components/2. Create and Execute addPost Action  Mutation.mp4", "size": 99664058, "thumbnail": "", "date": 1606412584, "mimetype": "video/mp4"},
+        {"name": "3. Update and Optimistic Response for addPost Mutation.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/10. Add Post  Infinite Scroll Components/3. Update and Optimistic Response for addPost Mutation.mp4", "size": 135261557, "thumbnail": "", "date": 1606412739, "mimetype": "video/mp4"},
+        {"name": "4. Infinite Scroll on Posts Page; Add typeDef, Resolver, and Query.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/10. Add Post  Infinite Scroll Components/4. Infinite Scroll on Posts Page; Add typeDef, Resolver, and Query.mp4", "size": 65900541, "thumbnail": "", "date": 1606412756, "mimetype": "video/mp4"},
+        {"name": "5. Add Infinite Scroll Functionality on Client.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/10. Add Post  Infinite Scroll Components/5. Add Infinite Scroll Functionality on Client.mp4", "size": 85100135, "thumbnail": "", "date": 1606412769, "mimetype": "video/mp4"},
+        {"name": "6. Add Grid Layout  Cards for Each Post in Posts Component.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/10. Add Post  Infinite Scroll Components/6. Add Grid Layout  Cards for Each Post in Posts Component.mp4", "size": 94191828, "thumbnail": "", "date": 1606412787, "mimetype": "video/mp4"}
+      ]
+    }

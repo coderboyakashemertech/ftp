@@ -1,0 +1,28 @@
+    {
+      "folder_name": "11. Advanced S3 & Athena",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena",
+      "file_count": 19,
+      "folder_size_bytes": 445066371,
+      "latest_mtime": 1617197066,
+      "files": [
+        {"name": "10. S3 Storage Classes + Glacier - Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/10. S3 Storage Classes + Glacier - Hands On.mp4", "size": 25216598, "thumbnail": "", "date": 1617197000, "mimetype": "video/mp4"},
+        {"name": "11. S3 Lifecycle Rules.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/11. S3 Lifecycle Rules.mp4", "size": 27450297, "thumbnail": "", "date": 1617197010, "mimetype": "video/mp4"},
+        {"name": "12. S3 Lifecycle Rules - Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/12. S3 Lifecycle Rules - Hands On.mp4", "size": 18969164, "thumbnail": "", "date": 1617197020, "mimetype": "video/mp4"},
+        {"name": "13. S3 Performance.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/13. S3 Performance.mp4", "size": 26097419, "thumbnail": "", "date": 1617197028, "mimetype": "video/mp4"},
+        {"name": "14. S3 & Glacier Select.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/14. S3 & Glacier Select.mp4", "size": 8136073, "thumbnail": "", "date": 1617197032, "mimetype": "video/mp4"},
+        {"name": "15. S3 Event Notifications.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/15. S3 Event Notifications.mp4", "size": 6559312, "thumbnail": "", "date": 1617197034, "mimetype": "video/mp4"},
+        {"name": "16. S3 Event Notifications - Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/16. S3 Event Notifications - Hands On.mp4", "size": 39672940, "thumbnail": "", "date": 1617197048, "mimetype": "video/mp4"},
+        {"name": "17. Athena Overview.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/17. Athena Overview.mp4", "size": 6859625, "thumbnail": "", "date": 1617197050, "mimetype": "video/mp4"},
+        {"name": "18. Athena Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/18. Athena Hands On.mp4", "size": 61426948, "thumbnail": "", "date": 1617197064, "mimetype": "video/mp4"},
+        {"name": "19. S3 Lock Policies & Glacier Vault Lock.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/19. S3 Lock Policies & Glacier Vault Lock.mp4", "size": 5579919, "thumbnail": "", "date": 1617197066, "mimetype": "video/mp4"},
+        {"name": "1. S3 MFA Delete.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/1. S3 MFA Delete.mp4", "size": 6204319, "thumbnail": "", "date": 1617196926, "mimetype": "video/mp4"},
+        {"name": "2. S3 MFA Delete Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/2. S3 MFA Delete Hands On.mp4", "size": 48155841, "thumbnail": "", "date": 1617196936, "mimetype": "video/mp4"},
+        {"name": "3. S3 Access Logs.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/3. S3 Access Logs.mp4", "size": 6724872, "thumbnail": "", "date": 1617196940, "mimetype": "video/mp4"},
+        {"name": "4. S3 Access Logs - Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/4. S3 Access Logs - Hands On.mp4", "size": 34164884, "thumbnail": "", "date": 1617196952, "mimetype": "video/mp4"},
+        {"name": "5. S3 Replication (Cross Region and Same Region).mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/5. S3 Replication (Cross Region and Same Region).mp4", "size": 8334204, "thumbnail": "", "date": 1617196954, "mimetype": "video/mp4"},
+        {"name": "6. S3 Replication - Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/6. S3 Replication - Hands On.mp4", "size": 47565392, "thumbnail": "", "date": 1617196970, "mimetype": "video/mp4"},
+        {"name": "7. S3 Pre-signed URLs.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/7. S3 Pre-signed URLs.mp4", "size": 7306630, "thumbnail": "", "date": 1617196974, "mimetype": "video/mp4"},
+        {"name": "8. S3 Pre-signed URLs - Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/8. S3 Pre-signed URLs - Hands On.mp4", "size": 17690112, "thumbnail": "", "date": 1617196976, "mimetype": "video/mp4"},
+        {"name": "9. S3 Storage Classes + Glacier.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/11. Advanced S3 & Athena/9. S3 Storage Classes + Glacier.mp4", "size": 42951822, "thumbnail": "", "date": 1617196992, "mimetype": "video/mp4"}
+      ]
+    }

@@ -1,0 +1,19 @@
+    {
+      "folder_name": "11. Laravello Security - Authentication",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/11. Laravello Security - Authentication",
+      "file_count": 10,
+      "folder_size_bytes": 509085124,
+      "latest_mtime": 1606035585,
+      "files": [
+        {"name": "10. Frontend Authentication.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/11. Laravello Security - Authentication/10. Frontend Authentication.mp4", "size": 29967588, "thumbnail": "", "date": 1606035585, "mimetype": "video/mp4"},
+        {"name": "1. Setting Up Vue Router (In a Different Way Than Before).mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/11. Laravello Security - Authentication/1. Setting Up Vue Router (In a Different Way Than Before).mp4", "size": 47460532, "thumbnail": "", "date": 1606035493, "mimetype": "video/mp4"},
+        {"name": "2. Login Page Markup (A Lot of Tailwind).mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/11. Laravello Security - Authentication/2. Login Page Markup (A Lot of Tailwind).mp4", "size": 108984414, "thumbnail": "", "date": 1606035508, "mimetype": "video/mp4"},
+        {"name": "3. Registration Page Markup.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/11. Laravello Security - Authentication/3. Registration Page Markup.mp4", "size": 45295410, "thumbnail": "", "date": 1606035520, "mimetype": "video/mp4"},
+        {"name": "4. Authentication, Sessions, Cookies, Tokens & Laravel Sanctum.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/11. Laravello Security - Authentication/4. Authentication, Sessions, Cookies, Tokens & Laravel Sanctum.mp4", "size": 53528575, "thumbnail": "", "date": 1606035532, "mimetype": "video/mp4"},
+        {"name": "5. Setting Up Session Based Authentication with GraphQL.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/11. Laravello Security - Authentication/5. Setting Up Session Based Authentication with GraphQL.mp4", "size": 66912257, "thumbnail": "", "date": 1606035544, "mimetype": "video/mp4"},
+        {"name": "6. Session Based Authentication on Frontend (CSRF Token & Cookies).mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/11. Laravello Security - Authentication/6. Session Based Authentication on Frontend (CSRF Token & Cookies).mp4", "size": 36342275, "thumbnail": "", "date": 1606035551, "mimetype": "video/mp4"},
+        {"name": "7. Laravel Guards.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/11. Laravello Security - Authentication/7. Laravel Guards.mp4", "size": 36442360, "thumbnail": "", "date": 1606035559, "mimetype": "video/mp4"},
+        {"name": "8. Fixing GraphQL Playground.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/11. Laravello Security - Authentication/8. Fixing GraphQL Playground.mp4", "size": 29647694, "thumbnail": "", "date": 1606035568, "mimetype": "video/mp4"},
+        {"name": "9. Non Directive Custom Login & Logout Mutations.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/11. Laravello Security - Authentication/9. Non Directive Custom Login & Logout Mutations.mp4", "size": 54504019, "thumbnail": "", "date": 1606035578, "mimetype": "video/mp4"}
+      ]
+    }

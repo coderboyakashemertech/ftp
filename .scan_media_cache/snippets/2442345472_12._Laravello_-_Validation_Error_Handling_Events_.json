@@ -1,0 +1,15 @@
+    {
+      "folder_name": "12. Laravello - Validation, Error Handling & Events",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/12. Laravello - Validation, Error Handling & Events",
+      "file_count": 6,
+      "folder_size_bytes": 433574372,
+      "latest_mtime": 1606035664,
+      "files": [
+        {"name": "1. GraphQL Error Handling.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/12. Laravello - Validation, Error Handling & Events/1. GraphQL Error Handling.mp4", "size": 52505104, "thumbnail": "", "date": 1606035598, "mimetype": "video/mp4"},
+        {"name": "2. Arrow Functions, Array Functions and Operators (Optional).mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/12. Laravello - Validation, Error Handling & Events/2. Arrow Functions, Array Functions and Operators (Optional).mp4", "size": 78973935, "thumbnail": "", "date": 1606035611, "mimetype": "video/mp4"},
+        {"name": "3. Login Error Handling.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/12. Laravello - Validation, Error Handling & Events/3. Login Error Handling.mp4", "size": 73947340, "thumbnail": "", "date": 1606035624, "mimetype": "video/mp4"},
+        {"name": "4. Registration GraphQL Mutation.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/12. Laravello - Validation, Error Handling & Events/4. Registration GraphQL Mutation.mp4", "size": 51247819, "thumbnail": "", "date": 1606035635, "mimetype": "video/mp4"},
+        {"name": "5. Server Side Input Validation.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/12. Laravello - Validation, Error Handling & Events/5. Server Side Input Validation.mp4", "size": 115811359, "thumbnail": "", "date": 1606035654, "mimetype": "video/mp4"},
+        {"name": "6. Events & Listeners - Authenticate User After Registration.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/12. Laravello - Validation, Error Handling & Events/6. Events & Listeners - Authenticate User After Registration.mp4", "size": 61088815, "thumbnail": "", "date": 1606035664, "mimetype": "video/mp4"}
+      ]
+    }

@@ -1,0 +1,13 @@
+    {
+      "folder_name": "25. Advanced Identity",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/25. Advanced Identity",
+      "file_count": 4,
+      "folder_size_bytes": 114455453,
+      "latest_mtime": 1617199340,
+      "files": [
+        {"name": "1. STS Overview.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/25. Advanced Identity/1. STS Overview.mp4", "size": 16445638, "thumbnail": "", "date": 1617199302, "mimetype": "video/mp4"},
+        {"name": "2. Advanced IAM.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/25. Advanced Identity/2. Advanced IAM.mp4", "size": 52039275, "thumbnail": "", "date": 1617199322, "mimetype": "video/mp4"},
+        {"name": "3. Granting a User Permissions to Pass a Role to an AWS Service.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/25. Advanced Identity/3. Granting a User Permissions to Pass a Role to an AWS Service.mp4", "size": 19510105, "thumbnail": "", "date": 1617199332, "mimetype": "video/mp4"},
+        {"name": "4. Directory Services - Overview.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/25. Advanced Identity/4. Directory Services - Overview.mp4", "size": 26460435, "thumbnail": "", "date": 1617199340, "mimetype": "video/mp4"}
+      ]
+    }

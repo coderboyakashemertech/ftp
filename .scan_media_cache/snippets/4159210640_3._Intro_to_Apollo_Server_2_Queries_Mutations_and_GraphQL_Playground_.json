@@ -1,0 +1,14 @@
+    {
+      "folder_name": "3. Intro to Apollo Server 2, Queries, Mutations and GraphQL Playground",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/3. Intro to Apollo Server 2, Queries, Mutations and GraphQL Playground",
+      "file_count": 5,
+      "folder_size_bytes": 211858453,
+      "latest_mtime": 1606412003,
+      "files": [
+        {"name": "1. Git Clone and Install Dependencies (Required).mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/3. Intro to Apollo Server 2, Queries, Mutations and GraphQL Playground/1. Git Clone and Install Dependencies (Required).mp4", "size": 32136829, "thumbnail": "", "date": 1606411964, "mimetype": "video/mp4"},
+        {"name": "2. Initializing Apollo Server 2 (Optional).mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/3. Intro to Apollo Server 2, Queries, Mutations and GraphQL Playground/2. Initializing Apollo Server 2 (Optional).mp4", "size": 80513586, "thumbnail": "", "date": 1606411977, "mimetype": "video/mp4"},
+        {"name": "3. Adding Resolvers and Executing Queries in GraphQL Playground (Optional).mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/3. Intro to Apollo Server 2, Queries, Mutations and GraphQL Playground/3. Adding Resolvers and Executing Queries in GraphQL Playground (Optional).mp4", "size": 37551010, "thumbnail": "", "date": 1606411985, "mimetype": "video/mp4"},
+        {"name": "4. Writing and Running First Mutation in GraphQL Playground (Optional).mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/3. Intro to Apollo Server 2, Queries, Mutations and GraphQL Playground/4. Writing and Running First Mutation in GraphQL Playground (Optional).mp4", "size": 45527937, "thumbnail": "", "date": 1606411994, "mimetype": "video/mp4"},
+        {"name": "5. Exploring GraphQL Playground.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/3. Intro to Apollo Server 2, Queries, Mutations and GraphQL Playground/5. Exploring GraphQL Playground.mp4", "size": 16129091, "thumbnail": "", "date": 1606412003, "mimetype": "video/mp4"}
+      ]
+    }

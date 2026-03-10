@@ -1,0 +1,16 @@
+    {
+      "folder_name": "4. BlogQL - Setting Up Laravel, Vue, GraphQL & Tailwind",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/4. BlogQL - Setting Up Laravel, Vue, GraphQL & Tailwind",
+      "file_count": 7,
+      "folder_size_bytes": 402438196,
+      "latest_mtime": 1606034895,
+      "files": [
+        {"name": "1. Composer 101.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/4. BlogQL - Setting Up Laravel, Vue, GraphQL & Tailwind/1. Composer 101.mp4", "size": 47310306, "thumbnail": "", "date": 1606034805, "mimetype": "video/mp4"},
+        {"name": "2. Installing Laravel and Dependencies.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/4. BlogQL - Setting Up Laravel, Vue, GraphQL & Tailwind/2. Installing Laravel and Dependencies.mp4", "size": 53176426, "thumbnail": "", "date": 1606034817, "mimetype": "video/mp4"},
+        {"name": "3. Setting Up Laravel.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/4. BlogQL - Setting Up Laravel, Vue, GraphQL & Tailwind/3. Setting Up Laravel.mp4", "size": 42584767, "thumbnail": "", "date": 1606034828, "mimetype": "video/mp4"},
+        {"name": "4. Laravel Mix & Tailwind CSS.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/4. BlogQL - Setting Up Laravel, Vue, GraphQL & Tailwind/4. Laravel Mix & Tailwind CSS.mp4", "size": 37032855, "thumbnail": "", "date": 1606034836, "mimetype": "video/mp4"},
+        {"name": "5. Setting Up Tailwind CSS & Vue.js.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/4. BlogQL - Setting Up Laravel, Vue, GraphQL & Tailwind/5. Setting Up Tailwind CSS & Vue.js.mp4", "size": 64908717, "thumbnail": "", "date": 1606034852, "mimetype": "video/mp4"},
+        {"name": "6. Setting up a GraphQL Server in Laravel Part 1.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/4. BlogQL - Setting Up Laravel, Vue, GraphQL & Tailwind/6. Setting up a GraphQL Server in Laravel Part 1.mp4", "size": 48031841, "thumbnail": "", "date": 1606034860, "mimetype": "video/mp4"},
+        {"name": "7. Setting up a GraphQL Server in Laravel Part 2.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/4. BlogQL - Setting Up Laravel, Vue, GraphQL & Tailwind/7. Setting up a GraphQL Server in Laravel Part 2.mp4", "size": 109393284, "thumbnail": "", "date": 1606034895, "mimetype": "video/mp4"}
+      ]
+    }

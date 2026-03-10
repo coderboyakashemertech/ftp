@@ -1,0 +1,15 @@
+    {
+      "folder_name": "1. Course Introduction - AWS Certified Developer Associate",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/1. Course Introduction - AWS Certified Developer Associate",
+      "file_count": 6,
+      "folder_size_bytes": 99506397,
+      "latest_mtime": 1617196048,
+      "files": [
+        {"name": "1. Course Introduction - AWS Certified Developer Associate.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/1. Course Introduction - AWS Certified Developer Associate/1. Course Introduction - AWS Certified Developer Associate.mp4", "size": 11334713, "thumbnail": "", "date": 1617196028, "mimetype": "video/mp4"},
+        {"name": "3. Create your AWS Account.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/1. Course Introduction - AWS Certified Developer Associate/3. Create your AWS Account.mp4", "size": 10860961, "thumbnail": "", "date": 1617196030, "mimetype": "video/mp4"},
+        {"name": "5. AWS Budget Setup.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/1. Course Introduction - AWS Certified Developer Associate/5. AWS Budget Setup.mp4", "size": 13118074, "thumbnail": "", "date": 1617196032, "mimetype": "video/mp4"},
+        {"name": "6. Important Message.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/1. Course Introduction - AWS Certified Developer Associate/6. Important Message.mp4", "size": 3081933, "thumbnail": "", "date": 1617196032, "mimetype": "video/mp4"},
+        {"name": "7. About your instructor.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/1. Course Introduction - AWS Certified Developer Associate/7. About your instructor.mp4", "size": 52117062, "thumbnail": "", "date": 1617196046, "mimetype": "video/mp4"},
+        {"name": "8. How to read an AWS Bill.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/1. Course Introduction - AWS Certified Developer Associate/8. How to read an AWS Bill.mp4", "size": 8993654, "thumbnail": "", "date": 1617196048, "mimetype": "video/mp4"}
+      ]
+    }

@@ -1,0 +1,17 @@
+    {
+      "folder_name": "17. Persistent Data with Localbase",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/17. Persistent Data with Localbase",
+      "file_count": 8,
+      "folder_size_bytes": 401951341,
+      "latest_mtime": 1609342518,
+      "files": [
+        {"name": "1. Install Localbase.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/17. Persistent Data with Localbase/1. Install Localbase.mp4", "size": 45124342, "thumbnail": "", "date": 1609342452, "mimetype": "video/mp4"},
+        {"name": "2. Make Add Task Persist.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/17. Persistent Data with Localbase/2. Make Add Task Persist.mp4", "size": 73760356, "thumbnail": "", "date": 1609342462, "mimetype": "video/mp4"},
+        {"name": "3. Get Tasks from Localbase on Load.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/17. Persistent Data with Localbase/3. Get Tasks from Localbase on Load.mp4", "size": 53454347, "thumbnail": "", "date": 1609342477, "mimetype": "video/mp4"},
+        {"name": "4. Make Done Task Persist.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/17. Persistent Data with Localbase/4. Make Done Task Persist.mp4", "size": 80196434, "thumbnail": "", "date": 1609342490, "mimetype": "video/mp4"},
+        {"name": "5. Make Update Title Persist.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/17. Persistent Data with Localbase/5. Make Update Title Persist.mp4", "size": 31094971, "thumbnail": "", "date": 1609342495, "mimetype": "video/mp4"},
+        {"name": "6. Make Due Date Persist.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/17. Persistent Data with Localbase/6. Make Due Date Persist.mp4", "size": 19312354, "thumbnail": "", "date": 1609342499, "mimetype": "video/mp4"},
+        {"name": "7. Make Delete Task Persist.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/17. Persistent Data with Localbase/7. Make Delete Task Persist.mp4", "size": 21022619, "thumbnail": "", "date": 1609342505, "mimetype": "video/mp4"},
+        {"name": "8. Make Reordering Persist.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/17. Persistent Data with Localbase/8. Make Reordering Persist.mp4", "size": 77985918, "thumbnail": "", "date": 1609342518, "mimetype": "video/mp4"}
+      ]
+    }

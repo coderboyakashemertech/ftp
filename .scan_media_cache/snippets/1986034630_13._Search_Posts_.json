@@ -1,0 +1,13 @@
+    {
+      "folder_name": "13. Search Posts",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/13. Search Posts",
+      "file_count": 4,
+      "folder_size_bytes": 250621682,
+      "latest_mtime": 1606413024,
+      "files": [
+        {"name": "1. Add typeDef  resolver  query for searchPosts.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/13. Search Posts/1. Add typeDef  resolver  query for searchPosts.mp4", "size": 63844510, "thumbnail": "", "date": 1606412981, "mimetype": "video/mp4"},
+        {"name": "2. Fire searchPosts Action, Log Search Results.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/13. Search Posts/2. Fire searchPosts Action, Log Search Results.mp4", "size": 51442945, "thumbnail": "", "date": 1606412992, "mimetype": "video/mp4"},
+        {"name": "3. Add searchResults to State, Build Search Result Card.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/13. Search Posts/3. Add searchResults to State, Build Search Result Card.mp4", "size": 61022253, "thumbnail": "", "date": 1606413003, "mimetype": "video/mp4"},
+        {"name": "4. Finishing Search Results, Making them Functional.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/13. Search Posts/4. Finishing Search Results, Making them Functional.mp4", "size": 74311974, "thumbnail": "", "date": 1606413024, "mimetype": "video/mp4"}
+      ]
+    }

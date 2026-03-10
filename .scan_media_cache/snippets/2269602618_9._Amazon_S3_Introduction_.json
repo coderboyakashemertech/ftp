@@ -1,0 +1,22 @@
+    {
+      "folder_name": "9. Amazon S3 Introduction",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/9. Amazon S3 Introduction",
+      "file_count": 13,
+      "folder_size_bytes": 396804044,
+      "latest_mtime": 1617196748,
+      "files": [
+        {"name": "10. S3 Websites.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/9. Amazon S3 Introduction/10. S3 Websites.mp4", "size": 37006120, "thumbnail": "", "date": 1617196710, "mimetype": "video/mp4"},
+        {"name": "11. S3 CORS.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/9. Amazon S3 Introduction/11. S3 CORS.mp4", "size": 22272455, "thumbnail": "", "date": 1617196714, "mimetype": "video/mp4"},
+        {"name": "12. S3 CORS Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/9. Amazon S3 Introduction/12. S3 CORS Hands On.mp4", "size": 67813388, "thumbnail": "", "date": 1617196740, "mimetype": "video/mp4"},
+        {"name": "13. S3 Consistency Model.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/9. Amazon S3 Introduction/13. S3 Consistency Model.mp4", "size": 12711347, "thumbnail": "", "date": 1617196748, "mimetype": "video/mp4"},
+        {"name": "1. Amazon S3 - Section Introduction.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/9. Amazon S3 Introduction/1. Amazon S3 - Section Introduction.mp4", "size": 13949896, "thumbnail": "", "date": 1617196614, "mimetype": "video/mp4"},
+        {"name": "2. S3 Buckets and Objects.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/9. Amazon S3 Introduction/2. S3 Buckets and Objects.mp4", "size": 12620255, "thumbnail": "", "date": 1617196622, "mimetype": "video/mp4"},
+        {"name": "3. S3 Buckets and Objects - Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/9. Amazon S3 Introduction/3. S3 Buckets and Objects - Hands On.mp4", "size": 42769683, "thumbnail": "", "date": 1617196636, "mimetype": "video/mp4"},
+        {"name": "4. S3 Versioning.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/9. Amazon S3 Introduction/4. S3 Versioning.mp4", "size": 4410696, "thumbnail": "", "date": 1617196638, "mimetype": "video/mp4"},
+        {"name": "5. S3 Versioning - Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/9. Amazon S3 Introduction/5. S3 Versioning - Hands On.mp4", "size": 36386719, "thumbnail": "", "date": 1617196656, "mimetype": "video/mp4"},
+        {"name": "6. S3 Encryption.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/9. Amazon S3 Introduction/6. S3 Encryption.mp4", "size": 24605691, "thumbnail": "", "date": 1617196666, "mimetype": "video/mp4"},
+        {"name": "7. S3 Encryption - Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/9. Amazon S3 Introduction/7. S3 Encryption - Hands On.mp4", "size": 42692123, "thumbnail": "", "date": 1617196676, "mimetype": "video/mp4"},
+        {"name": "8. S3 Security & Bucket Policies.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/9. Amazon S3 Introduction/8. S3 Security & Bucket Policies.mp4", "size": 21191143, "thumbnail": "", "date": 1617196684, "mimetype": "video/mp4"},
+        {"name": "9. S3 Bucket Policies Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/9. Amazon S3 Introduction/9. S3 Bucket Policies Hands On.mp4", "size": 58374528, "thumbnail": "", "date": 1617196698, "mimetype": "video/mp4"}
+      ]
+    }

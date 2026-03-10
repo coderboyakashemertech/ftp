@@ -1,0 +1,11 @@
+    {
+      "folder_name": "Ad Astra (2019) [WEBRip] [1080p] [YTS.LT]",
+      "folder_path": "/mnt/seagate-2tb/Movies/Ad Astra (2019) [WEBRip] [1080p] [YTS.LT]",
+      "file_count": 2,
+      "folder_size_bytes": 2107663579,
+      "latest_mtime": 1699883377,
+      "files": [
+        {"name": "Ad.Astra.2019.1080p.WEBRip.x264-[YTS.LT].mp4", "path": "/mnt/seagate-2tb/Movies/Ad Astra (2019) [WEBRip] [1080p] [YTS.LT]/Ad.Astra.2019.1080p.WEBRip.x264-[YTS.LT].mp4", "size": 2107605230, "thumbnail": "", "date": 1699883377, "mimetype": "video/mp4"},
+        {"name": "www.YTS.LT.jpg", "path": "/mnt/seagate-2tb/Movies/Ad Astra (2019) [WEBRip] [1080p] [YTS.LT]/www.YTS.LT.jpg", "size": 58349, "thumbnail": "", "date": 1699883364, "mimetype": "image/jpeg"}
+      ]
+    }

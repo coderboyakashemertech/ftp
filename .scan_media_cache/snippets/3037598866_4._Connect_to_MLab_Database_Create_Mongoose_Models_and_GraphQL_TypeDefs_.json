@@ -1,0 +1,15 @@
+    {
+      "folder_name": "4. Connect to MLab Database, Create Mongoose Models and GraphQL TypeDefs",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/4. Connect to MLab Database, Create Mongoose Models and GraphQL TypeDefs",
+      "file_count": 6,
+      "folder_size_bytes": 341776831,
+      "latest_mtime": 1606412087,
+      "files": [
+        {"name": "1. Create MongoDB Atlas Database, Connect to GraphQL Server.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/4. Connect to MLab Database, Create Mongoose Models and GraphQL TypeDefs/1. Create MongoDB Atlas Database, Connect to GraphQL Server.mp4", "size": 47482863, "thumbnail": "", "date": 1606412019, "mimetype": "video/mp4"},
+        {"name": "2. Creating Mongoose Schemas.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/4. Connect to MLab Database, Create Mongoose Models and GraphQL TypeDefs/2. Creating Mongoose Schemas.mp4", "size": 80621090, "thumbnail": "", "date": 1606412033, "mimetype": "video/mp4"},
+        {"name": "3. Creating typeDefs for Project.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/4. Connect to MLab Database, Create Mongoose Models and GraphQL TypeDefs/3. Creating typeDefs for Project.mp4", "size": 51765804, "thumbnail": "", "date": 1606412047, "mimetype": "video/mp4"},
+        {"name": "4. Write and Run signupUser Mutation.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/4. Connect to MLab Database, Create Mongoose Models and GraphQL TypeDefs/4. Write and Run signupUser Mutation.mp4", "size": 59349394, "thumbnail": "", "date": 1606412065, "mimetype": "video/mp4"},
+        {"name": "5. Write and Run addPost Mutation.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/4. Connect to MLab Database, Create Mongoose Models and GraphQL TypeDefs/5. Write and Run addPost Mutation.mp4", "size": 49322890, "thumbnail": "", "date": 1606412073, "mimetype": "video/mp4"},
+        {"name": "6. Write and Run getPosts Query, Intro to populate.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/4. Connect to MLab Database, Create Mongoose Models and GraphQL TypeDefs/6. Write and Run getPosts Query, Intro to populate.mp4", "size": 53234790, "thumbnail": "", "date": 1606412087, "mimetype": "video/mp4"}
+      ]
+    }

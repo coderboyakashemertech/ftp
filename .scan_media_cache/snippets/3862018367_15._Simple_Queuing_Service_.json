@@ -1,0 +1,12 @@
+    {
+      "folder_name": "15. Simple Queuing Service",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/15. Simple Queuing Service",
+      "file_count": 3,
+      "folder_size_bytes": 13645303,
+      "latest_mtime": 1615106202,
+      "files": [
+        {"name": "1. 1501 AWS - Overview Of Queues.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/15. Simple Queuing Service/1. 1501 AWS - Overview Of Queues.mp4", "size": 4402437, "thumbnail": "", "date": 1615106190, "mimetype": "video/mp4"},
+        {"name": "2. 1502 Introduction To SQS.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/15. Simple Queuing Service/2. 1502 Introduction To SQS.mp4", "size": 6108527, "thumbnail": "", "date": 1615106196, "mimetype": "video/mp4"},
+        {"name": "3. 1503 SQS Use Cases.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/15. Simple Queuing Service/3. 1503 SQS Use Cases.mp4", "size": 3134339, "thumbnail": "", "date": 1615106202, "mimetype": "video/mp4"}
+      ]
+    }

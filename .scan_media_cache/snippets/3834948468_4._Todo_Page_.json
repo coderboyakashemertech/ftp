@@ -1,0 +1,15 @@
+    {
+      "folder_name": "4. Todo Page",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/4. Todo Page",
+      "file_count": 6,
+      "folder_size_bytes": 421585601,
+      "latest_mtime": 1609341827,
+      "files": [
+        {"name": "1. Create a List of Tasks.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/4. Todo Page/1. Create a List of Tasks.mp4", "size": 37589584, "thumbnail": "", "date": 1609341757, "mimetype": "video/mp4"},
+        {"name": "2. Add a Data Property for the Tasks.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/4. Todo Page/2. Add a Data Property for the Tasks.mp4", "size": 55611471, "thumbnail": "", "date": 1609341770, "mimetype": "video/mp4"},
+        {"name": "3. Mark Task as Done.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/4. Todo Page/3. Mark Task as Done.mp4", "size": 101341274, "thumbnail": "", "date": 1609341784, "mimetype": "video/mp4"},
+        {"name": "4. Delete Task.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/4. Todo Page/4. Delete Task.mp4", "size": 44690850, "thumbnail": "", "date": 1609341791, "mimetype": "video/mp4"},
+        {"name": "5. Add Task.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/4. Todo Page/5. Add Task.mp4", "size": 104209505, "thumbnail": "", "date": 1609341806, "mimetype": "video/mp4"},
+        {"name": "6. No Tasks Fallback.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/4. Todo Page/6. No Tasks Fallback.mp4", "size": 78142917, "thumbnail": "", "date": 1609341827, "mimetype": "video/mp4"}
+      ]
+    }

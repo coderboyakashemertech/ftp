@@ -1,0 +1,13 @@
+    {
+      "folder_name": "1. Introduction To Amazon Web Services",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/1. Introduction To Amazon Web Services",
+      "file_count": 4,
+      "folder_size_bytes": 40771228,
+      "latest_mtime": 1615106036,
+      "files": [
+        {"name": "2. 0101 Amazon Web Services - What Is The Cloud.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/1. Introduction To Amazon Web Services/2. 0101 Amazon Web Services - What Is The Cloud.mp4", "size": 22805088, "thumbnail": "", "date": 1615106028, "mimetype": "video/mp4"},
+        {"name": "3. 0102 Scalability And Costs In The Cloud.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/1. Introduction To Amazon Web Services/3. 0102 Scalability And Costs In The Cloud.mp4", "size": 6424182, "thumbnail": "", "date": 1615106030, "mimetype": "video/mp4"},
+        {"name": "4. 0103 Cloud Impacts On Architecture.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/1. Introduction To Amazon Web Services/4. 0103 Cloud Impacts On Architecture.mp4", "size": 7192056, "thumbnail": "", "date": 1615106034, "mimetype": "video/mp4"},
+        {"name": "5. 0104 Creating A Cloud Account With AWS.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/1. Introduction To Amazon Web Services/5. 0104 Creating A Cloud Account With AWS.mp4", "size": 4349902, "thumbnail": "", "date": 1615106036, "mimetype": "video/mp4"}
+      ]
+    }

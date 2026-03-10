@@ -1,0 +1,18 @@
+    {
+      "folder_name": "6. AWS Fundamentals RDS + Aurora + ElastiCache",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/6. AWS Fundamentals RDS + Aurora + ElastiCache",
+      "file_count": 9,
+      "folder_size_bytes": 327799525,
+      "latest_mtime": 1617196480,
+      "files": [
+        {"name": "1. Amazon RDS Overview.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/6. AWS Fundamentals RDS + Aurora + ElastiCache/1. Amazon RDS Overview.mp4", "size": 14187948, "thumbnail": "", "date": 1617196386, "mimetype": "video/mp4"},
+        {"name": "2. RDS Read Replicas vs Multi AZ.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/6. AWS Fundamentals RDS + Aurora + ElastiCache/2. RDS Read Replicas vs Multi AZ.mp4", "size": 27663195, "thumbnail": "", "date": 1617196398, "mimetype": "video/mp4"},
+        {"name": "3. Amazon RDS Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/6. AWS Fundamentals RDS + Aurora + ElastiCache/3. Amazon RDS Hands On.mp4", "size": 58159191, "thumbnail": "", "date": 1617196416, "mimetype": "video/mp4"},
+        {"name": "4. RDS Encryption + Security.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/6. AWS Fundamentals RDS + Aurora + ElastiCache/4. RDS Encryption + Security.mp4", "size": 28011518, "thumbnail": "", "date": 1617196422, "mimetype": "video/mp4"},
+        {"name": "5. Aurora Overview.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/6. AWS Fundamentals RDS + Aurora + ElastiCache/5. Aurora Overview.mp4", "size": 42909837, "thumbnail": "", "date": 1617196434, "mimetype": "video/mp4"},
+        {"name": "6. Aurora Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/6. AWS Fundamentals RDS + Aurora + ElastiCache/6. Aurora Hands On.mp4", "size": 61791081, "thumbnail": "", "date": 1617196452, "mimetype": "video/mp4"},
+        {"name": "7. ElastiCache Overview.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/6. AWS Fundamentals RDS + Aurora + ElastiCache/7. ElastiCache Overview.mp4", "size": 25876136, "thumbnail": "", "date": 1617196462, "mimetype": "video/mp4"},
+        {"name": "8. ElastiCache Hands On.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/6. AWS Fundamentals RDS + Aurora + ElastiCache/8. ElastiCache Hands On.mp4", "size": 18919130, "thumbnail": "", "date": 1617196468, "mimetype": "video/mp4"},
+        {"name": "9. ElastiCache Strategies.mp4", "path": "/mnt/seagate-2tb/Lectures/Ultimate AWS Certified Developer Associate 2021 - NEW!/6. AWS Fundamentals RDS + Aurora + ElastiCache/9. ElastiCache Strategies.mp4", "size": 50281489, "thumbnail": "", "date": 1617196480, "mimetype": "video/mp4"}
+      ]
+    }

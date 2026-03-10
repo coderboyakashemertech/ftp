@@ -1,0 +1,13 @@
+    {
+      "folder_name": "7. Integrate Vuex with ApolloClient",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/7. Integrate Vuex with ApolloClient",
+      "file_count": 4,
+      "folder_size_bytes": 188738242,
+      "latest_mtime": 1606412270,
+      "files": [
+        {"name": "1. Firing getPosts Action with Vuex.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/7. Integrate Vuex with ApolloClient/1. Firing getPosts Action with Vuex.mp4", "size": 45045346, "thumbnail": "", "date": 1606412239, "mimetype": "video/mp4"},
+        {"name": "2. Using Mutations and Getters.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/7. Integrate Vuex with ApolloClient/2. Using Mutations and Getters.mp4", "size": 59031967, "thumbnail": "", "date": 1606412251, "mimetype": "video/mp4"},
+        {"name": "3. Add Loading Property, Loading Spinner and mapGetters.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/7. Integrate Vuex with ApolloClient/3. Add Loading Property, Loading Spinner and mapGetters.mp4", "size": 57037314, "thumbnail": "", "date": 1606412263, "mimetype": "video/mp4"},
+        {"name": "4. Create queries.js for Clientside Query  Mutation Definitions.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/7. Integrate Vuex with ApolloClient/4. Create queries.js for Clientside Query  Mutation Definitions.mp4", "size": 27623615, "thumbnail": "", "date": 1606412270, "mimetype": "video/mp4"}
+      ]
+    }

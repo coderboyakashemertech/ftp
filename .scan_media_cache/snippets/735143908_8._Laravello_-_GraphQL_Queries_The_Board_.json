@@ -1,0 +1,15 @@
+    {
+      "folder_name": "8. Laravello - GraphQL Queries & The Board",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/8. Laravello - GraphQL Queries & The Board",
+      "file_count": 6,
+      "folder_size_bytes": 437192038,
+      "latest_mtime": 1606035291,
+      "files": [
+        {"name": "1. Board View Page (incl. CSS Flexbox crash course).mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/8. Laravello - GraphQL Queries & The Board/1. Board View Page (incl. CSS Flexbox crash course).mp4", "size": 141220281, "thumbnail": "", "date": 1606035233, "mimetype": "video/mp4"},
+        {"name": "2. Extracting Board Into Vue Component.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/8. Laravello - GraphQL Queries & The Board/2. Extracting Board Into Vue Component.mp4", "size": 63510875, "thumbnail": "", "date": 1606035243, "mimetype": "video/mp4"},
+        {"name": "3. Seeding Data (Generating Fake Data).mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/8. Laravello - GraphQL Queries & The Board/3. Seeding Data (Generating Fake Data).mp4", "size": 98059124, "thumbnail": "", "date": 1606035262, "mimetype": "video/mp4"},
+        {"name": "4. Setup Vue Apollo & JavaScript Import Syntax.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/8. Laravello - GraphQL Queries & The Board/4. Setup Vue Apollo & JavaScript Import Syntax.mp4", "size": 46245918, "thumbnail": "", "date": 1606035271, "mimetype": "video/mp4"},
+        {"name": "5. Querying For The Board (GraphQL Query).mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/8. Laravello - GraphQL Queries & The Board/5. Querying For The Board (GraphQL Query).mp4", "size": 37903301, "thumbnail": "", "date": 1606035278, "mimetype": "video/mp4"},
+        {"name": "6. Board Page - Querying Real Data.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel with GraphQL, Vue.js and Tailwind/8. Laravello - GraphQL Queries & The Board/6. Board Page - Querying Real Data.mp4", "size": 50252539, "thumbnail": "", "date": 1606035291, "mimetype": "video/mp4"}
+      ]
+    }

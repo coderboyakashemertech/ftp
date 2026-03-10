@@ -1,0 +1,16 @@
+    {
+      "folder_name": "14. Profile Page, Update  Delete Posts",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/14. Profile Page, Update  Delete Posts",
+      "file_count": 7,
+      "folder_size_bytes": 543594519,
+      "latest_mtime": 1606413959,
+      "files": [
+        {"name": "1. Add User Details Card  Favorites Cards.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/14. Profile Page, Update  Delete Posts/1. Add User Details Card  Favorites Cards.mp4", "size": 49772654, "thumbnail": "", "date": 1606413038, "mimetype": "video/mp4"},
+        {"name": "2. Write getUserPosts Query.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/14. Profile Page, Update  Delete Posts/2. Write getUserPosts Query.mp4", "size": 34583713, "thumbnail": "", "date": 1606413057, "mimetype": "video/mp4"},
+        {"name": "3. Execute getUserPosts Query, Create and Populate User Cards.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/14. Profile Page, Update  Delete Posts/3. Execute getUserPosts Query, Create and Populate User Cards.mp4", "size": 95816094, "thumbnail": "", "date": 1606413086, "mimetype": "video/mp4"},
+        {"name": "4. Add Edit Post Dialog for Updating User Posts.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/14. Profile Page, Update  Delete Posts/4. Add Edit Post Dialog for Updating User Posts.mp4", "size": 65625369, "thumbnail": "", "date": 1606413097, "mimetype": "video/mp4"},
+        {"name": "5. Create updateUserPost Mutation.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/14. Profile Page, Update  Delete Posts/5. Create updateUserPost Mutation.mp4", "size": 69556430, "thumbnail": "", "date": 1606413114, "mimetype": "video/mp4"},
+        {"name": "6. Executing updateUserPost Mutation with Vuex Action.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/14. Profile Page, Update  Delete Posts/6. Executing updateUserPost Mutation with Vuex Action.mp4", "size": 150289166, "thumbnail": "", "date": 1606413945, "mimetype": "video/mp4"},
+        {"name": "7. deleteUserRecipe Mutation - Backend Creation to Frontend Execution.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/14. Profile Page, Update  Delete Posts/7. deleteUserRecipe Mutation - Backend Creation to Frontend Execution.mp4", "size": 77951093, "thumbnail": "", "date": 1606413959, "mimetype": "video/mp4"}
+      ]
+    }

@@ -1,0 +1,18 @@
+    {
+      "folder_name": "6. Nuxt Checkout",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/6. Nuxt Checkout",
+      "file_count": 9,
+      "folder_size_bytes": 242379171,
+      "latest_mtime": 1614094590,
+      "files": [
+        {"name": "1. Installation.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/6. Nuxt Checkout/1. Installation.mp4", "size": 9253681, "thumbnail": "", "date": 1614094532, "mimetype": "video/mp4"},
+        {"name": "2. Template.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/6. Nuxt Checkout/2. Template.mp4", "size": 54967545, "thumbnail": "", "date": 1614094546, "mimetype": "video/mp4"},
+        {"name": "3. Routing.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/6. Nuxt Checkout/3. Routing.mp4", "size": 17478800, "thumbnail": "", "date": 1614094550, "mimetype": "video/mp4"},
+        {"name": "4. asyncData.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/6. Nuxt Checkout/4. asyncData.mp4", "size": 22233850, "thumbnail": "", "date": 1614094554, "mimetype": "video/mp4"},
+        {"name": "5. Products.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/6. Nuxt Checkout/5. Products.mp4", "size": 34968095, "thumbnail": "", "date": 1614094566, "mimetype": "video/mp4"},
+        {"name": "6. Order Total.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/6. Nuxt Checkout/6. Order Total.mp4", "size": 25230385, "thumbnail": "", "date": 1614094570, "mimetype": "video/mp4"},
+        {"name": "7. Creating Orders.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/6. Nuxt Checkout/7. Creating Orders.mp4", "size": 50355444, "thumbnail": "", "date": 1614094582, "mimetype": "video/mp4"},
+        {"name": "8. Stripe.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/6. Nuxt Checkout/8. Stripe.mp4", "size": 20604802, "thumbnail": "", "date": 1614094588, "mimetype": "video/mp4"},
+        {"name": "9. Conclusion.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/6. Nuxt Checkout/9. Conclusion.mp4", "size": 7286569, "thumbnail": "", "date": 1614094590, "mimetype": "video/mp4"}
+      ]
+    }

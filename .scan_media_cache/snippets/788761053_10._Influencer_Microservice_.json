@@ -1,0 +1,15 @@
+    {
+      "folder_name": "10. Influencer Microservice",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/10. Influencer Microservice",
+      "file_count": 6,
+      "folder_size_bytes": 214623652,
+      "latest_mtime": 1614094942,
+      "files": [
+        {"name": "1. Setup.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/10. Influencer Microservice/1. Setup.mp4", "size": 8436048, "thumbnail": "", "date": 1614094896, "mimetype": "video/mp4"},
+        {"name": "2. Migrations.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/10. Influencer Microservice/2. Migrations.mp4", "size": 11947280, "thumbnail": "", "date": 1614094902, "mimetype": "video/mp4"},
+        {"name": "3. Importing Data.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/10. Influencer Microservice/3. Importing Data.mp4", "size": 40829940, "thumbnail": "", "date": 1614094908, "mimetype": "video/mp4"},
+        {"name": "4. Moving Controllers.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/10. Influencer Microservice/4. Moving Controllers.mp4", "size": 60451440, "thumbnail": "", "date": 1614094926, "mimetype": "video/mp4"},
+        {"name": "5. Adding Events and Listeners.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/10. Influencer Microservice/5. Adding Events and Listeners.mp4", "size": 57553021, "thumbnail": "", "date": 1614094938, "mimetype": "video/mp4"},
+        {"name": "6. Redis.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/10. Influencer Microservice/6. Redis.mp4", "size": 35405923, "thumbnail": "", "date": 1614094942, "mimetype": "video/mp4"}
+      ]
+    }

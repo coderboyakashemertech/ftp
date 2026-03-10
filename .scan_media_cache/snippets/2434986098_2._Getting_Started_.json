@@ -1,0 +1,15 @@
+    {
+      "folder_name": "2. Getting Started",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/2. Getting Started",
+      "file_count": 6,
+      "folder_size_bytes": 179539365,
+      "latest_mtime": 1609341699,
+      "files": [
+        {"name": "1. Install Node.js & Vue CLI.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/2. Getting Started/1. Install Node.js & Vue CLI.mp4", "size": 14745103, "thumbnail": "", "date": 1609341661, "mimetype": "video/mp4"},
+        {"name": "2. Create a Vue Project & Add Vuetify.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/2. Getting Started/2. Create a Vue Project & Add Vuetify.mp4", "size": 38300222, "thumbnail": "", "date": 1609341672, "mimetype": "video/mp4"},
+        {"name": "3. Folder & File Structure.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/2. Getting Started/3. Folder & File Structure.mp4", "size": 60903833, "thumbnail": "", "date": 1609341680, "mimetype": "video/mp4"},
+        {"name": "4. Install Vue Devtools on Chrome.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/2. Getting Started/4. Install Vue Devtools on Chrome.mp4", "size": 19725494, "thumbnail": "", "date": 1609341684, "mimetype": "video/mp4"},
+        {"name": "5. Vue.js Basics.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/2. Getting Started/5. Vue.js Basics.mp4", "size": 38146778, "thumbnail": "", "date": 1609341697, "mimetype": "video/mp4"},
+        {"name": "6. Clean up the Project.mp4", "path": "/mnt/seagate-2tb/Lectures/Vuetify Create an App with Vue JS & Vuex - in 5 Hours!/2. Getting Started/6. Clean up the Project.mp4", "size": 7717935, "thumbnail": "", "date": 1609341699, "mimetype": "video/mp4"}
+      ]
+    }

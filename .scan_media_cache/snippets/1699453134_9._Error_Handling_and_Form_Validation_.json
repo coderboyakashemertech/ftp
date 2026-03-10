@@ -1,0 +1,15 @@
+    {
+      "folder_name": "9. Error Handling and Form Validation",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/9. Error Handling and Form Validation",
+      "file_count": 6,
+      "folder_size_bytes": 427392785,
+      "latest_mtime": 1606412545,
+      "files": [
+        {"name": "1. Adding Global Form Alert Component.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/9. Error Handling and Form Validation/1. Adding Global Form Alert Component.mp4", "size": 74104339, "thumbnail": "", "date": 1606412466, "mimetype": "video/mp4"},
+        {"name": "2. Add Loading Spinner to Signin Button.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/9. Error Handling and Form Validation/2. Add Loading Spinner to Signin Button.mp4", "size": 36726136, "thumbnail": "", "date": 1606412472, "mimetype": "video/mp4"},
+        {"name": "3. Form Validation with Vuetify in Signin Component.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/9. Error Handling and Form Validation/3. Form Validation with Vuetify in Signin Component.mp4", "size": 61058920, "thumbnail": "", "date": 1606412485, "mimetype": "video/mp4"},
+        {"name": "4. Show AuthSnackbar on Signin  Signup.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/9. Error Handling and Form Validation/4. Show AuthSnackbar on Signin  Signup.mp4", "size": 48463057, "thumbnail": "", "date": 1606412500, "mimetype": "video/mp4"},
+        {"name": "5. Handle Authentication Errors, Show Auth Error Snackbar.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/9. Error Handling and Form Validation/5. Handle Authentication Errors, Show Auth Error Snackbar.mp4", "size": 95359620, "thumbnail": "", "date": 1606412523, "mimetype": "video/mp4"},
+        {"name": "6. Create Signup Form and Signup User Action.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/9. Error Handling and Form Validation/6. Create Signup Form and Signup User Action.mp4", "size": 111680713, "thumbnail": "", "date": 1606412545, "mimetype": "video/mp4"}
+      ]
+    }

@@ -1,0 +1,18 @@
+    {
+      "folder_name": "9. Checkout Microservice",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/9. Checkout Microservice",
+      "file_count": 9,
+      "folder_size_bytes": 354681338,
+      "latest_mtime": 1614094892,
+      "files": [
+        {"name": "1. Setup.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/9. Checkout Microservice/1. Setup.mp4", "size": 8446644, "thumbnail": "", "date": 1614094788, "mimetype": "video/mp4"},
+        {"name": "2. Migrations.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/9. Checkout Microservice/2. Migrations.mp4", "size": 27423812, "thumbnail": "", "date": 1614094806, "mimetype": "video/mp4"},
+        {"name": "3. Docker.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/9. Checkout Microservice/3. Docker.mp4", "size": 24837817, "thumbnail": "", "date": 1614094816, "mimetype": "video/mp4"},
+        {"name": "4. Importing Data.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/9. Checkout Microservice/4. Importing Data.mp4", "size": 53810051, "thumbnail": "", "date": 1614094846, "mimetype": "video/mp4"},
+        {"name": "5. Moving Controllers.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/9. Checkout Microservice/5. Moving Controllers.mp4", "size": 36386263, "thumbnail": "", "date": 1614094858, "mimetype": "video/mp4"},
+        {"name": "6. Upload PHP Libraries to Packagist.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/9. Checkout Microservice/6. Upload PHP Libraries to Packagist.mp4", "size": 65269347, "thumbnail": "", "date": 1614094868, "mimetype": "video/mp4"},
+        {"name": "7. Listening to Events.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/9. Checkout Microservice/7. Listening to Events.mp4", "size": 79177287, "thumbnail": "", "date": 1614094880, "mimetype": "video/mp4"},
+        {"name": "8. Queue Listener.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/9. Checkout Microservice/8. Queue Listener.mp4", "size": 14835063, "thumbnail": "", "date": 1614094884, "mimetype": "video/mp4"},
+        {"name": "9. Publishing to Different Queues.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/9. Checkout Microservice/9. Publishing to Different Queues.mp4", "size": 44495054, "thumbnail": "", "date": 1614094892, "mimetype": "video/mp4"}
+      ]
+    }

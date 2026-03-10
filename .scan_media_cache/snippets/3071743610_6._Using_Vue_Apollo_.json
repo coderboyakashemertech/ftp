@@ -1,0 +1,13 @@
+    {
+      "folder_name": "6. Using Vue Apollo",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/6. Using Vue Apollo",
+      "file_count": 4,
+      "folder_size_bytes": 180425602,
+      "latest_mtime": 1606412228,
+      "files": [
+        {"name": "1. Setting up Apollo Client  Vue Apollo, Firing getPosts Query from Client.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/6. Using Vue Apollo/1. Setting up Apollo Client  Vue Apollo, Firing getPosts Query from Client.mp4", "size": 61768677, "thumbnail": "", "date": 1606412198, "mimetype": "video/mp4"},
+        {"name": "2. Dive into Smart Queries in Vue Components.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/6. Using Vue Apollo/2. Dive into Smart Queries in Vue Components.mp4", "size": 46942936, "thumbnail": "", "date": 1606412210, "mimetype": "video/mp4"},
+        {"name": "3. Executing Queries with the ApolloQuery Component.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/6. Using Vue Apollo/3. Executing Queries with the ApolloQuery Component.mp4", "size": 38749706, "thumbnail": "", "date": 1606412218, "mimetype": "video/mp4"},
+        {"name": "4. Add Carousel Component to Home Page.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/6. Using Vue Apollo/4. Add Carousel Component to Home Page.mp4", "size": 32964283, "thumbnail": "", "date": 1606412228, "mimetype": "video/mp4"}
+      ]
+    }

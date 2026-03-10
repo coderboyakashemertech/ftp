@@ -1,0 +1,12 @@
+    {
+      "folder_name": "11. Going Deep with Attributes, Tables, and Models in Laravel",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/11. Going Deep with Attributes, Tables, and Models in Laravel",
+      "file_count": 3,
+      "folder_size_bytes": 241527277,
+      "latest_mtime": 1613989122,
+      "files": [
+        {"name": "1. Indicating the Columns of the Tables in the Laravel Migrations.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/11. Going Deep with Attributes, Tables, and Models in Laravel/1. Indicating the Columns of the Tables in the Laravel Migrations.mp4", "size": 72012439, "thumbnail": "", "date": 1613989110, "mimetype": "video/mp4"},
+        {"name": "2. Implementing the Additional Models of Your Laravel Project.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/11. Going Deep with Attributes, Tables, and Models in Laravel/2. Implementing the Additional Models of Your Laravel Project.mp4", "size": 67955848, "thumbnail": "", "date": 1613989098, "mimetype": "video/mp4"},
+        {"name": "3. Implement the Factories of Your Models in Laravel.mp4", "path": "/mnt/seagate-2tb/Lectures/Master Laravel & Create High-Level Applications with Laravel/11. Going Deep with Attributes, Tables, and Models in Laravel/3. Implement the Factories of Your Models in Laravel.mp4", "size": 101558990, "thumbnail": "", "date": 1613989122, "mimetype": "video/mp4"}
+      ]
+    }

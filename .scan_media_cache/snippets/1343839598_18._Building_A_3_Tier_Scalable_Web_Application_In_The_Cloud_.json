@@ -1,0 +1,16 @@
+    {
+      "folder_name": "18. Building A 3 Tier Scalable Web Application In The Cloud",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/18. Building A 3 Tier Scalable Web Application In The Cloud",
+      "file_count": 7,
+      "folder_size_bytes": 98605434,
+      "latest_mtime": 1615106272,
+      "files": [
+        {"name": "1. 1801 Application Overview.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/18. Building A 3 Tier Scalable Web Application In The Cloud/1. 1801 Application Overview.mp4", "size": 2923128, "thumbnail": "", "date": 1615106230, "mimetype": "video/mp4"},
+        {"name": "2. 1802 Download And Modify CloudFormation Template - Part 1.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/18. Building A 3 Tier Scalable Web Application In The Cloud/2. 1802 Download And Modify CloudFormation Template - Part 1.mp4", "size": 7297501, "thumbnail": "", "date": 1615106236, "mimetype": "video/mp4"},
+        {"name": "3. 1803 Download And Modify CloudFormation Template - Part 2.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/18. Building A 3 Tier Scalable Web Application In The Cloud/3. 1803 Download And Modify CloudFormation Template - Part 2.mp4", "size": 7284731, "thumbnail": "", "date": 1615106244, "mimetype": "video/mp4"},
+        {"name": "4. 1804 Download And Modify CloudFormation Template - Part 3.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/18. Building A 3 Tier Scalable Web Application In The Cloud/4. 1804 Download And Modify CloudFormation Template - Part 3.mp4", "size": 4460395, "thumbnail": "", "date": 1615106248, "mimetype": "video/mp4"},
+        {"name": "5. 1805 AWS - Build Stack With CloudFormation.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/18. Building A 3 Tier Scalable Web Application In The Cloud/5. 1805 AWS - Build Stack With CloudFormation.mp4", "size": 20955367, "thumbnail": "", "date": 1615106254, "mimetype": "video/mp4"},
+        {"name": "6. 1806 Review Stack In Web GUI.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/18. Building A 3 Tier Scalable Web Application In The Cloud/6. 1806 Review Stack In Web GUI.mp4", "size": 8629127, "thumbnail": "", "date": 1615106260, "mimetype": "video/mp4"},
+        {"name": "7. 1807 Simulating Load On The Application.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/18. Building A 3 Tier Scalable Web Application In The Cloud/7. 1807 Simulating Load On The Application.mp4", "size": 47055185, "thumbnail": "", "date": 1615106272, "mimetype": "video/mp4"}
+      ]
+    }

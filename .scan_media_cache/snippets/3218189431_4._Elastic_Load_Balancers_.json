@@ -1,0 +1,12 @@
+    {
+      "folder_name": "4. Elastic Load Balancers",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/4. Elastic Load Balancers",
+      "file_count": 3,
+      "folder_size_bytes": 23439073,
+      "latest_mtime": 1618119037,
+      "files": [
+        {"name": "._1. 0401 AWS - Elastic Load Balancers Introduction.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/4. Elastic Load Balancers/._1. 0401 AWS - Elastic Load Balancers Introduction.mp4", "size": 4096, "thumbnail": "", "date": 1618119037, "mimetype": "application/octet-stream"},
+        {"name": "1. 0401 AWS - Elastic Load Balancers Introduction.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/4. Elastic Load Balancers/1. 0401 AWS - Elastic Load Balancers Introduction.mp4", "size": 5995105, "thumbnail": "", "date": 1615106096, "mimetype": "video/mp4"},
+        {"name": "2. 0402 Elastic Load Balancers Lab.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/4. Elastic Load Balancers/2. 0402 Elastic Load Balancers Lab.mp4", "size": 17439872, "thumbnail": "", "date": 1615106102, "mimetype": "video/mp4"}
+      ]
+    }

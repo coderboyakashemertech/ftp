@@ -1,0 +1,11 @@
+    {
+      "folder_name": "12. Virtual Private Cloud",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/12. Virtual Private Cloud",
+      "file_count": 2,
+      "folder_size_bytes": 15719526,
+      "latest_mtime": 1615106168,
+      "files": [
+        {"name": "1. 1201 AWS - Introduction To VPC.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/12. Virtual Private Cloud/1. 1201 AWS - Introduction To VPC.mp4", "size": 10955223, "thumbnail": "", "date": 1615106162, "mimetype": "video/mp4"},
+        {"name": "2. 1202 Advanced VPC Networking, Stacks, Etc..mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/12. Virtual Private Cloud/2. 1202 Advanced VPC Networking, Stacks, Etc..mp4", "size": 4764303, "thumbnail": "", "date": 1615106168, "mimetype": "video/mp4"}
+      ]
+    }

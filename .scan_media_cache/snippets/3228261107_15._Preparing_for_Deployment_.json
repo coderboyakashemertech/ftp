@@ -1,0 +1,12 @@
+    {
+      "folder_name": "15. Preparing for Deployment",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/15. Preparing for Deployment",
+      "file_count": 3,
+      "folder_size_bytes": 206314480,
+      "latest_mtime": 1606414006,
+      "files": [
+        {"name": "1. RefetchQueries for Fresh Data upon Executing Mutations.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/15. Preparing for Deployment/1. RefetchQueries for Fresh Data upon Executing Mutations.mp4", "size": 48079150, "thumbnail": "", "date": 1606413974, "mimetype": "video/mp4"},
+        {"name": "2. Formatting Dates with moment.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/15. Preparing for Deployment/2. Formatting Dates with moment.mp4", "size": 61746745, "thumbnail": "", "date": 1606413987, "mimetype": "video/mp4"},
+        {"name": "3. Minor ImprovementsFixes.mp4", "path": "/mnt/seagate-2tb/Lectures/Full-Stack Vue with GraphQL - The Ultimate Guide/15. Preparing for Deployment/3. Minor ImprovementsFixes.mp4", "size": 96488585, "thumbnail": "", "date": 1606414006, "mimetype": "video/mp4"}
+      ]
+    }

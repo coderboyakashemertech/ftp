@@ -1,0 +1,17 @@
+    {
+      "folder_name": "3. EC2 Virtual Servers",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/3. EC2 Virtual Servers",
+      "file_count": 8,
+      "folder_size_bytes": 95608829,
+      "latest_mtime": 1615106092,
+      "files": [
+        {"name": "1. 0301 Instance Types, Security Groups, Keypairs, And User Data.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/3. EC2 Virtual Servers/1. 0301 Instance Types, Security Groups, Keypairs, And User Data.mp4", "size": 11880617, "thumbnail": "", "date": 1615106060, "mimetype": "video/mp4"},
+        {"name": "2. 0302 EC2 Disk Options EBS Vs. Ephemeral.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/3. EC2 Virtual Servers/2. 0302 EC2 Disk Options EBS Vs. Ephemeral.mp4", "size": 8011622, "thumbnail": "", "date": 1615106064, "mimetype": "video/mp4"},
+        {"name": "3. 0303 Spinning Up Your First EC2 Server And SSHing In.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/3. EC2 Virtual Servers/3. 0303 Spinning Up Your First EC2 Server And SSHing In.mp4", "size": 23704398, "thumbnail": "", "date": 1615106072, "mimetype": "video/mp4"},
+        {"name": "4. 0304 EC2 Gotchas Keypairs, DNS Changes, Etc..mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/3. EC2 Virtual Servers/4. 0304 EC2 Gotchas Keypairs, DNS Changes, Etc..mp4", "size": 6404551, "thumbnail": "", "date": 1615106078, "mimetype": "video/mp4"},
+        {"name": "5. 0305 Amazon Web Services Templatizing Servers With AMIs.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/3. EC2 Virtual Servers/5. 0305 Amazon Web Services Templatizing Servers With AMIs.mp4", "size": 4033046, "thumbnail": "", "date": 1615106080, "mimetype": "video/mp4"},
+        {"name": "6. 0306 EBS Snapshots, Attaching, And Detaching.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/3. EC2 Virtual Servers/6. 0306 EBS Snapshots, Attaching, And Detaching.mp4", "size": 25744687, "thumbnail": "", "date": 1615106086, "mimetype": "video/mp4"},
+        {"name": "7. 0307 Pricing Model For EC2.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/3. EC2 Virtual Servers/7. 0307 Pricing Model For EC2.mp4", "size": 8445506, "thumbnail": "", "date": 1615106090, "mimetype": "video/mp4"},
+        {"name": "8. 0308 Making An AMI.mp4", "path": "/mnt/seagate-2tb/Lectures/Amazon Web Services - Web Hosting & Cloud Computing With AWS/3. EC2 Virtual Servers/8. 0308 Making An AMI.mp4", "size": 7384402, "thumbnail": "", "date": 1615106092, "mimetype": "video/mp4"}
+      ]
+    }

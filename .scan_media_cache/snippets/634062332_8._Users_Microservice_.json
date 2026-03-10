@@ -1,0 +1,23 @@
+    {
+      "folder_name": "8. Users Microservice",
+      "folder_path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/8. Users Microservice",
+      "file_count": 14,
+      "folder_size_bytes": 582773293,
+      "latest_mtime": 1614094784,
+      "files": [
+        {"name": "10. Moving Paginated Users.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/8. Users Microservice/10. Moving Paginated Users.mp4", "size": 42520842, "thumbnail": "", "date": 1614094732, "mimetype": "video/mp4"},
+        {"name": "11. Moving UserController.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/8. Users Microservice/11. Moving UserController.mp4", "size": 93789882, "thumbnail": "", "date": 1614094750, "mimetype": "video/mp4"},
+        {"name": "12. Removing User Instances.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/8. Users Microservice/12. Removing User Instances.mp4", "size": 24322996, "thumbnail": "", "date": 1614094758, "mimetype": "video/mp4"},
+        {"name": "13. Filtering Users.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/8. Users Microservice/13. Filtering Users.mp4", "size": 36726535, "thumbnail": "", "date": 1614094770, "mimetype": "video/mp4"},
+        {"name": "14. Refactor User Class.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/8. Users Microservice/14. Refactor User Class.mp4", "size": 41702388, "thumbnail": "", "date": 1614094784, "mimetype": "video/mp4"},
+        {"name": "1. Setup.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/8. Users Microservice/1. Setup.mp4", "size": 23971153, "thumbnail": "", "date": 1614094654, "mimetype": "video/mp4"},
+        {"name": "2. Database.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/8. Users Microservice/2. Database.mp4", "size": 16165651, "thumbnail": "", "date": 1614094662, "mimetype": "video/mp4"},
+        {"name": "3. User Model.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/8. Users Microservice/3. User Model.mp4", "size": 29551716, "thumbnail": "", "date": 1614094670, "mimetype": "video/mp4"},
+        {"name": "4. Moving AuthController.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/8. Users Microservice/4. Moving AuthController.mp4", "size": 67853610, "thumbnail": "", "date": 1614094680, "mimetype": "video/mp4"},
+        {"name": "5. Importing User Data.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/8. Users Microservice/5. Importing User Data.mp4", "size": 50820069, "thumbnail": "", "date": 1614094696, "mimetype": "video/mp4"},
+        {"name": "6. Internal API Calls.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/8. Users Microservice/6. Internal API Calls.mp4", "size": 24595509, "thumbnail": "", "date": 1614094700, "mimetype": "video/mp4"},
+        {"name": "7. User Service.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/8. Users Microservice/7. User Service.mp4", "size": 41573674, "thumbnail": "", "date": 1614094708, "mimetype": "video/mp4"},
+        {"name": "8. Scope Middleware.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/8. Users Microservice/8. Scope Middleware.mp4", "size": 59257702, "thumbnail": "", "date": 1614094718, "mimetype": "video/mp4"},
+        {"name": "9. Authorization.mp4", "path": "/mnt/seagate-2tb/Lectures/Vue 3 and Laravel Breaking a Monolith to Microservices/8. Users Microservice/9. Authorization.mp4", "size": 29921566, "thumbnail": "", "date": 1614094724, "mimetype": "video/mp4"}
+      ]
+    }
