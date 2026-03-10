@@ -83,12 +83,16 @@ router.get("/serve", (req, res) => {
         const rootDir = resolveRootDir(driveName);
         const targetFile = path.resolve(rootDir, relativePath);
 
+        console.log(`[SERVE] Drive: ${driveName}, Root: ${rootDir}, Relative: ${relativePath}, Target: ${targetFile}`);
+
         // Path traversal protection
         if (!targetFile.startsWith(rootDir)) {
+            console.warn(`[SERVE] Forbidden: ${targetFile} does not start with ${rootDir}`);
             return res.status(403).json({ error: "Forbidden" });
         }
 
         if (!fs.existsSync(targetFile)) {
+            console.warn(`[SERVE] File not found: ${targetFile}`);
             return res.status(404).json({ error: "File not found" });
         }
 
