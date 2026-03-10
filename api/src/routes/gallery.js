@@ -11,7 +11,6 @@ const MEDIA_EXTENSIONS = new Set([
     ".mp4", ".mov", ".webm", ".avi", ".mkv"         // Videos
 ]);
 
-const fsPromises = require("fs").promises;
 
 /**
  * Helper function to recursively find all media files in a directory.
