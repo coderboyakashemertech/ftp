@@ -6,8 +6,29 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3002/api"
 
 function getAuthHeaders() {
     const token = localStorage.getItem("token");
-    return token ? { Authorization: `Bearer ${token} ` } : {};
+    return token ? { Authorization: `Bearer ${token}` } : {};
 }
+
+// Add a response interceptor
+axios.interceptors.response.use(
+    (response) => response,
+    (error) => {
+        if (error.response && (error.response.status === 401 || error.response.status === 403)) {
+            const errorMessage = error.response.data?.error;
+            // Clear local storage and reload if it's an auth error
+            if (
+                error.response.status === 401 ||
+                (error.response.status === 403 && errorMessage === "Invalid or expired token.")
+            ) {
+                localStorage.removeItem("token");
+                localStorage.removeItem("username");
+                localStorage.removeItem("name");
+                window.location.reload();
+            }
+        }
+        return Promise.reject(error);
+    }
+);
 
 export async function fetchDirectory(path: string = "", drive?: string): Promise<BrowseResponse> {
     try {
