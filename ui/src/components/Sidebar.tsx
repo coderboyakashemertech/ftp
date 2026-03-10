@@ -10,31 +10,55 @@ interface Drive {
 interface SidebarItemProps {
     icon: React.ElementType
     label: string
+    href?: string
     active?: boolean
     onClick?: () => void
     onAction?: () => void
     actionIcon?: React.ElementType
 }
 
-function SidebarItem({ icon: Icon, label, active, onClick, onAction, actionIcon: ActionIcon }: SidebarItemProps) {
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+function SidebarItem({ icon: Icon, label, href, active, onClick, onAction, actionIcon: ActionIcon }: SidebarItemProps) {
+    const Component = href ? Link : "button";
+
     return (
         <div className="group/item relative flex items-center pr-2">
-            <button
-                onClick={onClick}
-                className={cn(
-                    "flex items-center gap-3 flex-1 px-4 py-2 text-sm font-medium rounded-r-full transition-colors cursor-pointer text-left truncate",
-                    active
-                        ? "bg-indigo-50 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300"
-                        : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
-                )}
-            >
-                <Icon className="h-5 w-5 flex-shrink-0" />
-                <span className="truncate">{label}</span>
-            </button>
+            {href ? (
+                <Link
+                    href={href}
+                    onClick={onClick}
+                    className={cn(
+                        "flex items-center gap-3 flex-1 px-4 py-2 text-sm font-medium rounded-r-full transition-colors cursor-pointer text-left truncate",
+                        active
+                            ? "bg-indigo-50 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300"
+                            : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    )}
+                >
+                    <Icon className="h-5 w-5 flex-shrink-0" />
+                    <span className="truncate">{label}</span>
+                </Link>
+            ) : (
+                <button
+                    onClick={onClick}
+                    className={cn(
+                        "flex items-center gap-3 flex-1 px-4 py-2 text-sm font-medium rounded-r-full transition-colors cursor-pointer text-left truncate",
+                        active
+                            ? "bg-indigo-50 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300"
+                            : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    )}
+                >
+                    <Icon className="h-5 w-5 flex-shrink-0" />
+                    <span className="truncate">{label}</span>
+                </button>
+            )}
+
             {onAction && ActionIcon && (
                 <button
                     onClick={(e) => {
                         e.stopPropagation();
+                        e.preventDefault();
                         onAction();
                     }}
                     className="absolute right-4 p-1 rounded-md opacity-0 group-hover/item:opacity-100 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-all cursor-pointer z-20"
@@ -60,7 +84,8 @@ interface SidebarProps {
     onClose?: () => void;
 }
 
-export function Sidebar({ pinnedFolders = [], onNavigate, drives = [], selectedDrive, onDriveSelect, onUnpin, currentView = "drive", onNavigateView, isOpen, onClose }: SidebarProps) {
+export function Sidebar({ pinnedFolders = [], onNavigate, drives = [], selectedDrive, onDriveSelect, onUnpin, isOpen, onClose }: SidebarProps) {
+    const pathname = usePathname();
     return (
         <aside className={cn(
             "flex-shrink-0 flex flex-col py-4 pr-3 border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-y-auto",
@@ -85,8 +110,9 @@ export function Sidebar({ pinnedFolders = [], onNavigate, drives = [], selectedD
                     <SidebarItem
                         icon={ImageIcon}
                         label="Gallery"
-                        active={currentView === "gallery"}
-                        onClick={() => onNavigateView?.("gallery")}
+                        href="/gallery"
+                        active={pathname === "/gallery"}
+                        onClick={onClose}
                     />
                 </div>
 

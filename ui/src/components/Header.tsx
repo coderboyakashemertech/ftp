@@ -1,13 +1,14 @@
 import { Search, Settings, HelpCircle, User, LogOut, Menu } from "lucide-react"
 
+import Link from "next/link";
+
 interface HeaderProps {
     onLogout?: () => void;
     username?: string | null;
-    onNavigateToSettings?: () => void;
     onToggleSidebar?: () => void;
 }
 
-export function Header({ onLogout, username, onNavigateToSettings, onToggleSidebar }: HeaderProps) {
+export function Header({ onLogout, username, onToggleSidebar }: HeaderProps) {
     return (
         <header className="flex items-center justify-between px-4 sm:px-6 py-2 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 sticky top-0 z-[50] transition-colors">
             <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
@@ -49,13 +50,13 @@ export function Header({ onLogout, username, onNavigateToSettings, onToggleSideb
                 <button className="p-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors cursor-pointer hidden sm:block" title="Help">
                     <HelpCircle className="h-5 w-5" />
                 </button>
-                <button
-                    onClick={onNavigateToSettings}
-                    className="p-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors cursor-pointer"
+                <Link
+                    href="/settings"
+                    className="p-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors cursor-pointer block"
                     title="Settings"
                 >
                     <Settings className="h-5 w-5" />
-                </button>
+                </Link>
                 <div className="flex items-center gap-3 pl-2 border-l border-gray-100 dark:border-gray-800">
                     <div className="flex flex-col items-end hidden sm:flex">
                         <span className="text-xs font-semibold text-gray-900 dark:text-gray-100 uppercase tracking-wider whitespace-nowrap">{username || "User"}</span>
