@@ -10,14 +10,12 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "developers.elementor.com",
-        // pathname: "/docs/assets/img/**",
+        hostname: "serve.pakyaaa.online",
+        pathname: "/api/files/**",
       },
       {
-        protocol: "http",
-        hostname: "localhost",
-        port: "3002",
-        pathname: "/api/files/**",
+        protocol: "https",
+        hostname: "developers.elementor.com",
       },
     ],
   },

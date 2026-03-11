@@ -50,7 +50,7 @@ export function GalleryMedia({ folderPath }: GalleryMediaProps) {
             return;
         }
 
-        const cacheKey = `gallery_media_cache_${folderPath}`;
+        const cacheKey = `gallery0_media_cache_${folderPath}`;
 
         if (!append && pageNum === 1 && !forceRefresh) {
             try {

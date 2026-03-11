@@ -1,9 +1,10 @@
 #!/bin/bash
 
 # Configuration
-INPUT_JSON_FILE="/home/coderboy/ftp/api/gallery.json"
-OUTPUT_JSON_FILE="/home/coderboy/ftp/api/gallery_with_thumbnails.json"
-THUMBNAIL_DIRECTORY="/mnt/seagate-2tb/.thumbnails"
+INPUT_JSON_FILE="/home/coderboy/projects/ftp/api/gallery.json"
+OUTPUT_JSON_FILE="/home/coderboy/projects/ftp/api/gallery.json"
+THUMBNAIL_DIRECTORY="/mnt/c/Users/akash/Downloads/.thumbnails"
+LOG_FILE="/home/coderboy/projects/ftp/ffmpeg_generation_$(date +%s).log"
 
 mkdir -p "$THUMBNAIL_DIRECTORY"
 
@@ -20,7 +21,7 @@ updated_json=$(jq --arg thumb_dir "$THUMBNAIL_DIRECTORY" '
   .folders |= map(
     .files |= map(
       if (.mimetype | startswith("video/")) and (.name | test("\\.(jpg|jpeg|png|webp)$"; "i") | not) then
-        .thumbnail = ($thumb_dir + "/" + (.name | gsub("[^a-zA-Z0-9.]"; "_")) + "_thumb.jpg")
+        .thumbnail = ($thumb_dir + "/" + (.date // (now | floor) | tostring) + ".png")
       else
         .
       end
@@ -30,7 +31,7 @@ updated_json=$(jq --arg thumb_dir "$THUMBNAIL_DIRECTORY" '
 
 # 2. Extraction & Generation
 # We only pipe items that actually received a .thumbnail path in step 1
-echo "$updated_json" | jq -r '.folders[].files[] | select(.thumbnail != null) | .path + "|" + .thumbnail' | while IFS="|" read -r video_path thumb_path; do
+echo "$updated_json" | jq -r '.folders[].files[] | select(.thumbnail != null and .thumbnail != "") | .path + "|" + .thumbnail' | while IFS="|" read -r video_path thumb_path; do
     
     # Final sanity check: skip if the source path somehow ends in an image extension
     if [[ "$video_path" =~ \.(jpg|jpeg|png|webp)$ ]]; then
@@ -40,15 +41,27 @@ echo "$updated_json" | jq -r '.folders[].files[] | select(.thumbnail != null) | 
     if [ ! -f "$thumb_path" ]; then
         if [ -f "$video_path" ]; then
             echo "Generating: $(basename "$thumb_path")"
-            ffmpeg -y -ss 00:00:02 -i "$video_path" -vframes 1 -q:v 2 -vf "scale=480:-1" "$thumb_path" > /dev/null 2>&1
+            {
+                echo "--------------------------------------------------"
+                echo "TIME: $(date)"
+                echo "VIDEO: $video_path"
+                echo "THUMB: $thumb_path"
+                echo "COMMAND: ffmpeg -y -ss 00:00:02 -i \"$video_path\" -vframes 1 -q:v 2 -vf \"scale=480:-1\" \"$thumb_path\""
+                echo "OUTPUT:"
+                ffmpeg -y -ss 00:00:02 -i "$video_path" -vframes 1 -q:v 2 -vf "scale=480:-1" "$thumb_path" 2>&1
+                FFMPEG_EXIT_CODE=$?
+                echo "EXIT CODE: $FFMPEG_EXIT_CODE"
+            } >> "$LOG_FILE"
             
-            if [ $? -ne 0 ]; then
-                echo "Warning: Failed to process $video_path (Likely a corrupt file or non-video)"
+            if [ $FFMPEG_EXIT_CODE -ne 0 ]; then
+                echo "Warning: Failed to process $video_path (See $LOG_FILE for details)"
             fi
         fi
     fi
 done
 
 # 3. Save
+cp "$INPUT_JSON_FILE" "${INPUT_JSON_FILE%.json}_backup_$(date +%s).json"
 echo "$updated_json" > "$OUTPUT_JSON_FILE"
 echo "Done. Processed videos from $INPUT_JSON_FILE"
+echo "Log file saved to: $LOG_FILE"
