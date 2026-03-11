@@ -171,7 +171,14 @@ router.get("/", async (req, res) => {
                     preview: previewClone
                 });
             } else {
-                foldersMap.get(fPath).count++;
+                const folderData = foldersMap.get(fPath);
+                folderData.count++;
+                // If the current preview doesn't have a thumbnail, but this file does, swap it out
+                if (!folderData.preview.thumbnail && file.thumbnail) {
+                    const previewClone = { ...file };
+                    delete previewClone.absPath;
+                    folderData.preview = previewClone;
+                }
             }
         });
 
