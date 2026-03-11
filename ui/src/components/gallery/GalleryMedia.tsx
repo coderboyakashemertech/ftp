@@ -198,7 +198,6 @@ export function GalleryMedia({ folderPath }: GalleryMediaProps) {
                         {mediaFiles.map((file, idx) => {
                             const isVid = isVideo(file.name);
                             const srcUrl = getStaticUrl(file.path || "", file.drive);
-
                             return (
                                 <div
                                     key={file.path || file.name}
