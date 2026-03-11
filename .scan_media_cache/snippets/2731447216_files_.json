@@ -1,0 +1,11 @@
+    {
+      "folder_name": "files",
+      "folder_path": "/home/coderboy/ftp/api/files",
+      "file_count": 2,
+      "folder_size_bytes": 276095,
+      "latest_mtime": 1773181691,
+      "files": [
+        {"name": "demo.jpg", "path": "/home/coderboy/ftp/api/files/demo.jpg", "size": 17960, "thumbnail": "", "date": 1773103118, "mimetype": "image/jpeg"},
+        {"name": "VID-20250309-WA0012.mp4", "path": "/home/coderboy/ftp/api/files/VID-20250309-WA0012.mp4", "size": 258135, "thumbnail": "", "date": 1773181691, "mimetype": "video/mp4"}
+      ]
+    }

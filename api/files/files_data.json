@@ -1,0 +1,24 @@
+{
+  "root": "/home/coderboy/ftp/api/files",
+  "generated_at": 1773222397,
+  "first_run": false,
+  "folders": [
+    {
+      "folder_name": "files",
+      "folder_path": "/home/coderboy/ftp/api/files",
+      "file_count": 1,
+      "folder_size_bytes": 258135,
+      "latest_mtime": 1773181691,
+      "files": [
+        {
+          "name": "VID-20250309-WA0012.mp4",
+          "path": "/home/coderboy/ftp/api/files/VID-20250309-WA0012.mp4",
+          "size": 258135,
+          "date": 1773181691,
+          "mimetype": "video/mp4",
+          "thumbnail": "/home/coderboy/ftp/api/files/VID-20250309-WA0012_thumbnail.png"
+        }
+      ]
+    }
+  ]
+}
