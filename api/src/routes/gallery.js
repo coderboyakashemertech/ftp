@@ -160,24 +160,26 @@ router.get("/", async (req, res) => {
         const foldersMap = new Map();
         mediaFiles.forEach(file => {
             const fPath = file.folderPath ? `/${file.folderPath}` : "/";
+
+            // Helper to create a safe preview object without absPath
+            const createPreview = (f) => {
+                const { absPath, ...rest } = f;
+                return rest;
+            };
+
             if (!foldersMap.has(fPath)) {
-                // Create a clone of the preview to safely delete absPath later or modify it
-                const previewClone = { ...file };
-                delete previewClone.absPath;
                 foldersMap.set(fPath, {
                     name: file.folderName || fPath,
                     path: fPath,
                     count: 1,
-                    preview: previewClone
+                    preview: createPreview(file)
                 });
             } else {
                 const folderData = foldersMap.get(fPath);
                 folderData.count++;
                 // If the current preview doesn't have a thumbnail, but this file does, swap it out
                 if (!folderData.preview.thumbnail && file.thumbnail) {
-                    const previewClone = { ...file };
-                    delete previewClone.absPath;
-                    folderData.preview = previewClone;
+                    folderData.preview = createPreview(file);
                 }
             }
         });
