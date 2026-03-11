@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Folder, File as FileIcon, MoreVertical, FileText, ImageIcon, Code, FileArchive, Film, Music } from "lucide-react"
+import { Folder, File as FileIcon, MoreVertical, FileText, ImageIcon, Code, FileArchive, Film, Music, PlayCircle } from "lucide-react"
 import type { FileItem } from "../types"
 import { format } from "date-fns"
 import { ContextMenu } from "./ContextMenu"
@@ -50,6 +50,7 @@ function formatBytes(bytes: number, decimals = 2) {
 export function ItemCard({ item, isFolder, viewMode, currentPath, onDoubleClick, isPinned, onPin, selectedDrive }: ItemCardProps) {
     const name = isFolder ? (item as string) : (item as FileItem).name
     const isImage = !isFolder && ['jpg', 'jpeg', 'png', 'gif', 'svg', 'webp', 'avif', 'bmp', 'ico', 'tiff'].includes((item as FileItem).extension?.toLowerCase() || '')
+    const isVid = !isFolder && ['mp4', 'webm', 'ogg', 'mov', 'mkv', 'avi'].includes((item as FileItem).extension?.toLowerCase() || '')
     const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:3001/api"
     const staticUrl = API_URL.replace('/api', '/api/static')
 
@@ -100,6 +101,17 @@ export function ItemCard({ item, isFolder, viewMode, currentPath, onDoubleClick,
                                 alt={name}
                                 className="w-full h-full object-cover"
                             />
+                        ) : isVid && (item as FileItem).thumbnail ? (
+                            <div className="w-full h-full relative">
+                                <img
+                                    src={getStaticUrl((item as FileItem).thumbnail as string, selectedDrive)}
+                                    alt={name}
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                                    <PlayCircle className="h-4 w-4 text-white opacity-80" />
+                                </div>
+                            </div>
                         ) : (
                             getFileIcon((item as FileItem).extension)
                         )}
@@ -187,6 +199,17 @@ export function ItemCard({ item, isFolder, viewMode, currentPath, onDoubleClick,
                     <div className="flex-1 bg-gray-50 dark:bg-gray-800/50 flex items-center justify-center border-b border-gray-100 dark:border-gray-800 overflow-hidden relative">
                         {isImage ? (
                             <img src={imagePath} alt={name || "File image"} className="w-full h-full object-cover" />
+                        ) : isVid && (item as FileItem).thumbnail ? (
+                            <div className="w-full h-full relative">
+                                <img
+                                    src={getStaticUrl((item as FileItem).thumbnail as string, selectedDrive)}
+                                    alt={name || "Video thumbnail"}
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                                    <PlayCircle className="h-8 w-8 text-white opacity-80" />
+                                </div>
+                            </div>
                         ) : (
                             getFileIcon((item as FileItem).extension)
                         )}

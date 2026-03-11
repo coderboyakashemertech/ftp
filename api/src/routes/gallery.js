@@ -122,6 +122,15 @@ router.get("/", async (req, res) => {
 
                         const ext = path.extname(img.name).toLowerCase();
 
+                        let thumbRelPath = null;
+                        if (img.thumbnail && typeof img.thumbnail === 'string' && img.thumbnail.trim() !== "") {
+                            try {
+                                thumbRelPath = path.relative(rootDirForMatched, img.thumbnail).replace(/\\/g, '/');
+                            } catch (e) {
+                                // Ignore
+                            }
+                        }
+
                         mediaFiles.push({
                             name: img.name,
                             path: relativePath,
@@ -131,6 +140,7 @@ router.get("/", async (req, res) => {
                             extension: ext,
                             size: img.size || 0,
                             absPath: absPath,
+                            thumbnail: thumbRelPath,
                             modifiedAt: img.date ? new Date(img.date * 1000).toISOString() : new Date().toISOString()
                         });
                     } catch (err) {

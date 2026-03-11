@@ -207,13 +207,29 @@ export function GalleryMedia({ folderPath }: GalleryMediaProps) {
                                 >
                                     <div className="w-full h-full relative overflow-hidden">
                                         {isVid ? (
-                                            <div className="w-full h-full flex items-center justify-center bg-indigo-50/50 dark:bg-indigo-900/10 group-hover:bg-indigo-100/50 dark:group-hover:bg-indigo-900/20">
-                                                <div className="relative">
-                                                    <div className="absolute inset-0 bg-indigo-500/20 blur-xl rounded-full scale-150 opacity-50 group-hover:opacity-100" />
-                                                    <Film className="h-10 w-10 text-indigo-500 dark:text-indigo-400 relative" strokeWidth={1.5} />
-                                                </div>
-
-                                                <div className="absolute top-3 right-3 p-1.5 bg-black/40 backdrop-blur-md rounded-lg border border-white/20">
+                                            <div className="w-full h-full relative">
+                                                {file.thumbnail ? (
+                                                    <Image
+                                                        src={getStaticUrl(file.thumbnail, file.drive)}
+                                                        alt={file.name}
+                                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-out"
+                                                        loading="lazy"
+                                                        onError={(e) => {
+                                                            const target = e.target as HTMLImageElement;
+                                                            target.style.display = 'none';
+                                                        }}
+                                                        height={400}
+                                                        width={400}
+                                                    />
+                                                ) : (
+                                                    <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-indigo-50/50 dark:bg-indigo-900/10 group-hover:bg-indigo-100/50 dark:group-hover:bg-indigo-900/20">
+                                                        <div className="relative">
+                                                            <div className="absolute inset-0 bg-indigo-500/20 blur-xl rounded-full scale-150 opacity-50 group-hover:opacity-100" />
+                                                            <Film className="h-10 w-10 text-indigo-500 dark:text-indigo-400 relative" strokeWidth={1.5} />
+                                                        </div>
+                                                    </div>
+                                                )}
+                                                <div className="absolute top-3 right-3 p-1.5 bg-black/40 backdrop-blur-md rounded-lg border border-white/20 z-10">
                                                     <PlayCircle className="h-3.5 w-3.5 text-white" />
                                                 </div>
                                             </div>
@@ -259,9 +275,25 @@ export function GalleryMedia({ folderPath }: GalleryMediaProps) {
                                 >
                                     <div className="relative w-14 h-14 bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800">
                                         {isVid ? (
-                                            <div className="w-full h-full flex items-center justify-center bg-indigo-50/50 dark:bg-indigo-900/10">
-                                                <Film className="h-5 w-5 text-indigo-500 dark:text-indigo-400" />
-                                            </div>
+                                            file.thumbnail ? (
+                                                <div className="relative w-full h-full">
+                                                    <Image
+                                                        src={getStaticUrl(file.thumbnail, file.drive)}
+                                                        alt={file.name}
+                                                        className="w-full h-full object-cover"
+                                                        loading="lazy"
+                                                        height={50}
+                                                        width={50}
+                                                    />
+                                                    <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                                                        <PlayCircle className="h-6 w-6 text-white opacity-80" />
+                                                    </div>
+                                                </div>
+                                            ) : (
+                                                <div className="w-full h-full flex items-center justify-center bg-indigo-50/50 dark:bg-indigo-900/10">
+                                                    <Film className="h-5 w-5 text-indigo-500 dark:text-indigo-400" />
+                                                </div>
+                                            )
                                         ) : (
                                             <Image
                                                 src={srcUrl}

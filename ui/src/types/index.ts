@@ -4,6 +4,7 @@ export interface FileItem {
     folderPath?: string
     folderName?: string
     drive?: string
+    thumbnail?: string | null
     extension: string | null
     size: number
     modifiedAt: string
