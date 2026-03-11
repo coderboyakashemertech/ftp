@@ -161,11 +161,14 @@ router.get("/", async (req, res) => {
         mediaFiles.forEach(file => {
             const fPath = file.folderPath ? `/${file.folderPath}` : "/";
             if (!foldersMap.has(fPath)) {
+                // Create a clone of the preview to safely delete absPath later or modify it
+                const previewClone = { ...file };
+                delete previewClone.absPath;
                 foldersMap.set(fPath, {
                     name: file.folderName || fPath,
                     path: fPath,
                     count: 1,
-                    preview: file
+                    preview: previewClone
                 });
             } else {
                 foldersMap.get(fPath).count++;

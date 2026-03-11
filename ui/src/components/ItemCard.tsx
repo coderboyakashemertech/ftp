@@ -102,13 +102,20 @@ export function ItemCard({ item, isFolder, viewMode, currentPath, onDoubleClick,
                                 className="w-full h-full object-cover"
                             />
                         ) : isVid && (item as FileItem).thumbnail ? (
-                            <div className="w-full h-full relative">
+                            <div className="w-full h-full relative overflow-hidden">
+                                <div className="absolute inset-0 flex items-center justify-center bg-indigo-50/50 dark:bg-indigo-900/10 z-0">
+                                    {getFileIcon((item as FileItem).extension)}
+                                </div>
                                 <img
                                     src={getStaticUrl((item as FileItem).thumbnail as string, selectedDrive)}
                                     alt={name}
-                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    className="absolute inset-0 w-full h-full object-cover z-10"
+                                    onError={(e) => {
+                                        (e.target as HTMLImageElement).style.display = 'none';
+                                    }}
                                 />
-                                <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                                <div className="absolute inset-0 flex items-center justify-center bg-black/20 z-20 pointer-events-none">
                                     <PlayCircle className="h-4 w-4 text-white opacity-80" />
                                 </div>
                             </div>
@@ -200,13 +207,20 @@ export function ItemCard({ item, isFolder, viewMode, currentPath, onDoubleClick,
                         {isImage ? (
                             <img src={imagePath} alt={name || "File image"} className="w-full h-full object-cover" />
                         ) : isVid && (item as FileItem).thumbnail ? (
-                            <div className="w-full h-full relative">
+                            <div className="w-full h-full relative overflow-hidden">
+                                <div className="absolute inset-0 flex items-center justify-center bg-indigo-50/50 dark:bg-indigo-900/10 z-0">
+                                    {getFileIcon((item as FileItem).extension)}
+                                </div>
                                 <img
                                     src={getStaticUrl((item as FileItem).thumbnail as string, selectedDrive)}
                                     alt={name || "Video thumbnail"}
-                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    className="absolute inset-0 w-full h-full object-cover z-10"
+                                    onError={(e) => {
+                                        (e.target as HTMLImageElement).style.display = 'none';
+                                    }}
                                 />
-                                <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                                <div className="absolute inset-0 flex items-center justify-center bg-black/20 z-20 pointer-events-none">
                                     <PlayCircle className="h-8 w-8 text-white opacity-80" />
                                 </div>
                             </div>
